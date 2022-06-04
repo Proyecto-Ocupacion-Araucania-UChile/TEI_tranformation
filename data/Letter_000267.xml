@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title xml:id="">Letter</title>
+        <author xml:id="Contreras_Juan">
+          <forename>Juan</forename>
+          <surname>Contreras</surname>
+        </author>
+        <editor>
+            <orgName ref="ACAB">Archivo Central Andres Bello</orgName>
+            <persName ref="#DirSc" role="scientific director">Alessandro Chiaretti</persName>
+          <persName ref="#Enc" role="encodeur">Maxime Humeau</persName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+          <edition>Native digital publishing</edition>
+          <respStmt xml:id="DirSc">
+              <resp>Scientific Director of the edition</resp>
+          <persName>
+              <forename>Alessandro</forename>
+              <surname>Chiaretti</surname>
+              <roleName>Professor and archivist, responsable "Área de Información Bibliográfica y Archivística"</roleName>
+            <affiliation xml:id="Observatoire">Archivo Central Andres Bello | Universidad de Chile</affiliation>
+          </persName>
+        </respStmt>
+        <respStmt xml:id="Enc">
+            <resp>In charge of digital encoding</resp>
+          <persName>
+            <forename>Maxime</forename>
+            <surname>Humeau</surname>
+            <roleName>Student, trainee</roleName>
+            <affiliation>Ecole nationale des chartes | PSL</affiliation>
+          </persName>
+        </respStmt>
+      </editionStmt>
+      <extent>
+        <unit type="page" quantity=""/>
+        <idno xml:id=""/>
+        <link target="img/" source=""/>
+      </extent>
+      <publicationStmt>
+          <publisher xml:id="ACAB">Archivo Central Andres Bello</publisher>
+        <address>
+           <country key="FR"/>
+           <region>Región Metropolitana</region>
+           <settlement type="city">Santiago Centro</settlement>
+           <postCode>69002</postCode>
+           <street>Arturo Prat <num>#23</num></street>
+        </address>
+          <availability status="restricted">
+              <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</licence>
+              <p>Share — copy and redistribute the material in any medium or format</p>
+              <p>Adapt — remix, transform, and build upon the material</p>
+              <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p>
+              <p>NonCommercial — You may not use the material for commercial purposes.</p>
+              <p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p>
+              <p>The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: <email>archivo.central@uchile.cl</email></p>
+        </availability>
+        <date when-iso="2022-05-27"/>
+      </publicationStmt>
+      <notesStmt>
+          <note>Digital editing done as part of an international internship.</note>
+          <note>A first transcription of part of the collection was made in <date when-iso="2014-06">2014</date> by <persName>Cecilia del Carmen Ramallo Díaz</persName>.</note>
+          <note>HTR scanning done at Universidad de Chile avec le moteur kraken et l'application eScriptorium. The HTR models from the transcript are available at this address <ref target="https://github.com/Proyecto-Ocupacion-Araucania-UChile/model-HTR">github</ref></note>
+      </notesStmt>
+      <sourceDesc>
+          <!-- Utiliser element link pour lier jpg dans element s : voir exemple https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html -->
+          <!-- https://tei-openedition.readthedocs.io/fr/latest/tei.teiHeader.html#biblstruct-series -->
+        <bibl> 
+          <series xml:lang="es">
+            <title level="s" type="principal">Colección Manuscritos</title>
+            <title type="subtitle">Pacificacion de la Araucania</title>
+            <respStmt>
+              <resp>Edition by</resp>
+              <name type="person">Alessandro Chiaretti</name>
+              <name type="person">Marcos Parra</name>
+              <name type="org">Área de Información Bibliográfica y Archivística</name>
+            </respStmt>
+            <idno type="caja" n=""/>
+            <idno type="id" n=""/>
+            <extent>
+              <unit type="documentos" quantity="255"/>
+            </extent>
+          </series>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    
+    
+    
+    
+    
+    <encodingDesc>
+      <variantEncoding method="parallel-segmentation" location="internal"/>
+      <editorialDecl>
+        <p>Cette édition amène une lecture critique des Chroniques de Jean Froissart à partir de trois témoins reprennant le tome 1 et 2.</p>
+        <p>L'apparat critique a été constitué comme sélectif, excluant la ponctuation, et comme positif en faisant figurer systématiquement l'ensemble des témoins.</p>
+        <p>L'apparat critique à été déterminé à travers l'application <ref target="https://github.com/itsee-birmingham/standalone_collation_editor">Collatex</ref> et de l'algorithme Dekker</p>
+        <p>Dans le cadre de cette édition, voici la liste des choix qui ont été effectués :
+          <list>
+            <item>Le manuscrit de la Morgan Library situé à <placeName>New York</placeName> apparaît comme la variante la plus proche de la version originale des <bibl>Chroniques de Jean Froissart</bibl>. Le manuscrit de la B.N.F., Paris prend directement source sur celui de New York avec plus de 204 occurences contre seulement 74 avec celui de Courtrais. Les diverses notes indiquent que l'élément original pourrait être le <bibl corresp="#MSBes"> manuscrit MS 865 de Besançon</bibl></item>
+            <item>Le stemma pourraî être représenté ainsi : 
+              <eTree n="stemma">
+                <label>X (MS 865)</label>
+                <eTree>
+                  <label>Cou</label>
+                </eTree>
+                <eTree>
+                  <label>NY</label>
+                  <eLeaf>
+                    <label>Pa</label>
+                  </eLeaf>
+                </eTree>
+              </eTree>
+            </item>
+            <item>Seul deux types de variantes ont été sélectionnés, la variante substantive ou la variante orthographique. La ponctuation n'a pas été prise en compte.</item>
+          </list>
+        </p>
+        <p>
+          <list>
+            <head>Choix de transcriptions</head>
+            <item xml:id="conte">La lecture 'conte d'Artois' se retrouve dans la plupart des manuscrits de la rédaction 'A' du Livre I, mais ils appartiennent tous à la même famille textuelle. Cette lecture est historiquement incorrecte, car le père de Blanche était Odo V, comte de Bourgogne, qui ne portait pas le titre de "comte d'Artois". Il s'agissait plutôt de la mère de Blanche, Mahaut, comtesse d'Artois, qui avait hérité de l'Artois en 1302, peu avant la mort de son mari en 1303. La lecture correcte de l'auteur, 'contesse d'Artois', se trouve dans sept manuscrits de la rédaction 'A' du livre I (Brusssels, II 2551, Leiden, VGGF 9 I, et Paris, BnF, mss. fr. 2640, 2641, 2642, 2675 et 6474), et dans les manuscrits des rédactions 'B', 'C', 'Valenciennes' et 'Amiens'.</item>
+          </list>
+        </p>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <particDesc>
+        <!-- perso --> 
+      </particDesc>
+      <settingDesc>
+        <!-- lieux -->
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      
+    </body> 
+  </text> 
+</TEI> 
