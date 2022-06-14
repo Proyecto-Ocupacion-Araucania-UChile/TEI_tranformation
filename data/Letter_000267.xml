@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title xml:id="">Letter</title>
+        <title xml:id="f_000215">Letter</title>
         <author xml:id="Contreras_Juan">
           <forename>Juan</forename>
           <surname>Contreras</surname>
@@ -37,9 +37,12 @@
         </respStmt>
       </editionStmt>
       <extent>
-        <unit type="page" quantity=""/>
-        <idno xml:id=""/>
-        <link target="img/" source=""/>
+        <unit type="page" quantity="4"/>
+        <idno>000215</idno>
+        <!-- move une graphic zone -->
+        <link xml:id="img_2" target="img/215_1_b.jpg"/>
+        <link xml:id="img_3" target="img/215_2_a.jpg"/>
+        <link xml:id="img_4" target="img/215_2_b.jpg"/>
       </extent>
       <publicationStmt>
           <publisher xml:id="ACAB">Archivo Central Andres Bello</publisher>
@@ -64,7 +67,8 @@
       <notesStmt>
           <note>Digital editing done as part of an international internship.</note>
           <note>A first transcription of part of the collection was made in <date when-iso="2014-06">2014</date> by <persName>Cecilia del Carmen Ramallo Díaz</persName>.</note>
-          <note>HTR scanning done at Universidad de Chile avec le moteur kraken et l'application eScriptorium. The HTR models from the transcript are available at this address <ref target="https://github.com/Proyecto-Ocupacion-Araucania-UChile/model-HTR">github</ref></note>
+        <note>HTR scanning done at Universidad de Chile with kraken engine and the application eScriptorium. 
+          The HTR models from the transcript are available at this address <ref target="https://github.com/Proyecto-Ocupacion-Araucania-UChile/model-HTR">github</ref></note>
       </notesStmt>
       <sourceDesc>
           <!-- Utiliser element link pour lier jpg dans element s : voir exemple https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html -->
@@ -88,57 +92,257 @@
         </bibl>
       </sourceDesc>
     </fileDesc>
-    
-    
-    
-    
-    
     <encodingDesc>
-      <variantEncoding method="parallel-segmentation" location="internal"/>
       <editorialDecl>
-        <p>Cette édition amène une lecture critique des Chroniques de Jean Froissart à partir de trois témoins reprennant le tome 1 et 2.</p>
-        <p>L'apparat critique a été constitué comme sélectif, excluant la ponctuation, et comme positif en faisant figurer systématiquement l'ensemble des témoins.</p>
-        <p>L'apparat critique à été déterminé à travers l'application <ref target="https://github.com/itsee-birmingham/standalone_collation_editor">Collatex</ref> et de l'algorithme Dekker</p>
-        <p>Dans le cadre de cette édition, voici la liste des choix qui ont été effectués :
-          <list>
-            <item>Le manuscrit de la Morgan Library situé à <placeName>New York</placeName> apparaît comme la variante la plus proche de la version originale des <bibl>Chroniques de Jean Froissart</bibl>. Le manuscrit de la B.N.F., Paris prend directement source sur celui de New York avec plus de 204 occurences contre seulement 74 avec celui de Courtrais. Les diverses notes indiquent que l'élément original pourrait être le <bibl corresp="#MSBes"> manuscrit MS 865 de Besançon</bibl></item>
-            <item>Le stemma pourraî être représenté ainsi : 
-              <eTree n="stemma">
-                <label>X (MS 865)</label>
-                <eTree>
-                  <label>Cou</label>
-                </eTree>
-                <eTree>
-                  <label>NY</label>
-                  <eLeaf>
-                    <label>Pa</label>
-                  </eLeaf>
-                </eTree>
-              </eTree>
-            </item>
-            <item>Seul deux types de variantes ont été sélectionnés, la variante substantive ou la variante orthographique. La ponctuation n'a pas été prise en compte.</item>
-          </list>
-        </p>
-        <p>
-          <list>
-            <head>Choix de transcriptions</head>
-            <item xml:id="conte">La lecture 'conte d'Artois' se retrouve dans la plupart des manuscrits de la rédaction 'A' du Livre I, mais ils appartiennent tous à la même famille textuelle. Cette lecture est historiquement incorrecte, car le père de Blanche était Odo V, comte de Bourgogne, qui ne portait pas le titre de "comte d'Artois". Il s'agissait plutôt de la mère de Blanche, Mahaut, comtesse d'Artois, qui avait hérité de l'Artois en 1302, peu avant la mort de son mari en 1303. La lecture correcte de l'auteur, 'contesse d'Artois', se trouve dans sept manuscrits de la rédaction 'A' du livre I (Brusssels, II 2551, Leiden, VGGF 9 I, et Paris, BnF, mss. fr. 2640, 2641, 2642, 2675 et 6474), et dans les manuscrits des rédactions 'B', 'C', 'Valenciennes' et 'Amiens'.</item>
-          </list>
-        </p>
+        <p>Encoding with XML-TEI P5</p>
+        <correction>
+          <p>There are no corrections for spelling or grammatical errors. The transcription is as original as possible. A post-process HTR correction was performed via spellchecker and Levenshtein's Distance algorithm.</p>
+        </correction>
+        <punctuation><p>The punctuation has been transcribed as found.</p></punctuation>
+        <segmentation><p>The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files.</p></segmentation>
+        <normalization>
+          <p>Words that are crossed out, illegible or only interpretable have not been transcribed.</p>
+        </normalization>
       </editorialDecl>
+      <appInfo>
+        <application version="4.1.1" ident="kraken">
+          <label>Kraken HTR</label>
+          <ptr target="https://github.com/mittagessen/kraken"/>
+        </application>
+        <application version="1.0.0" ident="escriptorium">
+          <label>eScriptorium</label>
+          <ptr target="https://gitlab.com/scripta/escriptorium/"/>
+        </application>
+        <application version="0.6.3" ident="pyspellchecker">
+          <label>PYspellchecker</label>
+          <ptr target="https://github.com/barrust/pyspellchecker"/>
+        </application>
+        <application version="3.3" ident="spacy">
+          <label>spaCy</label>
+          <ptr target="https://spacy.io/"/>
+        </application>
+      </appInfo>
     </encodingDesc>
     <profileDesc>
       <particDesc>
-        <!-- perso --> 
+        <!-- perso -->
+        
       </particDesc>
       <settingDesc>
         <!-- lieux -->
       </settingDesc>
     </profileDesc>
   </teiHeader>
+  
+  <facsimile>
+    <surface>
+      <graphic xml:id="img_1" url="img/215_1_a.jpg" width="2309px" height="3749px"/>
+      <zone xml:id="l1" points="">
+        
+      </zone>
+      <zone xml:id="l2" ulx="1354" uly="240" lrx="2336" lry="361"/>
+      <zone xml:id="l3" ulx="460" uly="402" lrx="1412" lry="482"/>
+      <zone xml:id="l4" ulx="1427" uly="389" lrx="2351" lry="479"/>
+      <zone xml:id="l5" ulx="467" uly="508" lrx="1507" lry="616"/>
+      <zone xml:id="l6" ulx="1523" uly="509" lrx="2379" lry="614"/>
+      <zone xml:id="l7" ulx="470" uly="659" lrx="1443" lry="752"/>
+      <zone xml:id="l8" ulx="1458" uly="645" lrx="2411" lry="740"/>
+      <zone xml:id="l9" ulx="474" uly="780" lrx="1512" lry="876"/>
+      <zone xml:id="l10" ulx="1525" uly="762" lrx="2419" lry="862"/>
+      <zone xml:id="l11" ulx="465" uly="924" lrx="1340" lry="1009"/>
+      <zone xml:id="l12" ulx="1349" uly="910" lrx="2349" lry="1001"/>
+      <zone xml:id="l13" ulx="471" uly="1045" lrx="1479" lry="1139"/>
+      <zone xml:id="l14" ulx="1490" uly="1035" lrx="2349" lry="1134"/>
+      <zone xml:id="l15" ulx="477" uly="1175" lrx="1391" lry="1264"/>
+      <zone xml:id="l16" ulx="1404" uly="1172" lrx="2428" lry="1262"/>
+      <zone xml:id="l17" ulx="473" uly="1315" lrx="1323" lry="1403"/>
+      <zone xml:id="l18" ulx="1344" uly="1300" lrx="2420" lry="1384"/>
+      <zone xml:id="l19" ulx="470" uly="1432" lrx="1668" lry="1532"/>
+      <zone xml:id="l20" ulx="1683" uly="1414" lrx="2430" lry="1504"/>
+      <zone xml:id="l21" ulx="467" uly="1558" lrx="1752" lry="1654"/>
+      <zone xml:id="l22" ulx="1758" uly="1522" lrx="2453" lry="1628"/>
+      <zone xml:id="l23" ulx="474" uly="1678" lrx="1529" lry="1774"/>
+      <zone xml:id="l24" ulx="1547" uly="1678" lrx="2446" lry="1766"/>
+      <zone xml:id="l25" ulx="485" uly="1821" lrx="1427" lry="1917"/>
+      <zone xml:id="l26" ulx="1435" uly="1819" lrx="2455" lry="1905"/>
+      <zone xml:id="l27" ulx="482" uly="1968" lrx="1412" lry="2049"/>
+      <zone xml:id="l28" ulx="1428" uly="1947" lrx="2392" lry="2026"/>
+      <zone xml:id="l29" ulx="790" uly="2096" lrx="1586" lry="2165"/>
+    </surface>
+  </facsimile>
+  
   <text>
     <body>
-      
+      <div type="letter" n="1_r" facs="#img_1">
+        <opener>
+          <!-- peut avoir une date avec plusieurs ligne donc ref zone avec 2 id ? -->
+          <dateline corresp=""><placeName>Bahia de Arauco</placeName>, <date when-iso="1860-01-23">Enero 23 de 1860</date></dateline>
+          <salute corresp="">
+            <lg n="1">
+              <l n="1">Mi amigo querido</l>
+            </lg>
+          </salute>
+        </opener>
+        <div type="main" corresp="">
+          <p n="1">
+            <l n="1" corresp="">La tarde del 21 fue para mí de mucho</l>
+            <l n="2">regocijo, no creas que tuve muchachas a</l>
+            <l n="3">mi lado, no nada de eso, ese contento me</l>
+            <l n="4">lo proporcionó la lectura de tu estimable</l>
+            <l n="5">del 19. ¡Cuánto debe alegrar al Gobierno</l>
+            <l n="6">tu conducta, y cuanto lo hará sufrir la</l>
+            <l n="7">pachocha con que andan los de la alta fron-</l>
+            <l n="8">tera! ¿Que no pensaran por allá que mar-</l>
+            <l n="9">chando así te comprometía ó hacen mas di-</l>
+            <l n="10">latados tus procedimientos? Yo no sé que pen-</l>
+            <l n="11">sar, en aquella division tienen elementos</l>
+            <l n="12">superiores a la tuya, anda soy seguro he-</l>
+            <l n="13">chando á perder al Ten^te Coronel de Art^a</l>
+            <l n="14">é In^te D^n José T. Gonzales y quien sabe</l>
+            <l n="15">cuantos personajes como este: en tu pobre</l>
+            <l n="16">y afortunada manufactura de angelitos,</l>
+            <l n="17">no hay notabilidades, pero vive Dios, que</l>
+            <l n="18">hay laureles.</l>
+          </p>
+          <p n="2">
+            <l n="19">A mi llegada á Lota me dijeron: Ma-</l>
+            <l n="20">lo vá el asunto por arriba, los indios han</l>
+            <l n="21">avasallado la division y muértoles más de 20.</l>
+            <l n="22">Mas tarde los indios han vuelto á sorpren-</l>
+            <l n="23">der el ejércíto y han sido tanto los</l>
+            <l n="24">muertos que el jefe ha resuelto volver-</l>
+            <l n="25">se á Los Ángeles. ¿Habrá mayor desca-</l>
+            <l n="26">ro para mentir? Caramba, cuanto siento</l>
+            <l n="27">no poder hechar el guante á estos embusteros</l>
+            <l n="28">para tenerlos á mi lado, soy seguro que no</l>
+            <l n="29">volverian á hacer correr mas balas.</l>
+          </p>
+          <p n="3">
+            <l n="30">Por estos lugares todo marcha en paz;  pero</l>
+            <l n="31">los hombres parece que viven calculando en el</l>
+            <l n="32">fonto que tienen soñando y que nosotros velamos.</l>
+            <l n="33">En la carta adjunta verás que me reitera d^n</l>
+            <l n="34">Cornelio el mismo asunto y juzgando yo que</l>
+            <l n="35">en caso de haberse realizado en el Perú el</l>
+            <l n="36">negocio de las armas deben llegar por mo-</l>
+            <l n="37">mentos, no creo prudente separarme de</l>
+            <l n="38">estos lugares, por el contrario, si pudiese du-</l>
+            <l n="39">plicarme estaría de planton en Coronel</l>
+            <l n="40">para registrar la carga de los buques y vigi-</l>
+            <l n="41">laría lo demas; pero esto no se puede hacer,</l>
+            <l n="42">soy solo, el Meteoro que podia hacerlo</l>
+            <l n="43">tiene órdenes reservadas del Presidente y</l>
+            <l n="44">se mueve cada vez que lo cree conveniente,</l>
+            <l n="45">cosa que no haría yo, porque podrían ju-</l>
+            <l n="46">garmela</l>
+          </p>
+        </div>
+      </div>
+      <div type="letter" n="1_v" facs="#img_2">
+        <div type="main">
+          <p n="1">
+            <l n="1">al menor movimiento.</l>
+          </p>
+          <p n="2">
+            <l n="2">Me alegro mucho de que manden poner</l>
+            <l n="3">fuerza estable en Lebu, así estaremos más a cubier-</l>
+            <l n="4">to; y como tu seras quien la hará colocar, cuento</l>
+            <l n="5">que esto tendrá lugar despues que hayas des-</l>
+            <l n="6">trozado a los pícaros indios. Ojalá te manden</l>
+            <l n="7">300 infantes y 100 carabineros para los destaca-</l>
+            <l n="8">mentos.</l>           
+          </p>
+          <p n="3">
+            <l n="9">D^n Ángel Custodio Gallo debe haber lle-</l>
+            <l n="10">gado al Perú, esto debemos saberlo muy luego</l>
+            <l n="11">por que el Vapor debe llegar hoy á Valparaiso con</l>
+            <l n="12">la noticia; de consiguiente al General D^n Cus-</l>
+            <l n="13">todio será aquién tendremos que combatir,</l>
+            <l n="14">y no á D^n Pedro Leon.</l>
+          </p>
+          <p n="4">
+            <l n="15">Mercurios no he recibido, deben estar</l>
+            <l n="16">en Santa Juana los que me trajo el “Cloda”</l>
+            <l n="17">por que tu debes saber que el correo no lle-</l>
+            <l n="18">ga hasta el 1º, pero todos los que me ven-</l>
+            <l n="19">gan por el Independencia te los remitiré.</l>
+            <l n="20">Como no recibí correspondencia ofi-</l>
+            <l n="21">cial de la noticia que me das en la carta</l>
+            <l n="22">me he visto obligado á remitir un oficio</l>
+            <l n="23">haciendo figurar una comunicación tuya,</l>
+            <l n="24">soy seguro que la públicarán. No te eno-</l>
+            <l n="25">jes por esto, lo he hecho a fin de que</l>
+            <l n="26">nuestros conciudadanos tengan noticia de</l>
+            <l n="27">tus hechos y no salgan los estrilones del</l>
+            <l n="28">Mercurio con el desentono de que nada</l>
+            <l n="29">se dice de tu división sin embargo de</l>
+            <l n="30">llegar vapores del sud. A D^n Cornelio</l>
+            <l n="31">le digo que el parte tuyo habrá mar-</l>
+            <l n="32">chado por conducto del Int^te de Concep-</l>
+            <l n="33">cion, pero que por no tener dato seguro</l>
+            <l n="34">lo hago así. Posteriormente he sabido</l>
+            <l n="35">que el propio que mandaste con los par-</l>
+            <l n="36">tes no ha llegado aun, quien sabe que</l>
+            <l n="37">diablos le ha sucedido.</l>
+          </p>
+          <p n="5">
+            <l n="38">Hay siete individuos de tropa</l>
+            <l n="39">de los dejados por enfermos, comple-</l>
+            <l n="40">tamente buenos, a más uno manda-</l>
+            <l n="41">do hoy como desertor, y creyendo</l>
+            <l n="42">que esta gente puede serte útil, he</l>
+            <l n="43">oficiado al Gob^o, dándole cuenta de</l>
+            <l n="44">estar esa tropa en estado de mar-</l>
+            <l n="45">char, pero este ángel de Dios se de-</l>
+            <l n="46">sentiende de mi nota y me dice</l>
+            <l n="47">que junto con aquellos ponga á</l>
+            <l n="48">tu disposición el desertor, mala</l>
+            <l n="49">inteligencia que me obligó a pasarle</l>
+            <l n="50">una nueva nota y no sé el resulta</l>
+          </p>
+        </div>
+      </div>
+      <div type="letter" n="2_r" facs="#img_3">
+        <div type="main">
+          <p n="1">
+            <l n="1">do que consiga.</l>
+            <l n="2">Mañana salgo para Coronel y Lota</l>
+            <l n="3">y desde aquellos puntos te escribiré dán-</l>
+            <l n="4">dote cuenta de toda ocurrencia de im-</l>
+            <l n="5">portancia.</l>
+          </p> 
+        </div>
+       <closer>
+          <salute>
+            <lg n="1">
+              <l n="1">Adiós querido amigo hasta que</l>
+              <l n="2">tengamos el gusto de abrazarnos ha-</l>
+              <l n="3">blaremos largo.</l>
+            </lg>
+            <lg n="2">
+              <l n="4">Tu af^mo</l>
+            </lg>
+          </salute>
+         <signed>Manuel 2^o Escala</signed>
+        </closer>
+        <postscript>
+          <p n="1">
+            <l n="1">Nada hay hasta ahora de cambio</l>
+            <l n="2">de ministros.</l>
+          </p>
+          <p n="2">
+            <l n="3">llegado á Concepcion a dónde perma-</l>
+            <l n="4">D^n Rafael Soto Mayor debe haber</l>
+            <l n="5">necerá por tres meses; queda desem</l>
+            <l n="6">peñando su ministerio el Sñr Novoa.</l>
+            <l n="7">Los oficiales corresponden tus recuer-</l>
+            <l n="8">dos y el Gringo muy {dontento} con su {langa}.</l>
+          </p>
+        </postscript>
+      </div>
+      <div type="letter" n="2_v" facs="#img_4">
+        <note type="id">000215</note>
+      </div>
     </body> 
   </text> 
 </TEI> 
