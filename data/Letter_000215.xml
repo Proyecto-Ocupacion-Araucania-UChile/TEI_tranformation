@@ -5,9 +5,10 @@
     <fileDesc>
       <titleStmt>
         <title xml:id="f_000215">Letter</title>
-        <author xml:id="Contreras_Juan">
-          <forename>Juan</forename>
-          <surname>Contreras</surname>
+        <author xml:id="Manuel_Escala">
+          <forename>Manuel</forename>
+          <addName>Segundo</addName>
+          <surname>Escala</surname>
         </author>
         <editor>
             <orgName ref="ACAB">Archivo Central Andres Bello</orgName>
@@ -37,12 +38,7 @@
         </respStmt>
       </editionStmt>
       <extent>
-        <unit type="page" quantity="4"/>
-        <idno>000215</idno>
-        <!-- move une graphic zone -->
-        <link xml:id="img_2" target="img/215_1_b.jpg"/>
-        <link xml:id="img_3" target="img/215_2_a.jpg"/>
-        <link xml:id="img_4" target="img/215_2_b.jpg"/>
+        <unit type="images" quantity="4"/>
       </extent>
       <publicationStmt>
           <publisher xml:id="ACAB">Archivo Central Andres Bello</publisher>
@@ -83,8 +79,8 @@
               <name type="person">Marcos Parra</name>
               <name type="org">Área de Información Bibliográfica y Archivística</name>
             </respStmt>
-            <idno type="caja" n=""/>
-            <idno type="id" n=""/>
+            <idno type="caja" n="3"/>
+            <idno type="id" n="AH0215"/>
             <extent>
               <unit type="documentos" quantity="255"/>
             </extent>
@@ -134,59 +130,36 @@
     </profileDesc>
   </teiHeader>
   
-  <facsimile>
-    <surface>
-      <graphic xml:id="img_1" url="img/215_1_a.jpg" width="2309px" height="3749px"/>
-      <zone xml:id="l1" points="">
-        
+  <sourceDoc>
+    <surface xml:id="img_1" n="1">
+      <graphic url="img/215_1_a.jpg" width="2309px" height="3749px"/>
+      <zone xml:id="img_1_z1" type="MainZone_Text" points="2259,412 2246,3458 2059,3508 912,3495 324,3570 412,2408 412,1712 362,1571 374,499 668,394 668,395 1973,395 1973,389">
+        <zone xml:id="img_1_z1_l1" type="DefaultLine" points="603,462 593,412 656,390 659,390 659,390 662,390 887,390 887,390 887,390 890,390 949,409 968,412 996,406 1056,396 1056,396 1059,396 1059,396 1059,396 1109,406 1140,412 1152,406 1187,387 1187,387 1187,387 1190,387 1190,387 1190,387 1193,387 1193,387 1193,387 1196,387 1196,387 1199,387 1199,387 1199,390 1218,406 1224,409 1246,406 1340,387 1340,387 1340,387 1343,387 1343,387 1346,387 1399,403 1424,409 1468,403 1531,393 1531,393 1534,393 1715,399 1802,403 1809,399 1824,387 1824,387 1827,387 1827,387 1827,387 1830,387 1830,387 1834,387 1834,387 1834,387 1837,387 1837,387 1840,387 1840,387 1840,387 1852,399 1862,406 2237,396 2246,453 2243,474 603,481">
+          <path points="603,462 2246,453"/>
+        </zone>
+        <zone xml:id="img_1_z1_l2" type="DefaultLine" points="384,531 381,471 1043,481 1093,474 1146,465 1146,465 1149,465 1149,465 1149,465 1193,474 1224,481 1243,474 1274,462 1274,462 1277,462 1277,462 1281,462 1281,462 1281,462 1284,462 1284,462 1284,462 1287,462 1287,462 1299,474 1302,474 1302,474 1318,462 1318,462 1321,462 1321,462 1321,462 1324,462 1324,462 1327,462 1468,462 1468,462 1468,462 1471,462 1471,462 1471,462 1474,462 1474,462 1490,474 1496,477 1524,474 1671,462 1671,462 1674,462 1674,462 1677,462 1677,462 1677,462 1680,462 1680,462 1680,465 1693,477 1696,481 1865,481 1871,477 1924,462 1927,462 1927,462 1930,462 1930,462 1930,462 1934,462 1934,462 1934,462 1965,477 1968,481 2180,481 2187,524 2184,546 384,549">
+          <path points="384,531 2187,524"/>
+        </zone>
       </zone>
-      <zone xml:id="l2" ulx="1354" uly="240" lrx="2336" lry="361"/>
-      <zone xml:id="l3" ulx="460" uly="402" lrx="1412" lry="482"/>
-      <zone xml:id="l4" ulx="1427" uly="389" lrx="2351" lry="479"/>
-      <zone xml:id="l5" ulx="467" uly="508" lrx="1507" lry="616"/>
-      <zone xml:id="l6" ulx="1523" uly="509" lrx="2379" lry="614"/>
-      <zone xml:id="l7" ulx="470" uly="659" lrx="1443" lry="752"/>
-      <zone xml:id="l8" ulx="1458" uly="645" lrx="2411" lry="740"/>
-      <zone xml:id="l9" ulx="474" uly="780" lrx="1512" lry="876"/>
-      <zone xml:id="l10" ulx="1525" uly="762" lrx="2419" lry="862"/>
-      <zone xml:id="l11" ulx="465" uly="924" lrx="1340" lry="1009"/>
-      <zone xml:id="l12" ulx="1349" uly="910" lrx="2349" lry="1001"/>
-      <zone xml:id="l13" ulx="471" uly="1045" lrx="1479" lry="1139"/>
-      <zone xml:id="l14" ulx="1490" uly="1035" lrx="2349" lry="1134"/>
-      <zone xml:id="l15" ulx="477" uly="1175" lrx="1391" lry="1264"/>
-      <zone xml:id="l16" ulx="1404" uly="1172" lrx="2428" lry="1262"/>
-      <zone xml:id="l17" ulx="473" uly="1315" lrx="1323" lry="1403"/>
-      <zone xml:id="l18" ulx="1344" uly="1300" lrx="2420" lry="1384"/>
-      <zone xml:id="l19" ulx="470" uly="1432" lrx="1668" lry="1532"/>
-      <zone xml:id="l20" ulx="1683" uly="1414" lrx="2430" lry="1504"/>
-      <zone xml:id="l21" ulx="467" uly="1558" lrx="1752" lry="1654"/>
-      <zone xml:id="l22" ulx="1758" uly="1522" lrx="2453" lry="1628"/>
-      <zone xml:id="l23" ulx="474" uly="1678" lrx="1529" lry="1774"/>
-      <zone xml:id="l24" ulx="1547" uly="1678" lrx="2446" lry="1766"/>
-      <zone xml:id="l25" ulx="485" uly="1821" lrx="1427" lry="1917"/>
-      <zone xml:id="l26" ulx="1435" uly="1819" lrx="2455" lry="1905"/>
-      <zone xml:id="l27" ulx="482" uly="1968" lrx="1412" lry="2049"/>
-      <zone xml:id="l28" ulx="1428" uly="1947" lrx="2392" lry="2026"/>
-      <zone xml:id="l29" ulx="790" uly="2096" lrx="1586" lry="2165"/>
     </surface>
-  </facsimile>
+  </sourceDoc>
+  
   
   <text>
     <body>
       <div type="letter" n="1_r" facs="#img_1">
         <opener>
           <!-- peut avoir une date avec plusieurs ligne donc ref zone avec 2 id ? -->
-          <dateline corresp=""><placeName>Bahia de Arauco</placeName>, <date when-iso="1860-01-23">Enero 23 de 1860</date></dateline>
-          <salute corresp="">
-            <lg n="1">
+          <dateline><placeName>Bahia de Arauco</placeName>, <date when-iso="1860-01-23">Enero 23 de 1860</date></dateline>
+          <salute>
               <l n="1">Mi amigo querido</l>
             </lg>
           </salute>
         </opener>
-        <div type="main" corresp="">
+        <div type="main" corresp="#img_1_z1">
           <p n="1">
-            <l n="1" corresp="">La tarde del 21 fue para mí de mucho</l>
-            <l n="2">regocijo, no creas que tuve muchachas a</l>
+            <l n="1" corresp="img_1_z1_l1">La tarde del 21 fue para mí de mucho</l>
+            <l n="2" corresp="img_1_z1_l2">regocijo, no creas que tuve muchachas a</l>
             <l n="3">mi lado, no nada de eso, ese contento me</l>
             <l n="4">lo proporcionó la lectura de tu estimable</l>
             <l n="5">del 19. ¡Cuánto debe alegrar al Gobierno</l>
@@ -323,7 +296,7 @@
               <l n="4">Tu af^mo</l>
             </lg>
           </salute>
-         <signed>Manuel 2^o Escala</signed>
+         <signed><persName ref="#Manuel_Escala">Manuel 2^o Escala</persName></signed>
         </closer>
         <postscript>
           <p n="1">
