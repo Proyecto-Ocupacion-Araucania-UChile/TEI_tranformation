@@ -69,7 +69,8 @@
       <sourceDesc>
           <!-- Utiliser element link pour lier jpg dans element s : voir exemple https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html -->
           <!-- https://tei-openedition.readthedocs.io/fr/latest/tei.teiHeader.html#biblstruct-series -->
-        <bibl> 
+        <bibl>
+          <ser
           <series xml:lang="es">
             <title level="s" type="principal">Colección Manuscritos</title>
             <title type="subtitle">Pacificacion de la Araucania</title>
@@ -153,7 +154,6 @@
           <dateline><placeName>Bahia de Arauco</placeName>, <date when-iso="1860-01-23">Enero 23 de 1860</date></dateline>
           <salute>
               <l n="1">Mi amigo querido</l>
-            </lg>
           </salute>
         </opener>
         <div type="main" corresp="#img_1_z1">
