@@ -81,9 +81,7 @@
             </respStmt>
             <idno type="caja" n="3"/>
             <idno type="id" n="AH0215"/>
-            <extent>
-              <unit type="documentos" quantity="255"/>
-            </extent>
+            <note><unit type="documentos" quantity="255"/></note>
           </series>
         </bibl>
       </sourceDesc>
