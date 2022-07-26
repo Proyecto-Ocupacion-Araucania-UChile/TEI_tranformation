@@ -18,7 +18,7 @@ def run():
     for file in files:
         xml = XML(file.name, file.path)
         xml.preparation_metadada()
-        print(xml.date)
+        print(xml.tags)
 
 
 if __name__ == '__main__':

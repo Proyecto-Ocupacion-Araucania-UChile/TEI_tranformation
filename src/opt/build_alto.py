@@ -6,6 +6,7 @@ from ..build import XML
 
 class ALTO(XML):
 
+    @staticmethod
     def labels(self):
         """Creates a dictionary of a tag's ID (key) and its LABEL (value).
            The IDs are unique to each document and must be recalculated for each directory.
