@@ -4,7 +4,7 @@ from lxml import etree
 from ..build import XML
 
 
-class ALTO(XML):
+class ALTO:
 
     @staticmethod
     def labels(self):

@@ -41,14 +41,15 @@ class Inventory:
 
     def metadata(self) -> namedtuple:
         row = self.row
-        Metadata = namedtuple('Metadata', ['box', 'type_file', 'author', 'date', 'loc', 'nb_page'])
+        Metadata = namedtuple('Metadata', ['box', 'type_file', 'title', 'author', 'date', 'loc', 'nb_page'])
         box = row.Box.iloc[0]
         author = self._author()
         type_file = row.Type.iloc[0]
+        title = row.Title.iloc[0]
         date = self._date(row['Date']).item(0)
         nb_page = row['files'].str.split(";").str.len() - 1
         if row.Location.array[0] != np.nan:
             loc = row['Location'].apply(lambda x: str(x).split(';'))
         else:
             loc = "Unknow"
-        return Metadata(box, type_file, author, date, loc, nb_page)
+        return Metadata(box, type_file, title, author, date, loc, nb_page)

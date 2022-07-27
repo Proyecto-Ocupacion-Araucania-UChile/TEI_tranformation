@@ -17,8 +17,10 @@ def run():
 
     for file in files:
         xml = XML(file.name, file.path)
-        xml.preparation_metadada()
-        print(xml.tags)
+        xml._preparation_metadada()
+
+        for i in range(len(xml.meta.author)):
+            print(type(xml.meta.author[i]))
 
 
 if __name__ == '__main__':
