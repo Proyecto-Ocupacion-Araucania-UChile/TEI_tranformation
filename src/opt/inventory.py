@@ -27,12 +27,12 @@ class Inventory:
     def _author(self) -> list:
         row = self.row
         list_author = []
-        if row['Author2'].iloc[0] != np.nan:
-            list_author.append(row.Author.array[0])
+        if row['Author'].iloc[0] is not np.nan:
+            list_author.append(row.Author.iloc[0])
         else:
             list_author.append("Unknow")
-        if row['Author2'].iloc[0] != np.nan:
-            list_author.append(row.Author2.array[0])
+        if row['Author2'].iloc[0] is not np.nan:
+            list_author.append(row.Author2.iloc[0])
         return list_author
 
     @staticmethod

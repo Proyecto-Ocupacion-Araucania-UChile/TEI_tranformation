@@ -1,7 +1,7 @@
 from lxml import etree
 
 from .opt.inventory import Inventory
-from .teiheader import DefaultTree
+from .teiheader import TreeHeader
 
 
 class XML:
@@ -9,6 +9,7 @@ class XML:
     tags = None
     root = None
     meta = None
+    teiheader = None
 
     def __init__(self, name, path):
         self.name = name
@@ -20,14 +21,18 @@ class XML:
         from .opt.build_alto import ALTO
 
         self.tags = ALTO.labels(self)
-        self.root = etree.Element("TEI", {"xmlns": "http://www.tei-c.org/ns/1.0"})
+        self.root = etree.Element("TEI", {"xmlns": "http://www.tei-c.org/ns/1.0", 'xml': 'http://www.w3.org/XML/1998/namespace'})
         data_csv = Inventory(self.name)
         self.meta = data_csv.metadata()
 
     def building_teiheader(self):
-        self._preparation_metadada()
-        teiheader = DefaultTree(meta=self.meta, id_archive=self.id_archive)
-        teiheader_build = teiheader.build()
+        if self.teiheader is not None:
+            self._preparation_metadada()
+            teiheader = TreeHeader(meta=self.meta, id_archive=self.id_archive)
+            teiheader_build = teiheader.build()
+            return teiheader_build
+
+    
 
 
 
