@@ -3,7 +3,7 @@ from .opt.inventory import Inventory
 from lxml import etree as ET
 from collections import namedtuple, defaultdict
 
-from .opt.utils import read_json, date_process
+from .opt.utils import Tools
 
 
 class Index:
@@ -33,7 +33,7 @@ class TreeHeader:
         self.date = meta.date
         self.loc = meta.loc
         self.nb_page = meta.nb_page
-        self.resp = read_json("data/database/resp.json")
+        self.resp = Tools.read_json("data/database/resp.json")
         self.id_archive = id_archive
 
     def build(self) -> ET._Element:
@@ -110,7 +110,7 @@ class TreeHeader:
             auteur.text = self.terms[i]
         ### date
         date = ET.SubElement(publicationStmt, "date")
-        date.set("when-iso", date_process())
+        date.set("when-iso", Tools.date_process())
 
         ## NoteStmt
         notesStmt = ET.SubElement(fileDesc, "notesStmt")

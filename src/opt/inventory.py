@@ -5,7 +5,7 @@ import numpy as np
 from numpy import ndarray
 from collections import namedtuple
 
-from .utils import replace_pattern
+from .utils import Tools
 
 
 class Inventory:
@@ -37,7 +37,7 @@ class Inventory:
 
     @staticmethod
     def _date(date: Series) -> ndarray:
-        return np.vectorize(replace_pattern)(date, "/", "-")
+        return np.vectorize(Tools.replace_pattern)(date, "/", "-")
 
     def metadata(self) -> namedtuple:
         row = self.row
