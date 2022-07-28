@@ -2,6 +2,7 @@ import re
 import datetime
 import json
 import numpy as np
+from lxml import etree as ET
 
 
 class Tools:
@@ -22,6 +23,11 @@ class Tools:
         with open(file, encoding=encoding, mode="r") as f:
             f_json = json.load(f)
         return f_json
+
+    @staticmethod
+    def write_xml(file, root):
+        with open(f'./data/output/{file}.xml', 'wb') as f:
+            ET.ElementTree(root).write(f, encoding="utf-8", xml_declaration=True, pretty_print=True)
 
 
 ###build a fumction to find if id exist. if exist find id in csv and put in ref
