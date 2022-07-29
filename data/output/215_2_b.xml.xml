@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml="http://www.w3.org/XML/1998/namespace">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Carta del 23 de enero de 1860 de Manuel Segundo Escala</title>
+        <author>Escala, Manuel Segundo</author>
+        <editor>
+          <orgName>Archivo Central Andres Bello</orgName>
+        </editor>
+      </titleStmt>
+      <editionStmt>
+        <respStmt>
+          <resp xml:id="DirSc">Scientific Director of the edition</resp>
+          <persName>
+            <forename>Alessandro</forename>
+            <surname>Chiaretti</surname>
+            <roleName>Professor and archivist, responsable Área de Información Bibliográfica y Archivística</roleName>
+            <affiliation>Archivo Central Andres Bello | Universidad de Chile</affiliation>
+          </persName>
+        </respStmt>
+        <respStmt>
+          <resp xml:id="Enc">In charge of digital encoding</resp>
+          <persName>
+            <forename>Maxime</forename>
+            <surname>Humeau</surname>
+            <roleName>Student, trainee</roleName>
+            <affiliation>Ecole nationale des chartes | PSL</affiliation>
+          </persName>
+        </respStmt>
+      </editionStmt>
+      <extent>
+        <measure unit="images" n="65    4&#10;Name: files, dtype: int64"/>
+      </extent>
+      <publicationStmt>
+        <publisher xml:id="ACAB">Archivo Central Andres Bello</publisher>
+        <authority>Área de Información Bibliográfica y Archivística</authority>
+        <address>
+          <country key="CL"/>
+          <address>Región Metropolitana</address>
+          <settlement type="city">Santiago Centro</settlement>
+          <postCode>8320000</postCode>
+          <street>Arturo Prat</street>
+          <street>#23</street>
+        </address>
+        <availability status="restricted">
+          <licence target="https://creativecommons.org/licenses/by-sa/3.0/deed.fr">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</licence>
+          <p>Share — copy and redistribute the material in any medium or format</p>
+          <p>Adapt — remix, transform, and build upon the material</p>
+          <p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p>
+          <p>NonCommercial — You may not use the material for commercial purposes.</p>
+          <p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p>
+          <p>The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: &lt;email&gt;archivo.central@uchile.cl&lt;/email&gt;</p>
+        </availability>
+        <date when-iso="2022-07-29"/>
+      </publicationStmt>
+      <notesStmt>
+        <note>Digital editing done as part of an international internship.</note>
+        <note>A first transcription of part of the collection was made in &lt;date when-iso="2014-06"&gt;2014&lt;/date&gt; by &lt;persName&gt;Cecilia del Carmen Ramallo Díaz&lt;/persName&gt;.</note>
+        <note>HTR scanning done at Universidad de Chile with kraken engine and the application eScriptorium. The HTR models from the transcript are available at this address &lt;ref target="https://github.com/Proyecto-Ocupacion-Araucania-UChile/model-HTR"&gt;github&lt;/ref&gt;</note>
+      </notesStmt>
+      <sourceDesc>
+        <bibl>
+          <series xml:lang="es">
+            <title series="s" type="principal">Colección Manuscritos</title>
+            <title type="subtitle">Pacificacion de la Araucania</title>
+            <respStmt>
+              <resp>Classification and conservation by</resp>
+              <persName ref="#DirSc">Alessandro Chiaretti</persName>
+              <persName xml:id="M_Parra">Marcos Parra</persName>
+              <orgName ref="#ACAB">Área de Información Bibliográfica y Archivística</orgName>
+            </respStmt>
+            <idno type="caja" n="3"/>
+            <idno type="id" n="AH0215"/>
+            <note>
+              <unit type="documents" quantity="255"/>
+            </note>
+          </series>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc/>
+      <settingDesc/>
+    </profileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Encoding with XML-TEI P5</p>
+        <correction>
+          <p>There are no corrections for spelling or grammatical errors. The transcription is as original as possible. A post-process HTR correction was performed via spellchecker and Levenshtein's Distance algorithm.</p>
+        </correction>
+        <punctuation>&lt;p&gt;The punctuation has been transcribed as found.&lt;/p&gt;</punctuation>
+        <segmentation target="https://github.com/segmonto">&lt;p&gt;The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.&lt;/p&gt;</segmentation>
+        <normalization>&lt;p&gt;Words that are crossed out, illegible or only interpretable have not been transcribed.&lt;/p&gt;</normalization>
+      </editorialDecl>
+      <appInfo>
+        <application version="4.1.1" ident="kraken">
+          <label>Kraken HTR</label>
+          <ptr target="https://github.com/mittagessen/kraken"/>
+        </application>
+        <application version="1.0.0" ident="escriptorium">
+          <label>eScriptorium</label>
+          <ptr target="https://gitlab.com/scripta/escriptorium"/>
+        </application>
+        <application version="0.6.3" ident="pyspellchecker">
+          <label>PYspellchecker</label>
+          <ptr target="https://github.com/barrust/pyspellchecker"/>
+        </application>
+        <application version="3.4" ident="spacy">
+          <label>spaCy</label>
+          <ptr target="https://github.com/explosion/spaCy"/>
+        </application>
+      </appInfo>
+    </encodingDesc>
+  </teiHeader>
+  <sourceDoc>
+    <surfaceGrp>
+      <surface xml:id="215_2_b" n="11" ulx="0" uly="0" lrx="2319" lry="3774">
+        <graphic url="./input/215_2_b.jpg"/>
+        <zone xml:id="215_2_b_z1" type="NumberingZone" subtype="id" n="none" points="1916,3594 1617,3569 1629,3484 1928,3497 1941,3544" source="./input/215_2_b.jpg" corresp="eSc_textblock_91edcf20">
+          <zone xml:id="215_2_b_z1_l1" type="DefaultLine" subtype="none" n="1" points="1629,3556 1629,3487 1922,3500 1922,3572 1916,3597 1623,3575" source="./input/215_2_b.jpg" corresp="eSc_line_c5bd97f4">
+            <path xml:id="215_2_b_z1_l1_p" points="1629,3556 1922,3572"/>
+            <line xml:id="215_2_b_z1_l1_t">000215</line>
+          </zone>
+        </zone>
+      </surface>
+    </surfaceGrp>
+  </sourceDoc>
+</TEI>

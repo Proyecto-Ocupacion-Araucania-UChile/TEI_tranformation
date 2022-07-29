@@ -1,8 +1,8 @@
-from collections import namedtuple
+from collections import namedtuple, defaultdict
 from pathlib import Path
+import re
 
 from src.build import XML
-from src.sourceDoc import SourceDoc
 
 
 #https://github.com/e-ditiones/Annotator to apply NER
@@ -10,18 +10,19 @@ from src.sourceDoc import SourceDoc
 def run():
     p = Path('./data/input/')
 
-    files = []
-    Docs = namedtuple("Doc", ["name", "path"])
+    files = defaultdict(list)
+    Docs = namedtuple("Doc", ["name", "path", "id_group"])
     for doc in sorted(list(p.glob('*.xml'))):
-        files.append(Docs(doc.name, doc))
+        matching_id = re.match(r"^(\d+)_", doc.name)
+        id_ = matching_id.group(1)
+        docs = Docs(doc.name, doc, str(id_))
+        files[str(id_)].append(docs)
 
-    td_elem = None
 
     for file in files:
         xml = XML(file.name, file.path)
-        teiHeader = xml.building_teiheader()
-        tags = SourceDoc._labels(file.path)
-        print(tags)
+        xml.building_teiheader()
+        xml.building_sourcedesc()
 
 
 
