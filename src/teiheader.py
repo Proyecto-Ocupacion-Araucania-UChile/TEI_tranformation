@@ -25,7 +25,8 @@ class TreeHeader:
              "ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.",
              "The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: <email>archivo.central@uchile.cl</email>"]
 
-    def __init__(self, meta, id_archive):
+    def __init__(self, root, meta, id_archive):
+        self.root = root
         self.author = meta.author
         self.box = meta.box
         self.type_file = meta.type_file
@@ -39,7 +40,7 @@ class TreeHeader:
     def build(self) -> ET._Element:
 
         #   Base
-        teiHeader = ET.Element("teiHeader")
+        teiHeader = ET.SubElement(self.root, "teiHeader")
 
         # Generate attributs namespace
         ET.register_namespace("xml", TreeHeader.NS_XML)
@@ -177,5 +178,3 @@ class TreeHeader:
         # profileDesc
         ET.SubElement(profileDesc, "particDesc")
         ET.SubElement(profileDesc, "settingDesc")
-
-        return teiHeader

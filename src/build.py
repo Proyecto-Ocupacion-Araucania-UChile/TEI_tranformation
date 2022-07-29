@@ -2,14 +2,13 @@ from lxml import etree as ET
 
 from .opt.inventory import Inventory
 from .teiheader import TreeHeader
-
+from .sourceDoc import SourceDoc
 
 class XML:
     NS = {'alto': "http://www.loc.gov/standards/alto/ns-v4#"}
     tags = None
     root = None
     meta = None
-    teiheader = None
 
     def __init__(self, name, path):
         self.name = name
@@ -26,11 +25,16 @@ class XML:
         self.meta = data_csv.metadata()
 
     def building_teiheader(self):
-        if self.teiheader is not None:
-            self._preparation_metadada()
-            teiheader = TreeHeader(meta=self.meta, id_archive=self.id_archive)
-            teiheader_build = teiheader.build()
-            ET.SubElement(self.root, teiheader_build)
+        self._preparation_metadada()
+        teiheader = TreeHeader(self.root, meta=self.meta, id_archive=self.id_archive)
+        teiheader.build()
+        truc = ET.tostring(self.root, encoding='us-ascii', method='xml', xml_declaration=True, pretty_print=True)
+        print(truc)
+
+    def building_sourcedesc(self):
+        sourcedoc = SourceDoc.sourcedoc(self.path, self.root, self.tags)
+        return sourcedoc
+
 
 
 
