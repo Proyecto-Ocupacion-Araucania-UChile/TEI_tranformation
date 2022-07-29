@@ -12,16 +12,13 @@ class Inventory:
     csv = "data/database/araucania_inventory.csv"
     df = pd.read_csv(csv, encoding="utf-8")
 
-    def __init__(self, filename):
-        self.filename = filename
-        self.id = self.__find_id__()
+    def __init__(self, id_):
+        self.id = int(id_)
         self.row = self._row_select()
-
-    def __find_id__(self) -> int:
-        return int(self.filename[:3])
 
     def _row_select(self) -> DataFrame:
         df = self.df
+        print(df.loc[df['Id'] == self.id])
         return df.loc[df['Id'] == self.id]
 
     def _author(self) -> list:

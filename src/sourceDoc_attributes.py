@@ -11,7 +11,7 @@ class Attributes:
         self.root = alto_root
         self.tags = tags
 
-    def surface(self):
+    def get_surface(self):
         """Create attributes for the TEI <surface> element using data parsed from the ALTO file's <Page> element.
             The TEI attributes for <surface> are: @n (page number),
                                                 @ulx (upper left x-axis pixel position, always 0),
@@ -35,7 +35,7 @@ class Attributes:
 
         return attributes
 
-    def zone(self, parent, target):
+    def get_zone(self, parent, target):
         """Create attributes for one of the two types of TEI <zone> elements: (a) TextBlock and (b) TextLine.
         Args:
             parent (str): parent's entity name and @ID in the ALTO file for the entity being transformed into a <zone>, followed by a '/'

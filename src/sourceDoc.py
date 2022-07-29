@@ -1,23 +1,22 @@
 from lxml import etree
 
 from .sourceDoc_attributes import Attributes
-from .surface_and_desc import SurfaceTree
+from src.opt.surface_and_desc import SurfaceTree
 
 
 class SourceDoc:
     NS = {'a': "http://www.loc.gov/standards/alto/ns-v4#"}  # namespace for the Alto xml
+    sourceDoc = None
 
     @staticmethod
-    def sourcedoc(document, tei_root, tags):
+    def sourcedoc_build(document, sourcedoc, tags):
         """Creates the <sourceDoc> for an XML-TEI file using data parsed from a series of ALTO files.
             The <sourceDoc> collates each ALTO file, which represents one page of a document, into a wholistic
             description of the document.
         """
-        # ordered_files = Files(document, filepath_list).order_files()  # format_files.py
 
-        # create <sourceDoc> and its child <surfaceGrp>
-        sourceDoc = etree.SubElement(tei_root, "sourceDoc")
-        surfaceGrp = etree.SubElement(sourceDoc, "surfaceGrp")
+        # create <surfaceGrp>
+        surfaceGrp = etree.SubElement(sourcedoc, "surfaceGrp")
 
         lines_on_page = 0
         # On retype le chemin de fichier en chaîne pour éviter TypeError: cannot parse from 'PosixPath'
@@ -30,17 +29,17 @@ class SourceDoc:
 
         # -- SURFACE --
         # for every page in the document, create a <surface> and assign its attributes
-        surface = stree.surface(surfaceGrp, attributes.surface())
+        surface = stree.surface(surfaceGrp, attributes.get_surface())
 
         # -- TEXTBLOCK --
         # for every <Page> in this ALTO file, create a <zone> for every <TextBlock> and assign the latter's attributes
-        textblock_atts, processed_textblocks = attributes.zone("PrintSpace/", "TextBlock")
+        textblock_atts, processed_textblocks = attributes.get_zone("PrintSpace/", "TextBlock")
         for textblock_count, processed_textblock in enumerate(processed_textblocks):
             text_block = stree.zone1(surface, textblock_atts, textblock_count)
 
             # -- TEXTLINE --
             # for every <TextBlock> in this ALTO file that has at least one <TextLine>, create a <zone> and assign its attributes
-            textline_atts, processed_textlines = attributes.zone(f'TextBlock[@ID="{processed_textblock}"]/',
+            textline_atts, processed_textlines = attributes.get_zone(f'TextBlock[@ID="{processed_textblock}"]/',
                                                                  "TextLine")
             if len(processed_textlines) > 0:
                 for textline_count, processed_textline in enumerate(processed_textlines):

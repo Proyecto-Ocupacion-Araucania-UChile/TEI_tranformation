@@ -5,7 +5,7 @@ import re
 from src.build import XML
 
 
-#https://github.com/e-ditiones/Annotator to apply NER
+# https://github.com/e-ditiones/Annotator to apply NER voir aussi hugoscheitaeur
 
 def run():
     p = Path('./data/input/')
@@ -18,16 +18,10 @@ def run():
         docs = Docs(doc.name, doc, str(id_))
         files[str(id_)].append(docs)
 
-
-    for file in files:
-        xml = XML(file.name, file.path)
+    for id_group in dict(files):
+        xml = XML(str(id_group), files[id_group])
         xml.building_teiheader()
-        xml.building_sourcedesc()
-
-
-
-
-
+        #xml.building_sourcedesc()
 
 
 if __name__ == '__main__':
