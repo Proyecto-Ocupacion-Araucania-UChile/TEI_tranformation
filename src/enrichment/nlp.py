@@ -6,9 +6,11 @@ from collections import namedtuple
 class NLP:
     Text = None
     GPU = False
+    model = "data/models/araucania_NER_model"
 
-    def __init__(self, root, model):
-        self.model = model
+    def __init__(self, root, model=None):
+        if model is not None:
+            self.model = model
         self.nlp = self._init_model_()
         self.root = root
 
@@ -22,8 +24,8 @@ class NLP:
     @staticmethod
     def text_compilation() -> list:
         # find all subelement in root (body)
-        # return list list of nametuple with element and text
-        return list
+        # return list of nametuple with element and text
+        return []
 
     def preprocessing(self):
         return

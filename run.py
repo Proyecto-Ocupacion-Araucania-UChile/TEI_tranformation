@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 
 from src.build import XML
+from src.enrichment.nlp import NLP
 
 
 # https://github.com/e-ditiones/Annotator to apply NER voir aussi hugoscheitaeur
@@ -20,8 +21,13 @@ def run():
 
     for id_group in dict(files):
         xml = XML(str(id_group), files[id_group])
-        xml.building_teiheader()
+        #xml.building_teiheader()
         #xml.building_sourcedesc()
+
+    truc = NLP(root="truc")
+    truc.__gpu__()
+
+
 
 
 if __name__ == '__main__':
