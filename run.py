@@ -21,11 +21,11 @@ def run():
 
     for id_group in dict(files):
         xml = XML(str(id_group), files[id_group])
-        #xml.building_teiheader()
-        #xml.building_sourcedesc()
+        xml.building_teiheader()
+        xml.alto_extraction()
 
-    truc = NLP(root="truc")
-    truc.__gpu__()
+    #truc = NLP(root="truc")
+    #truc.__gpu__()
 
 
 

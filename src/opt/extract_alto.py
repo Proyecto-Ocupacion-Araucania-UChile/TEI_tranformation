@@ -5,15 +5,14 @@ from ..build import XML
 from ..sourceDoc import SourceDoc
 
 
-
 class ALTO(XML):
     """
     Subclass to process each unit of the XML-ALTO file group
     """
     NS = {'alto': "http://www.loc.gov/standards/alto/ns-v4#"}
-    
-    def __init__(self, name, path, id_):
-        super().__init__(id_)
+
+    def __init__(self, name, path, id_, bank_files):
+        super().__init__(id_, bank_files)
         self.name = name
         self.path = path
 

@@ -27,8 +27,8 @@ class XML:
         from .opt.extract_alto import ALTO
 
         for file in self.bank_files:
-            alto = ALTO(name=file.name, path=file.path, id_=self.id)
-            print(alto)
+            alto = ALTO(name=file.name, path=file.path, id_=self.id, bank_files=self.bank_files)
+            alto.building_sourcedesc()
 
 
 
