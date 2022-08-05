@@ -1,10 +1,14 @@
 from lxml import etree as ET
 
 
-def body(root, data):
+def body(root, data, type_):
     text = ET.SubElement(root, "text")
     body_root = ET.SubElement(text, "body")
-    div = ET.SubElement(body_root, "div")
+    div = ET.SubElement(body_root, "div", {"type": type_})
+    noteGrp = ET.SubElement(text, "noteGrp")
+
+    postscript = None
+
     for line in data:
         # prepare attributes for the text block's zone
         zone_atts = {"corresp": f"#{line.zone_id}", "type": line.zone_type}
@@ -14,7 +18,6 @@ def body(root, data):
 
         # if this is the page's first line, create a <pb> with the page's xml:id
         if int(line.n) == 1:
-            print(line.text)
             pb = ET.Element("pb", corresp=f"#{line.page_id}")
             div.append(pb)
 
@@ -28,8 +31,31 @@ def body(root, data):
             last_element.addnext(fw)
             fw.append(lb)
 
-        # MarginTextZone line
-        elif line.zone_type == "MarginTextZone":
+        # MarginTextZone note
+        elif line.zone_type == "MarginTextZone:note":
+            if postscript is None:
+                postscript = ET.SubElement(div, "postscript")
+                note = ET.Element("note", zone_atts)
+                postscript.append(note)
+                note.append(lb)
+                last_element_postscript = postscript[-1]
+            # create a <note> if one is not already the preceding sibling
+            if last_element_postscript.tag != "note":
+                note = ET.Element("note", zone_atts)
+                last_element_postscript.addnext(note)
+                last_element_postscript = postscript[-1]
+                note.append(lb)
+            elif line.text.startswith("⁋"):
+                p = ET.Element("p", zone_atts)
+                last_element_postscript.addnext(p)
+                # update the last element in div
+                last_element_postscript = postscript[-1]
+                last_element_postscript.append(lb)
+            else:
+                last_element_postscript.append(lb)
+
+        # MarginTextZone commentary
+        elif line.zone_type == "MarginTextZone:commentary":
             # create a <note> if one is not already the preceding sibling
             if last_element.tag != "note":
                 note = ET.Element("note", zone_atts)
@@ -46,23 +72,13 @@ def body(root, data):
                 last_element.addnext(p)
                 # update the last element in div
                 last_element = div[-1]
+                last_element.append(lb)
             elif line.text.startswith("⁋"):
                 p = ET.Element("p", zone_atts)
                 last_element.addnext(p)
                 # update the last element in div
                 last_element = div[-1]
-
-            # if the line is emphasized for being
-            if line.line_type == "DropCapitalLine" or line.line_type == "HeadingLine":
-                # check if there is already an emphasized line in this MainZone
-                ab_children = last_element.getchildren()
-                if len(ab_children) == 0 or ab_children[-1].tag != "hi":
-                    hi = ET.Element("hi", rend=line.line_type)
-                    last_element.append(hi)
-                    hi.append(lb)
-                elif ab_children[-1].tag == "hi":
-                    ab_children[-1].append(lb)
-
+                last_element.append(lb)
             # if the line is not emphasized, append it to the last element in the <ab>
             elif line.line_type == "DefaultLine":
                 last_element.append(lb)

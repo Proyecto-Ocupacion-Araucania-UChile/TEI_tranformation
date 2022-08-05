@@ -39,7 +39,7 @@ class XML:
 
     def body_creation(self):
         text = Text(self.root)
-        body(self.root, text.data)
+        body(self.root, text.data, self.meta.type_file)
 
     def write_xml(self):
         with open(f'./data/output/{self.id}.xml', 'wb') as f:

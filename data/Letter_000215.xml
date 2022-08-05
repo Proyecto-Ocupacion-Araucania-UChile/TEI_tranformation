@@ -70,7 +70,6 @@
           <!-- Utiliser element link pour lier jpg dans element s : voir exemple https://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-link.html -->
           <!-- https://tei-openedition.readthedocs.io/fr/latest/tei.teiHeader.html#biblstruct-series -->
         <bibl>
-          <ser
           <series xml:lang="es">
             <title level="s" type="principal">Colección Manuscritos</title>
             <title type="subtitle">Pacificacion de la Araucania</title>
