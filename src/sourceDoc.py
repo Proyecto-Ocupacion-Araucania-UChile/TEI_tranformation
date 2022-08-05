@@ -6,7 +6,6 @@ from src.opt.surface_and_desc import SurfaceTree
 
 class SourceDoc:
     NS = {'a': "http://www.loc.gov/standards/alto/ns-v4#"}  # namespace for the Alto xml
-    sourceDoc = None
 
     @staticmethod
     def sourcedoc_build(document, sourcedoc, tags):

@@ -8,15 +8,19 @@ class NLP:
     GPU = False
     model = "data/models/araucania_NER_model"
 
-    def __init__(self, root, model=None):
+    def __init__(self, root, model=None, fishing=True):
         if model is not None:
             self.model = model
+        self.fishing = fishing
         self.nlp = self._init_model_()
         self.root = root
 
     def _init_model_(self):
         self.GPU = spacy.prefer_gpu()
-        return spacy.load(self.model)
+        nlp = spacy.load(self.model)
+        if self.fishing is True:
+            nlp.add_pipe('entityfishing')
+        return nlp
 
     def __gpu__(self):
         print('GPU:', self.GPU)

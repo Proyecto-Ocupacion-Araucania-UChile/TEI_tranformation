@@ -72,7 +72,7 @@ class Attributes:
         for i in range(len(zone_elements)):
             # parse the three (possible) components of the targeted ALTO element's @TAGREFS, according to SegmOnto guidelines;
             # the 3 groups of this regex parse the following expected tag syntax: MainZone:column#1 --> (MainZone)(column)(1)
-            tag_parts = re.match(r"(\w+):?(\w+)?[#|:]?(\d?)?", str(self.tags[att_list[i]["TAGREFS"]]))
+            tag_parts = re.match(r"(\w+)[:|#]?(\w+)?", str(self.tags[att_list[i]["TAGREFS"]]))
 
             # specifically for the current targeted ALTO element [i], reformat the attribute values extracted
             # from its child <Polygon> (see above, stored in variable "points") so that every second value
@@ -92,7 +92,7 @@ class Attributes:
             zone_att = {
                 "type": tag_parts.group(1),
                 "subtype": tag_parts.group(2) or "none",
-                "n": tag_parts.group(3) or "none",
+                "n": str(i + 1),
                 "points": zone_points,
                 # use the values of the ALTO element's @HPOS, @VPOS, @WIDTH, @HEIGHT to complete region parameters for the IIIF Image API URI
                 "source": self.folio,

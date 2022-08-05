@@ -23,11 +23,11 @@ def run():
         xml = XML(str(id_group), files[id_group])
         xml.building_teiheader()
         xml.alto_extraction()
+        xml.body_creation()
+        xml.write_xml()
 
-    #truc = NLP(root="truc")
-    #truc.__gpu__()
-
-
+    # truc = NLP(root="truc")
+    # truc.__gpu__()
 
 
 if __name__ == '__main__':

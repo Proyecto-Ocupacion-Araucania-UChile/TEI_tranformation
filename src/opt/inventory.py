@@ -18,7 +18,6 @@ class Inventory:
 
     def _row_select(self) -> DataFrame:
         df = self.df
-        print(df.loc[df['Id'] == self.id])
         return df.loc[df['Id'] == self.id]
 
     def _author(self) -> list:
@@ -44,7 +43,7 @@ class Inventory:
         type_file = row.Type.iloc[0]
         title = row.Title.iloc[0]
         date = self._date(row['Date']).item(0)
-        nb_page = row['files'].str.split(";").str.len() - 1
+        nb_page = len(row['files'].iloc[0].split(";")) - 1
         if row.Location.array[0] != np.nan:
             loc = row['Location'].apply(lambda x: str(x).split(';'))
         else:
