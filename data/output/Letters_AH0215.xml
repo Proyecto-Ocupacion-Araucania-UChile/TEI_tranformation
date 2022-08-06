@@ -637,9 +637,13 @@
     <body>
       <div type="Letters">
         <pb corresp="#215_1_a"/>
+        <opener>
+          <dateline><lb corresp="#215_1_a_z2_l1"/>⁋Bahia de Arauco, Enero 23 de 1860</dateline>
+        </opener>
         <p corresp="#215_1_a_z1" type="MainZone:Text"><lb corresp="#215_1_a_z1_l1"/>⁋La tarde del 21 fue para mí de mucho<lb corresp="#215_1_a_z1_l2"/>regocijo, no creas que tuve muchachas a<lb corresp="#215_1_a_z1_l3"/>mi lado, no nada de eso, ese contento me<lb corresp="#215_1_a_z1_l4"/>lo proporcionó la lectura de tu estimable<lb corresp="#215_1_a_z1_l5"/>del 19. ¡Cuánto debe alegrar al Gobierno<lb corresp="#215_1_a_z1_l6"/>tu conducta, y cuanto lo hará sufrir la<lb corresp="#215_1_a_z1_l7"/>pachocha con que andan los de la alta fron-<lb corresp="#215_1_a_z1_l8"/>tera! ¿Que no pensaran por allá que mar-<lb corresp="#215_1_a_z1_l9"/>chando así te comprometía ó hacen mas di-<lb corresp="#215_1_a_z1_l10"/>latados tus procedimientos? Yo no sé que pen-<lb corresp="#215_1_a_z1_l11"/>sar, en aquella division tienen elementos<lb corresp="#215_1_a_z1_l12"/>superiores a la tuya, anda soy seguro he-<lb corresp="#215_1_a_z1_l13"/>chando á perder al Ten^te Coronel de Art^a<lb corresp="#215_1_a_z1_l14"/>é In^te D^n José T. Gonzales y quien sabe<lb corresp="#215_1_a_z1_l15"/>cuantos personajes como este: en tu pobre<lb corresp="#215_1_a_z1_l16"/>y afortunada manufactura de angelitos,<lb corresp="#215_1_a_z1_l17"/>no hay notabilidades, pero vive Dios, que<lb corresp="#215_1_a_z1_l18"/>hay laureles.</p>
         <p corresp="#215_1_a_z1" type="MainZone:Text"><lb corresp="#215_1_a_z1_l19"/>⁋A mi llegada á Lota me dijeron: Ma-<lb corresp="#215_1_a_z1_l20"/>lo vá el asunto por arriba, los indios han<lb corresp="#215_1_a_z1_l21"/>avasallado la division y muértoles más de 20.<lb corresp="#215_1_a_z1_l22"/>Mas tarde los indios han vuelto á sorpren-<lb corresp="#215_1_a_z1_l23"/>der el ejércíto y han sido tanto los<lb corresp="#215_1_a_z1_l24"/>muertos que el jefe ha resuelto volver-<lb corresp="#215_1_a_z1_l25"/>se á Los Ángeles. ¿Habrá mayor desca-<lb corresp="#215_1_a_z1_l26"/>ro para mentir? Caramba, cuanto siento<lb corresp="#215_1_a_z1_l27"/>no poder hechar el guante á estos embusteros<lb corresp="#215_1_a_z1_l28"/>para tenerlos á mi lado, soy seguro que no<lb corresp="#215_1_a_z1_l29"/>volverian á hacer correr mas balas.</p>
         <p corresp="#215_1_a_z1" type="MainZone:Text"><lb corresp="#215_1_a_z1_l30"/>⁋Por estos lugares todo marcha en paz;  pero<lb corresp="#215_1_a_z1_l31"/>los hombres parece que viven calculando en el<lb corresp="#215_1_a_z1_l32"/>fonto que tienen soñando y que nosotros velamos.<lb corresp="#215_1_a_z1_l33"/>En la carta adjunta verás que me reitera d^n<lb corresp="#215_1_a_z1_l34"/>Cornelio el mismo asunto y juzgando yo que<lb corresp="#215_1_a_z1_l35"/>en caso de haberse realizado en el Perú el<lb corresp="#215_1_a_z1_l36"/>negocio de las armas deben llegar por mo-<lb corresp="#215_1_a_z1_l37"/>mentos, no creo prudente separarme de<lb corresp="#215_1_a_z1_l38"/>estos lugares, por el contrario, si pudiese du-<lb corresp="#215_1_a_z1_l39"/>plicarme estaría de planton en Coronel<lb corresp="#215_1_a_z1_l40"/>para registrar la carga de los buques y vigi-<lb corresp="#215_1_a_z1_l41"/>laría lo demas; pero esto no se puede hacer,<lb corresp="#215_1_a_z1_l42"/>soy solo, el Meteoro que podia hacerlo<lb corresp="#215_1_a_z1_l43"/>tiene órdenes reservadas del Presidente y<lb corresp="#215_1_a_z1_l44"/>se mueve cada vez que lo cree conveniente,<lb corresp="#215_1_a_z1_l45"/>cosa que no haría yo, porque podrían ju-<lb corresp="#215_1_a_z1_l46"/>garmela</p>
+        <fw corresp="#215_1_a_z3" type="NumberingZone:page"><lb corresp="#215_1_a_z3_l1"/>1</fw>
         <pb corresp="#215_1_b"/>
         <p corresp="#215_1_b_z1" type="MainZone:Text"><lb corresp="#215_1_b_z1_l1"/>⁋al menor movimiento.</p>
         <p corresp="#215_1_b_z1" type="MainZone:Text"><lb corresp="#215_1_b_z1_l2"/>⁋Me alegro mucho de que manden poner<lb corresp="#215_1_b_z1_l3"/>fuerza estable en Lebu, así estaremos más a cubier-<lb corresp="#215_1_b_z1_l4"/>to; y como tu seras quien la hará colocar, cuento<lb corresp="#215_1_b_z1_l5"/>que esto tendrá lugar despues que hayas des-<lb corresp="#215_1_b_z1_l6"/>trozado a los pícaros indios. Ojalá te manden<lb corresp="#215_1_b_z1_l7"/>300 infantes y 100 carabineros para los destaca-<lb corresp="#215_1_b_z1_l8"/>mentos.</p>
@@ -651,15 +655,14 @@
         <p corresp="#215_2_a_z1" type="MainZone:Text"><lb corresp="#215_2_a_z1_l1"/>⁋do que consiga.</p>
         <p corresp="#215_2_a_z1" type="MainZone:Text"><lb corresp="#215_2_a_z1_l2"/>⁋Mañana salgo para Coronel y Lota<lb corresp="#215_2_a_z1_l3"/>y desde aquellos puntos te escribiré dán-<lb corresp="#215_2_a_z1_l4"/>dote cuenta de toda ocurrencia de im-<lb corresp="#215_2_a_z1_l5"/>portancia.</p>
         <postscript>
-          <note corresp="#215_2_a_z3" type="MarginTextZone:note"/>
-          <p corresp="#215_2_a_z3" type="MarginTextZone:note"><lb corresp="#215_2_a_z3_l1"/>⁋Nada hay hasta ahora de cambio</p>
-          <note corresp="#215_2_a_z3" type="MarginTextZone:note"><lb corresp="#215_2_a_z3_l2"/>de ministros-<lb corresp="#215_2_a_z3_l3"/>llegado á Concepcion a dónde perma-</note>
-          <p corresp="#215_2_a_z3" type="MarginTextZone:note"><lb corresp="#215_2_a_z3_l4"/>⁋D^n Rafael Soto Mayor debe haber</p>
-          <note corresp="#215_2_a_z3" type="MarginTextZone:note"><lb corresp="#215_2_a_z3_l5"/>necerá por tres meses; queda desem<lb corresp="#215_2_a_z3_l6"/>peñando su ministerio el Sñr Novoa.<lb corresp="#215_2_a_z3_l7"/>Los oficiales corresponden tus recuer-<lb corresp="#215_2_a_z3_l8"/>dos y el Gringo muy {dontento} con su {langa}.</note>
+          <note><p><lb corresp="#215_2_a_z3_l1"/>⁋Nada hay hasta ahora de cambio</p><lb corresp="#215_2_a_z3_l2"/>de ministros-<lb corresp="#215_2_a_z3_l3"/>llegado á Concepcion a dónde perma-<p corresp="#215_2_a_z3" type="MarginTextZone:note"/><lb corresp="#215_2_a_z3_l4"/>⁋D^n Rafael Soto Mayor debe haber<lb corresp="#215_2_a_z3_l5"/>necerá por tres meses; queda desem<lb corresp="#215_2_a_z3_l6"/>peñando su ministerio el Sñr Novoa.<lb corresp="#215_2_a_z3_l7"/>Los oficiales corresponden tus recuer-<lb corresp="#215_2_a_z3_l8"/>dos y el Gringo muy {dontento} con su {langa}.</note>
         </postscript>
+        <fw corresp="#215_2_a_z5" type="NumberingZone:page"><lb corresp="#215_2_a_z5_l1"/>2</fw>
         <pb corresp="#215_2_b"/>
       </div>
     </body>
-    <noteGrp/>
+    <noteGrp>
+      <note corresp="#215_2_b_z1" type="id_imp">000215</note>
+    </noteGrp>
   </text>
 </TEI>

@@ -3,6 +3,11 @@ from lxml import etree as ET
 from collections import namedtuple
 
 
+#TODO https://github.com/standoff-nlp/standoffconverter/blob/master/examples/named_entities.ipynb
+#TODO https://so.davidlassner.com/   c est la demo
+#TODO https://e-editiones.org/names-sell-named-entity-recognition-in-tei-publisher/
+#TODO https://github.com/eeditiones/tei-publisher-ner
+
 class NLP:
     Text = None
     GPU = False

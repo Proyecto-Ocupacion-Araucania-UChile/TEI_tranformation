@@ -42,5 +42,5 @@ class XML:
         body(self.root, text.data, self.meta.type_file)
 
     def write_xml(self):
-        with open(f'./data/output/{self.id}.xml', 'wb') as f:
+        with open(f'./data/output/{self.meta.type_file}_AH0{self.id}.xml', 'wb') as f:
             ET.ElementTree(self.root).write(f, encoding="utf-8", xml_declaration=True, pretty_print=True)
