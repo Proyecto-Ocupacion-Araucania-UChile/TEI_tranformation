@@ -7,6 +7,7 @@ from src.enrichment.nlp import NLP
 
 
 # https://github.com/e-ditiones/Annotator to apply NER voir aussi hugoscheitaeur
+#see https://stackoverflow.com/questions/5395948/incredibly-basic-lxml-questions-getting-html-string-content-of-lxml-etree-elem
 
 def run():
     p = Path('./data/input/')

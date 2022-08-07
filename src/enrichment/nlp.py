@@ -7,6 +7,7 @@ from collections import namedtuple
 #TODO https://so.davidlassner.com/   c est la demo
 #TODO https://e-editiones.org/names-sell-named-entity-recognition-in-tei-publisher/
 #TODO https://github.com/eeditiones/tei-publisher-ner
+#https://stackoverflow.com/questions/14299978/how-to-use-lxml-to-find-an-element-by-text
 
 class NLP:
     Text = None
