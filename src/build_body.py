@@ -104,7 +104,7 @@ def body(root: _Element, data: list, type_: str):
                 first_element.addnext(opener)
             stamp = ET.SubElement(opener, "salute", zone_atts)
             stamp.set("type", "manuscript")
-            ET.SubElement(stamp, "name")
+            name = ET.SubElement(stamp, "name")
             name.append(lb)
 
 
