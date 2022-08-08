@@ -7,7 +7,6 @@ class Text:
     def __init__(self, root):
         self.root = root
         self.data = self.line_data()
-        self.main = self.extract()
 
     def line_data(self):
         """Parse contextual and attribute data for each text line and store it in a named tuple.
@@ -56,6 +55,7 @@ class Text:
         Returns:
             s (str): text of entire document
         """
+        print("hello")
         df = pd.DataFrame(self.data)
         # join the text lines and words broken across line breaks together
         s = "%%".join(df.loc[df["zone_type"] == "MainZone"]["text"])

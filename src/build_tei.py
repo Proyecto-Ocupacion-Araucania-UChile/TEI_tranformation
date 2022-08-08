@@ -22,7 +22,7 @@ class XML:
 
     def _preparation_metadada(self):
         self.root = ET.Element("TEI",
-                               {"xmlns": "http://www.tei-c.org/ns/1.0", 'xml': 'http://www.w3.org/XML/1998/namespace'})
+                               {"xmlns": "http://www.tei-c.org/ns/1.0"})
         data_csv = Inventory(self.id)
         self.meta = data_csv.metadata()
 
@@ -41,6 +41,7 @@ class XML:
         text = Text(self.root)
         body(self.root, text.data, self.meta.type_file)
 
-    def write_xml(self):
+    def write_xml(self) -> str:
         with open(f'./data/output/{self.meta.type_file}_AH0{self.id}.xml', 'wb') as f:
             ET.ElementTree(self.root).write(f, encoding="utf-8", xml_declaration=True, pretty_print=True)
+        return f'./data/output/{self.meta.type_file}_AH0{self.id}.xml'

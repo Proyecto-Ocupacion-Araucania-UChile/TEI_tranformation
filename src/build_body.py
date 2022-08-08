@@ -215,3 +215,4 @@ def body(root: _Element, data: list, type_: str):
             # if the line is not emphasized, append it to the last element in the <ab>
             elif line.line_type == "DefaultLine":
                 last_element.append(lb)
+
