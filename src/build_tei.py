@@ -4,7 +4,7 @@ from .opt.inventory import Inventory
 from .teiheader import TreeHeader
 from .opt.extract_alto import ALTO
 from .sourceDoc import SourceDoc
-from .opt.utils import Tools
+from .opt.utils import write_xml
 from .text_data import Text
 from .build_body import body
 
@@ -40,8 +40,4 @@ class XML:
     def body_creation(self):
         text = Text(self.root)
         body(self.root, text.data, self.meta.type_file)
-
-    def write_xml(self) -> str:
-        with open(f'./data/output/{self.meta.type_file}_AH0{self.id}.xml', 'wb') as f:
-            ET.ElementTree(self.root).write(f, encoding="utf-8", xml_declaration=True, pretty_print=True)
-        return f'./data/output/{self.meta.type_file}_AH0{self.id}.xml'
+        write_xml(type=self.meta.type_file, id=self.id, root=self.root)

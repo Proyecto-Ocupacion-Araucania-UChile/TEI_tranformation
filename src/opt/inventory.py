@@ -5,7 +5,7 @@ import numpy as np
 from numpy import ndarray
 from collections import namedtuple
 
-from .utils import Tools
+from .utils import replace_pattern, check_csv
 
 
 class Inventory:
@@ -14,11 +14,7 @@ class Inventory:
 
     def __init__(self, id_):
         self.id = int(id_)
-        self.row = self._row_select()
-
-    def _row_select(self) -> DataFrame:
-        df = self.df
-        return df.loc[df['Id'] == self.id]
+        self.row = check_csv(self.df, self.id, 'Id')
 
     def _author(self) -> list:
         row = self.row
@@ -33,7 +29,7 @@ class Inventory:
 
     @staticmethod
     def _date(date: Series) -> ndarray:
-        return np.vectorize(Tools.replace_pattern)(date, "/", "-")
+        return np.vectorize(replace_pattern)(date, "/", "-")
 
     def metadata(self) -> namedtuple:
         row = self.row

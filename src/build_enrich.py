@@ -1,5 +1,6 @@
 from lxml import etree as ET
 from src.enrichment.nlp import NLP
+from src.opt.utils import write_xml
 
 
 class EnrichmentTEI:
@@ -16,10 +17,10 @@ class EnrichmentTEI:
         return parsed_file
 
     def annotation_NER(self):
-        file = NLP(self.tree)
+        file = NLP(self.tree, self.name)
         text = file.plain()
-        new_xml = file.annotation(text)
-        xml = ET.tostring(new_xml.tei_tree).decode("utf-8")
-        print(xml)
+        xml = file.processing_NER(text)
+        root = xml.tei_tree.getroot()
+        write_xml(path=self.path, root=root)
 
 

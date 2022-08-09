@@ -1,8 +1,6 @@
 from collections import defaultdict
 from lxml import etree as ET
 
-from ..sourceDoc import SourceDoc
-
 class ALTO:
     """
     Subclass to process each unit of the XML-ALTO file group

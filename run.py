@@ -31,7 +31,6 @@ def run(enrich):
         xml.building_teiheader()
         xml.alto_extraction()
         xml.body_creation()
-        xml.write_xml()
 
     # Enrichment of output files
     if enrich:
