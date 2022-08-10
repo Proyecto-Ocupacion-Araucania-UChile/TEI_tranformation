@@ -12,6 +12,9 @@ import numpy as np
 #TODO https://github.com/eeditiones/tei-publisher-ner
 #https://stackoverflow.com/questions/14299978/how-to-use-lxml-to-find-an-element-by-text
 
+#Threading
+# https://alexandra-zaharia.github.io/posts/how-to-return-a-result-from-a-python-thread/
+
 class NLP:
     NS = {"xmlns": "http://www.tei-c.org/ns/1.0", 'xml': 'http://www.w3.org/XML/1998/namespace'}
     GPU = False
@@ -103,35 +106,32 @@ class NLP:
     @staticmethod
     def attribute_NER(ent, file):
         df = NLP.df_ent
-        # add namespace xml
-        ET.register_namespace("xml", NLP.NS["xml"])
-        ns_id = ET.QName(NLP.NS["xml"], "id")
         # Checker ent
         val_id = check_csv(df, ent._.kb_qid, 'id')
         val_name = check_csv(df, ent.text, 'name')
         # Check if the entity is referenced
         if len(val_id) > 0:
             row = val_id.iloc[0]
-            return {"resp": "spacy", ns_id: row.id}
+            return {"resp": "spacy", "ref": f"#{row.id}"}
         elif len(val_name) > 0:
             row = val_name.iloc[0]
-            return {"resp": "spacy", ns_id: row.id}
+            return {"resp": "spacy", "ref": f"#{row.id}"}
         elif len(val_id) > 0 and len(val_name) > 0:
             #verification of row similarity
             if val_id['id'].iloc[0] == val_name['id'].iloc[0]:
                 row = val_id.iloc[0]
-                return {"resp": "spacy", ns_id: row.id}
+                return {"resp": "spacy", "ref": f"#{row.id}"}
             else :
                 journal_error(file=file, name=ent.text, error="confusion between entities csv")
         else:
             if ent._.nerd_score is not None and ent._.nerd_score > 0.90:
                 new_row = {'id': ent._.kb_qid, 'id_authority': np.nan, 'label_ent': ent.label_, "type": np.nan, "name": ent.text, "names_associated": ent.text, "date_birth": np.nan, "date_end": np.nan, "region": np.nan, "countries": np.nan, "description": np.nan}
                 NLP.df_ent = pd.concat([df, pd.DataFrame([new_row])])
-                return {"resp": "spacy", ns_id: ent._.kb_qid}
+                return {"resp": "spacy", "ref": f"#{ent._.kb_qid}"}
             else:
                 id_ = generate_id(ent.label_)
                 new_row = {'id': id_, 'id_authority': np.nan, 'label_ent': ent.label_, "type": np.nan,
                      "name": ent.text, "names_associated": ent.text, "date_birth": np.nan, "date_end": np.nan,
                      "region": np.nan, "countries": np.nan, "description": np.nan}
                 NLP.df_ent = pd.concat([df, pd.DataFrame([new_row])])
-                return {"resp": "spacy", ns_id: id_}
+                return {"resp": "spacy", "ref": f"#{id_}"}
