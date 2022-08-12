@@ -19,30 +19,32 @@ def run(enrich):
 
     files = defaultdict(list)
     Docs = namedtuple("Doc", ["name", "path", "id_group"])
-    for doc in sorted(list(p_input.glob('*.xml'))):
-        matching_id = re.match(r"^(\d+)_", doc.name)
-        id_ = matching_id.group(1)
-        docs = Docs(doc.name, doc, str(id_))
-        files[str(id_)].append(docs)
+    #for doc in sorted(list(p_input.glob('*.xml'))):
+        #matching_id = re.match(r"^(\d+)_", doc.name)
+        #id_ = matching_id.group(1)
+        #docs = Docs(doc.name, doc, str(id_))
+        #files[str(id_)].append(docs)
 
     # Building teiheader, sourcedoc and body
-    for id_group in dict(files):
-        xml = XML(str(id_group), files[id_group])
-        xml.building_teiheader()
-        xml.alto_extraction()
-        xml.body_creation()
+    #for id_group in dict(files):
+        #xml = XML(str(id_group), files[id_group])
+        #xml.building_teiheader()
+        #xml.alto_extraction()
+        #xml.body_creation()
 
     # Enrichment of output files
     if enrich:
         # list of files
         Docs_output = namedtuple("Doc", ["name", "path"])
         files_tei = []
-        for doc in list(p_output.glob('*.xml')):
-            files_tei.append(Docs_output(doc.name, doc))
-
+        #for doc in list(p_output.glob('*.xml')):
+            #files_tei.append(Docs_output(doc.name, doc))
+        truc = Docs_output('AH0215.xml', 'data/Letters_AH0215.xml')
+        files_tei.append(truc)
         for doc in files_tei:
             xml_op = EnrichmentTEI(doc.name, doc.path)
-            xml_op.annotation_NER()
+            #xml_op.annotation_NER()
+            xml_op.build_profileDesc()
 
 
 if __name__ == '__main__':

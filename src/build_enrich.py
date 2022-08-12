@@ -6,7 +6,7 @@ from src.teiheader import Index
 
 
 class EnrichmentTEI:
-    NS = {"xmlns": "http://www.tei-c.org/ns/1.0", 'xml': 'http://www.w3.org/XML/1998/namespace'}
+    NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
     def __init__(self, name, path):
         self.root = None
@@ -26,7 +26,16 @@ class EnrichmentTEI:
         self.root = xml.tei_tree.getroot()
 
     def build_profileDesc(self):
-        
+        parser = ET.XMLParser(recover=True)
+        tree = ET.parse(self.path, parser=parser)
+        self.root = tree.getroot()
+
+        index = Index(self.root)
+
+        persname = self.root.xpath('//tei:body/descendant::tei:persname', namespaces=EnrichmentTEI.NS)
+        orgname = self.root.xpath('//tei:body/descendant::tei:orgname', namespaces=EnrichmentTEI.NS)
+
+        geoname = self.root.xpath('//tei:body/descendant::tei:geoname', namespaces=EnrichmentTEI.NS)
+        print(orgname)
+
         write_xml(path=self.path, root=self.root)
-
-

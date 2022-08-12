@@ -97,7 +97,7 @@ class TreeHeader:
         authority.text = "Área de Información Bibliográfica y Archivística"
         adress = ET.SubElement(publicationStmt, "address")
         ET.SubElement(adress, "country", key="CL")
-        region = ET.SubElement(adress, "address")
+        region = ET.SubElement(adress, "region")
         region.text = "Región Metropolitana"
         settlement = ET.SubElement(adress, "settlement", type="city")
         settlement.text = "Santiago Centro"
