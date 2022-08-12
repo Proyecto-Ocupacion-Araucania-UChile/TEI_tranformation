@@ -57,6 +57,13 @@ def write_xml(**kwargs):
 
 
 def check_csv(df: pd.DataFrame, element, column: str) -> pd.DataFrame:
+    """
+    function to check if elements exist in csv
+    :param df: dataframe
+    :param element: name which you want to identify
+    :param column: columns names where you want identify your element
+    :return: dataframe row
+    """
     return df.loc[df[column] == element]
 
 

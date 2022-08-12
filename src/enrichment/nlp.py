@@ -27,7 +27,7 @@ class NLP:
         self.fishing = fishing
         self.nlp = self._init_model_()
         self.tree = tree
-        self.name =name
+        self.name = name
         self.xml_so = Standoff(self.tree, namespaces={"tei": "http://www.tei-c.org/ns/1.0"})
         self.view = self._text_compilation_()
 

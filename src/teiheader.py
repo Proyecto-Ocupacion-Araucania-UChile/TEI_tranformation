@@ -1,11 +1,21 @@
 from lxml import etree as ET
+import pandas as pd
+
 from .opt.utils import read_json, date_process
 
 
 class Index:
     """Class pour post NER to index"""
+    df_ent = pd.read_csv("data/database/entities.csv", encoding="utf-8")
+
+    def __init__(self, root):
+        self.root = root
+
+    def find_it(self):
+        return
 
     def build_Pers(self):
+
         return
 
     def build_Loc(self):
@@ -172,5 +182,14 @@ class TreeHeader:
         ET.SubElement(application4, "ptr", attrib={"target": "https://github.com/explosion/spaCy"})
 
         # profileDesc
-        ET.SubElement(profileDesc, "particDesc")
-        ET.SubElement(profileDesc, "settingDesc")
+        particDesc = ET.SubElement(profileDesc, "particDesc")
+        listOrg = ET.SubElement(particDesc, "listOrg")
+        head_org = ET.SubElement(listOrg, "head")
+        head_org.text = "List of organizations"
+        listPerson = ET.SubElement(particDesc, "listPerson")
+        head_pers = ET.SubElement(listPerson, "head")
+        head_pers.text = "List of persons"
+        settingDesc = ET.SubElement(profileDesc, "settingDesc")
+        listPlace = ET.SubElement(settingDesc, "listPlace")
+        head_loc = ET.SubElement(listPlace, "head")
+        head_loc.text ="List of places"
