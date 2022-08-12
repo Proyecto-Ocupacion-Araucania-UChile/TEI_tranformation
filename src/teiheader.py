@@ -1,25 +1,31 @@
 from lxml import etree as ET
-import pandas as pd
 
-from .opt.utils import read_json, date_process
+from .opt.utils import read_json, date_process, check_csv
 
 
 class Index:
     """Class pour post NER to index"""
-    df_ent = pd.read_csv("data/database/entities.csv", encoding="utf-8")
+    NS = {"tei": "http://www.tei-c.org/ns/1.0", "xml": "http://www.w3.org/XML/1998/namespace"}
 
     def __init__(self, root):
         self.root = root
+        ET.register_namespace("xml", Index.NS['xml'])
+        self.xml_id = ET.QName(Index.NS['xml'], "id")
+    def build_particDesc(self, elements: list, type_: str):
+        for element in elements:
+            id_ = element.attrib.get(self.xml_id)
+            if type_ == 'PERS':
+                xpath = f"//tei:particDesc/tei:listPerson/tei:person[@xml:id ='{id_}']"
+                if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
+                    listPerson = self.root.xpath('//tei:particDesc/tei:listPerson', namespaces=Index.NS)
 
-    def find_it(self):
-        return
 
-    def build_Pers(self):
+            elif type_ == 'ORG':
+                xpath = f"//tei:particDesc/tei:listOrg/tei:org[@xml:id ='{id_}']"
 
-        return
-
-    def build_Loc(self):
-        return
+    def build_Loc(self, elements: list):
+        for element in elements:
+            id_ = element.attrib.get(self.xml_id)
 
 
 class TreeHeader:
