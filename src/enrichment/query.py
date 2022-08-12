@@ -7,7 +7,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?country ?date_birth ?date_death ?name ?id ?description ?sex ?VIAF
 WHERE {
-          BIND (wd:Q4233309 AS ?id) #get entitie
+          BIND (wd:TOKEN AS ?id) #get entitie
 
   OPTIONAL {
   ?id rdfs:label ?name . #get label of entitie in english
@@ -55,7 +55,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?country ?region ?GeoNames ?name ?id ?instance ?loc ?description
 WHERE {
-          BIND (wd:Q2887 AS ?id) #get entitie
+          BIND (wd:TOKEN AS ?id) #get entitie
 
   OPTIONAL {
   ?id rdfs:label ?name . #get label of entitie in english

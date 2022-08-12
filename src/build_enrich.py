@@ -38,7 +38,6 @@ class EnrichmentTEI:
         persname = self.root.xpath('//tei:body/descendant::tei:persname', namespaces=EnrichmentTEI.NS)
         orgname = self.root.xpath('//tei:body/descendant::tei:orgname', namespaces=EnrichmentTEI.NS)
         geoname = self.root.xpath('//tei:body/descendant::tei:geoname', namespaces=EnrichmentTEI.NS)
-        #print(geoname[0].attrib.get('{http://www.w3.org/XML/1998/namespace}id'))
-        index.build_particDesc(persname)
+        index.build_particDesc(persname, type_='PERS')
 
-        #write_xml(path=self.path, root=self.root)
+        write_xml(path=self.path, root=self.root)

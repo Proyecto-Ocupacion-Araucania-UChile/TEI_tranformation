@@ -1,6 +1,8 @@
 from lxml import etree as ET
+from datetime import datetime
 
-from .opt.utils import read_json, date_process, check_csv
+from .opt.utils import read_json, date_process
+from src.enrichment.sparql import SPARQL
 
 
 class Index:
@@ -13,13 +15,21 @@ class Index:
         self.xml_id = ET.QName(Index.NS['xml'], "id")
     def build_particDesc(self, elements: list, type_: str):
         for element in elements:
-            id_ = element.attrib.get(self.xml_id)
+            id_ = element.attrib.get('ref')[1:]
             if type_ == 'PERS':
                 xpath = f"//tei:particDesc/tei:listPerson/tei:person[@xml:id ='{id_}']"
                 if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
+                    data = SPARQL.run_sparql(id_)
                     listPerson = self.root.xpath('//tei:particDesc/tei:listPerson', namespaces=Index.NS)
-
-
+                    person = ET.SubElement(listPerson, {self.xml_id: id_, 'corresp': data.id_authority, 'sex': data.sex})
+                    persname = ET.SubElement(person, "persname")
+                    persname.text = data.name
+                    birth = ET.SubElement(person, "birth", {'when_iso': datetime.strptime(data.date_birth, "%d %B, %Y")})
+                    birth.text = data.date_birth
+                    death = ET.SubElement(person, "death", {'when_iso': datetime.strptime(data.date_death, "%d %B, %Y")})
+                    death.text = data.date_death
+                    note = ET.SubElement(person, "note", type='description')
+                    note.text = data.description
             elif type_ == 'ORG':
                 xpath = f"//tei:particDesc/tei:listOrg/tei:org[@xml:id ='{id_}']"
 

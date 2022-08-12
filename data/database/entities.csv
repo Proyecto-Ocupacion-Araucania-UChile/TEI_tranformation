@@ -1,1 +1,46 @@
-id,id_authority,label_ent,type,name,names_associated,date_birth,date_end,region,countries,description,request
+,id,id_authority,label_ent,type,name,names_associated,date_birth,date_end,region,country,description,sex,request
+0,ORG_17832,blabla,ORG,tryc,⁋Bahia,⁋Bahia,2 june 1984,15 janvuer 1990,blabla,chile,truc muche,1,False
+0,LOC_66695,blabla,LOC,tryc,Arauco,Arauco,3 june 1984,16 janvuer 1990,blabla,chile,truc muche,2,False
+0,PERS_69642,blabla,PERS,tryc,muchachas,muchachas,4 june 1984,17 janvuer 1990,blabla,chile,truc muche,3,False
+0,LOC_21869,blabla,LOC,tryc,alta fron-tera,alta fron-tera,5 june 1984,18 janvuer 1990,blabla,chile,truc muche,4,False
+0,ORG_87643,blabla,ORG,tryc,division,division,6 june 1984,19 janvuer 1990,blabla,chile,truc muche,5,False
+0,PERS_57570,blabla,PERS,tryc,Ten^te Coronel de Art^aé,Ten^te Coronel de Art^aé,7 june 1984,20 janvuer 1990,blabla,chile,truc muche,6,False
+0,PERS_66102,blabla,PERS,tryc,In^te D^n José T. Gonzales,In^te D^n José T. Gonzales,8 june 1984,21 janvuer 1990,blabla,chile,truc muche,7,False
+0,LOC_43374,blabla,LOC,tryc,Lota,Lota,9 june 1984,22 janvuer 1990,blabla,chile,truc muche,8,False
+0,PERS_27126,blabla,PERS,tryc,indios,indios,10 june 1984,23 janvuer 1990,blabla,chile,truc muche,9,False
+0,PERS_85916,blabla,PERS,tryc,jefe,jefe,11 june 1984,24 janvuer 1990,blabla,chile,truc muche,10,False
+0,LOC_32858,blabla,LOC,tryc,Los Ángeles,Los Ángeles,12 june 1984,25 janvuer 1990,blabla,chile,truc muche,11,False
+0,PERS_45140,blabla,PERS,tryc,hombres,hombres,13 june 1984,26 janvuer 1990,blabla,chile,truc muche,12,False
+0,LOC_95317,blabla,LOC,tryc,Perú,Perú,14 june 1984,27 janvuer 1990,blabla,chile,truc muche,13,True
+0,PERS_39211,blabla,PERS,tryc,Presidente,Presidente,15 june 1984,28 janvuer 1990,blabla,chile,truc muche,14,True
+0,LOC_11065,blabla,LOC,tryc,Lebu,Lebu,16 june 1984,29 janvuer 1990,blabla,chile,truc muche,15,True
+0,PERS_77733,blabla,PERS,tryc,pícaros indios,pícaros indios,17 june 1984,30 janvuer 1990,blabla,chile,truc muche,16,True
+0,PERS_93312,blabla,PERS,tryc,infantes,infantes,18 june 1984,31 janvuer 1990,blabla,chile,truc muche,17,True
+0,PERS_65642,blabla,PERS,tryc,100 carabineros,100 carabineros,19 june 1984,32 janvuer 1990,blabla,chile,truc muche,18,True
+0,PERS_62803,blabla,PERS,tryc,Ángel Custodio Gallo,Ángel Custodio Gallo,20 june 1984,33 janvuer 1990,blabla,chile,truc muche,19,True
+0,LOC_51481,blabla,LOC,tryc,Valparaiso,Valparaiso,21 june 1984,34 janvuer 1990,blabla,chile,truc muche,20,True
+0,PERS_62598,blabla,PERS,tryc,General D^n Cus-todio,General D^n Cus-todio,22 june 1984,35 janvuer 1990,blabla,chile,truc muche,21,True
+0,Q310007,blabla,PERS,tryc,Pedro Leon,Pedro Leon,23 june 1984,36 janvuer 1990,blabla,chile,truc muche,22,True
+0,PERS_51949,blabla,PERS,tryc,⁋Mercurios,⁋Mercurios,24 june 1984,37 janvuer 1990,blabla,chile,truc muche,23,True
+0,Q187974,blabla,LOC,tryc,Santa Juana,Santa Juana,25 june 1984,38 janvuer 1990,blabla,chile,truc muche,24,True
+0,PERS_81423,blabla,PERS,tryc,estrilones,estrilones,26 june 1984,39 janvuer 1990,blabla,chile,truc muche,25,True
+0,ORG_90486,blabla,ORG,tryc,división,división,27 june 1984,40 janvuer 1990,blabla,chile,truc muche,26,True
+0,LOC_18897,blabla,LOC,tryc,sud,sud,28 june 1984,41 janvuer 1990,blabla,chile,truc muche,27,True
+0,PERS_97242,blabla,PERS,tryc,Corneliole,Corneliole,29 june 1984,42 janvuer 1990,blabla,chile,truc muche,28,True
+0,PERS_48847,blabla,PERS,tryc,Int^te,Int^te,30 june 1984,43 janvuer 1990,blabla,chile,truc muche,29,True
+0,LOC_16958,blabla,LOC,tryc,Concep-cion,Concep-cion,31 june 1984,44 janvuer 1990,blabla,chile,truc muche,30,True
+0,PERS_41436,blabla,PERS,tryc,propio,propio,32 june 1984,45 janvuer 1990,blabla,chile,truc muche,31,True
+0,PERS_38439,blabla,PERS,tryc,siete individuos,siete individuos,33 june 1984,46 janvuer 1990,blabla,chile,truc muche,32,True
+0,ORG_89004,blabla,ORG,tryc,Gob^o,Gob^o,34 june 1984,47 janvuer 1990,blabla,chile,truc muche,33,True
+0,ORG_48559,blabla,ORG,tryc,tropa,tropa,35 june 1984,48 janvuer 1990,blabla,chile,truc muche,34,True
+0,PERS_59046,blabla,PERS,tryc,desertor,desertor,36 june 1984,49 janvuer 1990,blabla,chile,truc muche,35,True
+0,LOC_95621,blabla,LOC,tryc,Coronel,Coronel,37 june 1984,50 janvuer 1990,blabla,chile,truc muche,36,True
+0,LOC_52883,blabla,LOC,tryc,Lotay,Lotay,38 june 1984,51 janvuer 1990,blabla,chile,truc muche,37,False
+0,PERS_14775,blabla,PERS,tryc,⁋Manuel 2^o Escala,⁋Manuel 2^o Escala,39 june 1984,52 janvuer 1990,blabla,chile,truc muche,38,False
+0,PERS_98100,blabla,PERS,tryc,ministros-llegado,ministros-llegado,40 june 1984,53 janvuer 1990,blabla,chile,truc muche,39,False
+0,LOC_47809,blabla,LOC,tryc,Concepcion,Concepcion,41 june 1984,54 janvuer 1990,blabla,chile,truc muche,40,False
+0,PERS_38857,blabla,PERS,tryc,Rafael Soto Mayor,Rafael Soto Mayor,42 june 1984,55 janvuer 1990,blabla,chile,truc muche,41,False
+0,ORG_49441,blabla,ORG,tryc,ministerio,ministerio,43 june 1984,56 janvuer 1990,blabla,chile,truc muche,42,False
+0,PERS_61754,blabla,PERS,tryc,Novoa,Novoa,44 june 1984,57 janvuer 1990,blabla,chile,truc muche,43,False
+0,Q16280345,blabla,PERS,tryc,Los oficiales,Los oficiales,45 june 1984,58 janvuer 1990,blabla,chile,truc muche,44,False
+0,PERS_99338,blabla,PERS,tryc,Gringo,Gringo,46 june 1984,59 janvuer 1990,blabla,chile,truc muche,45,False
