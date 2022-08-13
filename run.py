@@ -5,6 +5,7 @@ import click
 
 from src.build_tei import XML
 from src.build_enrich import EnrichmentTEI
+from src.enrichment.sparql import SPARQL
 
 
 # https://github.com/e-ditiones/Annotator to apply NER voir aussi hugoscheitaeur
@@ -42,9 +43,10 @@ def run(enrich):
         truc = Docs_output('AH0215.xml', 'data/Letters_AH0215.xml')
         files_tei.append(truc)
         for doc in files_tei:
-            xml_op = EnrichmentTEI(doc.name, doc.path)
+            #xml_op = EnrichmentTEI(doc.name, doc.path)
             #xml_op.annotation_NER()
-            xml_op.build_profileDesc()
+            #xml_op.build_profileDesc()
+            SPARQL.execute_query('Q1880', 'LOC')
 
 
 if __name__ == '__main__':
