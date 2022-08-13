@@ -95,7 +95,7 @@ class NLP:
                 self.xml_so.add_inline(
                     begin=start_ind,
                     end=end_ind,
-                    tag="geoname",
+                    tag="placename",
                     depth=None,
                     attrib=NLP.attribute_NER(ent, self.name)
                 )

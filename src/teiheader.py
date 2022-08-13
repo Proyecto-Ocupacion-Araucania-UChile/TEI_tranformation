@@ -1,5 +1,6 @@
 from lxml import etree as ET
 from datetime import datetime
+import numpy as np
 
 from .opt.utils import read_json, date_process
 from src.enrichment.sparql import SPARQL
@@ -13,6 +14,8 @@ class Index:
         self.root = root
         ET.register_namespace("xml", Index.NS['xml'])
         self.xml_id = ET.QName(Index.NS['xml'], "id")
+        self.xml_base = ET.QName(Index.NS['xml'], "base")
+        self.xml_lang = ET.QName(Index.NS['xml'], "lang")
     def build_particDesc(self, elements: list, type_: str):
         for element in elements:
             id_ = element.attrib.get('ref')[1:]
@@ -21,21 +24,47 @@ class Index:
                 if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
                     data = SPARQL.run_sparql(id_)
                     listPerson = self.root.xpath('//tei:particDesc/tei:listPerson', namespaces=Index.NS)
-                    person = ET.SubElement(listPerson, {self.xml_id: id_, 'corresp': data.id_authority, 'sex': data.sex})
+                    if data.sex == np.nan:
+                        data.sex = 0
+                    person = ET.SubElement(listPerson[0], "person", {self.xml_id: id_, self.xml_base: "https://viaf.org/viaf/"+str(data.id_authority), self.xml_lang: data.language, 'sex': str(data.sex)})
                     persname = ET.SubElement(person, "persname")
-                    persname.text = data.name
-                    birth = ET.SubElement(person, "birth", {'when_iso': datetime.strptime(data.date_birth, "%d %B, %Y")})
-                    birth.text = data.date_birth
-                    death = ET.SubElement(person, "death", {'when_iso': datetime.strptime(data.date_death, "%d %B, %Y")})
-                    death.text = data.date_death
-                    note = ET.SubElement(person, "note", type='description')
-                    note.text = data.description
+                    persname.text = str(data.name)
+                    if data.date_birth != np.nan:
+                        birth = ET.SubElement(person, "birth", {'when_iso': str(datetime.strptime(data.date_birth, "%d %B %Y"))})
+                        birth.text = str(data.date_birth)
+                    if data.date_death != np.nan:
+                        death = ET.SubElement(person, "death", {'when_iso': str(datetime.strptime(data.date_death, "%d %B %Y"))})
+                        death.text = str(data.date_death)
+                    if data.description != np.nan:
+                        note = ET.SubElement(person, "note", type='description')
+                        note.text = str(data.description)
             elif type_ == 'ORG':
                 xpath = f"//tei:particDesc/tei:listOrg/tei:org[@xml:id ='{id_}']"
+                if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
+                    data = SPARQL.run_sparql(id_)
+                    listOrg = self.root.xpath('//tei:particDesc/tei:listOrg', namespaces=Index.NS)
+                    org = ET.SubElement(listOrg[0], "org", {self.xml_id: id_})
+                    ET.SubElement(org, "orgname").text = str(data.name)
 
-    def build_Loc(self, elements: list):
+    def build_settingDesc(self, elements: list):
         for element in elements:
-            id_ = element.attrib.get(self.xml_id)
+            id_ = element.attrib.get('ref')[1:]
+            print(id_)
+            xpath = f"//tei:settingDesc/tei:listPlace/tei:place[@xml:id ='{id_}']"
+            if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
+                data = SPARQL.run_sparql(id_)
+                listPlace = self.root.xpath('//tei:settingDesc/tei:listPlace', namespaces=Index.NS)
+                place = ET.SubElement(listPlace[0], "place", {self.xml_id: id_, self.xml_base: "https://www.geonames.org/"+str(data.id_authority), self.xml_lang: data.language, 'type': str(data.type).replace(" ", "_")})
+                ET.SubElement(place, "placename").text = str(data.name)
+                if data.region != np.nan:
+                    ET.SubElement(place, "region").text = str(data.region)
+                if data.country != np.nan:
+                    ET.SubElement(place, "country").text = str(data.country)
+                if data.loc != np.nan:
+                    ET.SubElement(place, "geo").text = str(data.loc)
+                if data.description != np.nan:
+                    ET.SubElement(place, "note", type='description').text = str(data.description)
+
 
 
 class TreeHeader:
