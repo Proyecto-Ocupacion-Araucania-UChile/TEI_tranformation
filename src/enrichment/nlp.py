@@ -115,7 +115,7 @@ class NLP:
             else:
                 journal_error(file=file, name=ent.text, error="confusion between entities csv")
         else:
-            if ent._.nerd_score is not None and ent._.nerd_score > 0.50:
+            if ent._.nerd_score is not None and ent._.nerd_score > 0.80:
                 new_row = {'id': ent._.kb_qid, 'id_authority': np.nan, 'label_ent': ent.label_, "type": np.nan,
                            "name": ent.text, "names_associated": ent.text, "date_birth": np.nan, "date_end": np.nan,
                            "region": np.nan, "country": np.nan, "description": np.nan, "sex": np.nan, "geo_loc": np.nan,
