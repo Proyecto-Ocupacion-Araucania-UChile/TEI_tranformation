@@ -116,17 +116,18 @@ def body(root: _Element, data: list, type_: str):
         elif line.zone_type == "MainZone:SaluteConclude":
             #Check if closer exist and add first salute
             if closer is None:
+                print('hello')
                 closer = ET.SubElement(div, "closer")
                 n_p += 1
                 salute = ET.SubElement(closer, "salute", {"corresp": f"#{line.zone_id}", "n": f"{n_p}"})
-                # update the last element in div
+                # update the last element in closer
                 salute.append(lb)
                 last_element_closer = closer[-1]
-            elif line.text.startswith("⁋"):
+            elif closer is not None and line.text.startswith("⁋"):
                 n_p += 1
                 salute = ET.Element("salute", {"corresp": f"#{line.zone_id}", "n": f"{n_p}"})
                 last_element_closer.addnext(salute)
-                # update the last element in div
+                # update the last element in closer
                 last_element_closer = closer[-1]
                 last_element_closer.append(lb)
             # if the line is not emphasized, append it to the last element in the <ab>
@@ -138,6 +139,7 @@ def body(root: _Element, data: list, type_: str):
                 closer = ET.SubElement(div, "closer")
             signed = ET.SubElement(closer, "signed")
             signed.append(lb)
+            last_element_closer = closer[-1]
 
 
         # MarginTextZone note
