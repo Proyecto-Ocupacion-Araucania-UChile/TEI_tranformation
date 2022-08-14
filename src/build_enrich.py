@@ -28,13 +28,13 @@ class EnrichmentTEI:
         Function to apply NER (placename, persname, date) annotation in body root's
         :return: None
         """
-        #annotation NER
+        # annotation NER
         file = NLP(self.tree, self.name)
         text = file.plain()
         xml = file.processing_NER(text)
-        #get root
+        # get root
         self.root = xml.tei_tree.getroot()
-        #Clean variable
+        # Clean variable
         del file, text, xml
         self.tree = None
 
@@ -43,23 +43,20 @@ class EnrichmentTEI:
         Function to build profileDesc in teiHeader root's
         :return: None
         """
-        #TODO remove !!!
-        parser = ET.XMLParser(recover=True)
-        tree = ET.parse(self.path, parser=parser)
-        self.root = tree.getroot()
 
-        #Instance class index
+        # Instance class index
         index = Index(self.root)
 
-        #Get all elements to index
-        persname = self.root.xpath('//tei:body/descendant::tei:persname', namespaces=EnrichmentTEI.NS)
-        orgname = self.root.xpath('//tei:body/descendant::tei:orgname', namespaces=EnrichmentTEI.NS)
-        # TODO change for placename
-        geoname = self.root.xpath('//tei:body/descendant::tei:geoname', namespaces=EnrichmentTEI.NS)
-        #index.build_particDesc(persname, type_='PERS')
-        #index.build_particDesc(orgname, type_='ORG')
+        # Get all elements to index
+        persname = self.root.xpath('//tei:body/descendant::persname', namespaces=EnrichmentTEI.NS)
+        orgname = self.root.xpath('//tei:body/descendant::orgname', namespaces=EnrichmentTEI.NS)
+        placename = self.root.xpath('//tei:body/descendant::placename', namespaces=EnrichmentTEI.NS)
+        # Build particDesc
+        index.build_particDesc(persname, type_='PERS')
+        index.build_particDesc(orgname, type_='ORG')
         del persname, orgname
-        index.build_settingDesc(geoname)
-        del geoname
-
+        # Build settingDesc
+        index.build_settingDesc(placename)
+        del placename
+        # write final xml
         write_xml(path=self.path, root=self.root)

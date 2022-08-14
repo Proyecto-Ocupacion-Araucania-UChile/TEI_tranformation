@@ -1,8 +1,6 @@
 from lxml import etree as ET
-from datetime import datetime
-import numpy as np
 
-from .opt.utils import read_json, date_process
+from .opt.utils import read_json, date_process, date_transform
 from src.enrichment.sparql import SPARQL
 
 
@@ -37,25 +35,27 @@ class Index:
                     data = SPARQL.run_sparql(id_, type_)
                     # get list in particDesc
                     listPerson = self.root.xpath('//tei:particDesc/tei:listPerson', namespaces=Index.NS)
-                    if data.sex == np.nan:
-                        data.sex = 0
+                    if data.sex is None:
+                        sex = 0
+                    else:
+                        sex = data.sex
                     # Build element description
                     person = ET.SubElement(listPerson[0], "person", {self.xml_id: id_,
                                                                      self.xml_base: "https://viaf.org/viaf/" + str(
                                                                          data.id_authority),
                                                                      self.xml_lang: data.language,
-                                                                     'sex': str(data.sex)})
+                                                                     'sex': str(sex)})
                     persname = ET.SubElement(person, "persname")
                     persname.text = str(data.name)
-                    if data.date_birth != np.nan:
+                    if data.date_birth is not None:
                         birth = ET.SubElement(person, "birth",
-                                              {'when_iso': str(datetime.strptime(data.date_birth, "%d %B %Y"))})
-                        birth.text = str(data.date_birth)
-                    if data.date_death != np.nan:
+                                              {'when-iso': str(data.date_birth)})
+                        birth.text = date_transform(str(data.date_birth))
+                    if data.date_death is not None:
                         death = ET.SubElement(person, "death",
-                                              {'when_iso': str(datetime.strptime(data.date_death, "%d %B %Y"))})
-                        death.text = str(data.date_death)
-                    if data.description != np.nan:
+                                              {'when-iso': str(data.date_death)})
+                        death.text = date_transform(str(data.date_death))
+                    if data.description is not None:
                         note = ET.SubElement(person, "note", type='description')
                         note.text = str(data.description)
             elif type_ == 'ORG':
@@ -89,13 +89,13 @@ class Index:
                                                                   data.id_authority), self.xml_lang: data.language,
                                                               'type': str(data.type).replace(" ", "_")})
                 ET.SubElement(place, "placename").text = str(data.name)
-                if data.region != np.nan:
+                if data.region is not None:
                     ET.SubElement(place, "region").text = str(data.region)
-                if data.country != np.nan:
+                if data.country is not None:
                     ET.SubElement(place, "country").text = str(data.country)
-                if data.loc != np.nan:
+                if data.loc is not None:
                     ET.SubElement(place, "geo").text = str(data.loc)
-                if data.description != np.nan:
+                if data.description is not None:
                     ET.SubElement(place, "note", type='description').text = str(data.description)
 
 

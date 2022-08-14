@@ -1,5 +1,6 @@
 import re
-import datetime
+from datetime import datetime
+from babel.dates import format_date
 import json
 import numpy as np
 from lxml import etree as ET
@@ -12,13 +13,23 @@ def date_process() -> str:
     function to import date of execution in str
     :return: str date
     """
-    x = datetime.datetime.now()
+    x = datetime.now()
     return x.strftime("%Y-%m-%d")
+
+
+def date_transform(date_: str) -> str:
+    """
+    function to transform string date in date spanish literary
+    :param date_: str in format iso (YYYY-mm-dd)
+    :return:str, date
+    """
+    date_out = datetime.strptime(date_, '%Y-%m-%d')
+    return format_date(date_out, format='long', locale='es')
 
 
 def replace_pattern(input_txt: str, pattern: str, replace: str) -> str:
     """
-    Function to replace an element by an other element in a text
+    Function to replace an element by another element in a text
     :param input_txt: text which need to correct it
     :param pattern: element who want to replace
     :param replace: element will replace it

@@ -34,7 +34,7 @@ def body(root: _Element, data: list, type_: str):
         zone_atts = {"corresp": f"#{line.zone_id}"}
         # prepare <lb/> with this line's xml:id as @corresp
         lb = ET.Element("lb", corresp=f"#{line.id}")
-        lb.tail = f"{line.text}"
+        lb.tail = f"{line.text.replace('⁋', '')}"
 
         # if this is the page's first line, create a <pb> with the page's xml:id
         if int(line.n) == 1:
