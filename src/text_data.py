@@ -55,7 +55,6 @@ class Text:
         Returns:
             s (str): text of entire document
         """
-        print("hello")
         df = pd.DataFrame(self.data)
         # join the text lines and words broken across line breaks together
         s = "%%".join(df.loc[df["zone_type"] == "MainZone"]["text"])

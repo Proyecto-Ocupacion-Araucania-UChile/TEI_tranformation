@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from SPARQLWrapper import SPARQLWrapper, SPARQLExceptions, JSON
 from collections import namedtuple
 
@@ -21,6 +22,7 @@ class SPARQL:
         """
         # Get row
         row = check_csv(SPARQL.df_ent, id_, 'id')
+        print(id_)
         Data = namedtuple("Data",
                           ["id_authority", "name", "date_birth", "date_death", "region", "country", "description",
                            "sex", "type", "loc", 'language'])
@@ -83,17 +85,35 @@ class SPARQL:
             # save data
             if type_ == 'PERS':
                 # Get values
-                if results['sex']['value'] == 'male':
-                    sex = str(1)
-                elif results['sex']['value'] == 'female':
-                    sex = str(2)
+                if 'sex' in results:
+                    if results['sex']['value'] == 'male':
+                        sex = str(1)
+                    elif results['sex']['value'] == 'female':
+                        sex = str(2)
+                    else:
+                        sex = str(0)
                 else:
-                    sex = str(0)
-                id_authority = results['VIAF']['value']
-                description = results['description']['value']
-                date_birth = results['date_birth']['value'][:-10]
-                date_end = results['date_death']['value'][:-10]
-                country = results['country']['value']
+                    sex = np.nan
+                if 'VIAF' in results:
+                    id_authority = results['VIAF']['value']
+                else:
+                    id_authority = np.nan
+                if 'description' in results:
+                    description = results['description']['value']
+                else:
+                    description = np.nan
+                if 'date_birth' in results:
+                    date_birth = results['date_birth']['value'][:-10]
+                else:
+                    date_birth = np.nan
+                if 'date_death' in results:
+                    date_end = results['date_death']['value'][:-10]
+                else:
+                    date_end = np.nan
+                if 'country' in results:
+                    country = results['country']['value']
+                else:
+                    country = np.nan
                 # Update csv
                 df.loc[df['id'] == id_, ['country', 'description', 'id_authority', 'sex', 'date_birth', 'date_end',
                                          'request']] = [country, description, id_authority, sex, date_birth, date_end,
@@ -103,12 +123,31 @@ class SPARQL:
 
             elif type_ == 'LOC':
                 # Get values
-                geo_loc = str(results['loc']['value'][6:-1])
-                description = results['description']['value']
-                region = results['region']['value']
-                id_authority = results['GeoNames']['value']
-                type_csv = results['instance']['value']
-                country = results['country']['value']
+                if 'loc' in results:
+                    geo_loc = str(results['loc']['value'][6:-1])
+                else:
+                    geo_loc = np.nan
+                if 'description' in results:
+                    description = results['description']['value']
+                else:
+                    description = np.nan
+                if 'region' in results:
+                    region = results['region']['value']
+                else:
+                    region = np.nan
+                if 'GeoNames' in results:
+                    id_authority = results['GeoNames']['value']
+                else:
+                    id_authority = np.nan
+                if 'instance' in results:
+                    type_csv = results['instance']['value']
+                else:
+                    type_csv = np.nan
+                if 'country' in results:
+                    country = results['country']['value']
+                else:
+                    country = np.nan
+
                 # Update csv
                 df.loc[df['id'] == id_, ['type', 'region', 'country', 'description', 'id_authority', 'geo_loc',
                                          'request']] = [type_csv, region, country, description, id_authority, geo_loc,

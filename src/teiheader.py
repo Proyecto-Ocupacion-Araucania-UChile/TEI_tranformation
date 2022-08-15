@@ -79,7 +79,6 @@ class Index:
         """
         for element in elements:
             id_ = element.attrib.get('ref')[1:]
-            print(id_)
             xpath = f"//tei:settingDesc/tei:listPlace/tei:place[@xml:id ='{id_}']"
             if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
                 data = SPARQL.run_sparql(id_, 'LOC')

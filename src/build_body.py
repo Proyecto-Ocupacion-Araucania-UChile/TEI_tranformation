@@ -84,6 +84,7 @@ def body(root: _Element, data: list, type_: str):
             salute = ET.SubElement(opener, "salute", zone_atts)
             salute.append(lb)
 
+        # StampZone graphic line
         elif line.zone_type == "StampZone:graphic":
             # Check if opener exist
             if opener is None:
@@ -97,6 +98,7 @@ def body(root: _Element, data: list, type_: str):
             ET.SubElement(figure, "graphic", url=f"img/{line.page_id}.jpg")
             ET.SubElement(figure, "head")
 
+        # StampZone manuscript line
         elif line.zone_type == "StampZone:manuscript":
             # Check if opener exist
             if opener is None:
@@ -107,7 +109,7 @@ def body(root: _Element, data: list, type_: str):
             name = ET.SubElement(stamp, "name")
             name.append(lb)
 
-
+        # CustomZone Object line
         elif line.zone_type == "CustomZone:Object":
             head = ET.Element("head")
             first_element.addnext(head, {"head": f"#{line.zone_id}, t"})
@@ -116,7 +118,6 @@ def body(root: _Element, data: list, type_: str):
         elif line.zone_type == "MainZone:SaluteConclude":
             #Check if closer exist and add first salute
             if closer is None:
-                print('hello')
                 closer = ET.SubElement(div, "closer")
                 n_p += 1
                 salute = ET.SubElement(closer, "salute", {"corresp": f"#{line.zone_id}", "n": f"{n_p}"})
@@ -189,6 +190,7 @@ def body(root: _Element, data: list, type_: str):
 
         # MarginTextZone:commentary
         elif line.zone_type == "MarginTextZone:commentary":
+            # create a <note> if find zone and add in noteGrp
             if commentary is None:
                 commentary = ET.SubElement(noteGrp, "note", zone_atts)
                 commentary.set("type", "commentary")
@@ -214,7 +216,7 @@ def body(root: _Element, data: list, type_: str):
                 # update the last element in div
                 last_element = div[-1]
                 last_element.append(lb)
-            # if the line is not emphasized, append it to the last element in the <ab>
+            # add classical line
             elif line.line_type == "DefaultLine":
                 last_element.append(lb)
 

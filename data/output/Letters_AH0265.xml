@@ -52,7 +52,7 @@
           <p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p>
           <p>The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: &lt;email&gt;archivo.central@uchile.cl&lt;/email&gt;</p>
         </availability>
-        <date when-iso="2022-08-14"/>
+        <date when-iso="2022-08-15"/>
       </publicationStmt>
       <notesStmt>
         <note>Digital editing done as part of an international internship.</note>
@@ -83,15 +83,15 @@
       <particDesc>
         <listOrg>
           <head>List of organizations</head>
-        </listOrg>
+        <org xml:id="ORG_40231"><orgname>fuerzas</orgname></org><org xml:id="ORG_40231"><orgname>fuerzas</orgname></org><org xml:id="ORG_21557"><orgname>Presidencia</orgname></org></listOrg>
         <listPerson>
           <head>List of persons</head>
-        </listPerson>
+        <person xml:id="PERS_41113" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Mauricio Barboza</persname></person><person xml:id="PERS_99138" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Ulloa</persname></person><person xml:id="PERS_47745" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Boonen</persname></person><person xml:id="PERS_70976" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>25 ó 50 hombres</persname></person><person xml:id="PERS_12276" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Subdelegado Marítimo</persname></person><person xml:id="PERS_27985" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Ministro del Interior D. AntonioVaras</persname></person><person xml:id="PERS_23903" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Cornelio Saavedra</persname></person></listPerson>
       </particDesc>
       <settingDesc>
         <listPlace>
           <head>List of places</head>
-        </listPlace>
+        <place xml:id="LOC_47070" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Valp^o</placename></place><place xml:id="LOC_61855" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Araucoy</placename></place><place xml:id="LOC_26165" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Bio-Bio</placename></place><place xml:id="LOC_24529" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Coronela</placename></place></listPlace>
       </settingDesc>
     </profileDesc>
     <encodingDesc>
@@ -250,21 +250,20 @@
       <div type="Letters">
         <pb corresp="#265_a"/>
         <opener>
-          <dateline corresp="#265_a_z2"><lb corresp="#265_a_z2_l1"/>Valp^o Abril 201860</dateline>
-          <name corresp="#265_a_z5" type="addressee"><lb corresp="#265_a_z5_l1"/>S. D Mauricio Barboza</name>
+          <dateline corresp="#265_a_z2"><placename resp="spacy" ref="#LOC_47070"><lb corresp="#265_a_z2_l1"/>Valp^o</placename> <date resp="spacy">Abril 201860</date></dateline>
+          <name corresp="#265_a_z5" type="addressee"><lb corresp="#265_a_z5_l1"/>S. D <persname resp="spacy" ref="#PERS_41113">Mauricio Barboza</persname></name>
           <salute corresp="#265_a_z6"><lb corresp="#265_a_z6_l1"/>Mi estimado amigo:</salute>
         </opener>
-        <p corresp="#265_a_z1" n="1"><lb corresp="#265_a_z1_l1"/>He arreglado el pago de los mil quinientos pesos<lb corresp="#265_a_z1_l2"/>(1500 $) que me has jirado a favor de Ulloa y a la vuelta<lb corresp="#265_a_z1_l3"/>de Boonen arreglare con él el pago, porque supongo que te<lb corresp="#265_a_z1_l4"/>habrá comprado algunos animales, o de lo contrario me manda-<lb corresp="#265_a_z1_l5"/>ras fondos por el “Maipú”.</p>
-        <p corresp="#265_a_z1" n="2"><lb corresp="#265_a_z1_l6"/>Veo que pronto mandarás tus fuerzas a Nagualgüe pero<lb corresp="#265_a_z1_l7"/>me parece prudente que no te muevas en el invierno de Arauco<lb corresp="#265_a_z1_l8"/>y que sólo mandes 25 ó 50 hombres al trabajo del galpon<lb corresp="#265_a_z1_l9"/>preparados con carpas, víveres y herramientas. Esta corta<lb corresp="#265_a_z1_l10"/>fuerza te bastará para aquel trabajo y así que prepares el<lb corresp="#265_a_z1_l11"/>alojamiento de tus fuerzas, te podrias trasladar con ventaja<lb corresp="#265_a_z1_l12"/>sin mortificar al soldado en la estación de las lluvias, pero<lb corresp="#265_a_z1_l13"/>tú verás lo que más convenga.</p>
-        <p corresp="#265_a_z1" n="3"><lb corresp="#265_a_z1_l14"/>Los Sud-Oeste te los mando por el Bio-Bio a Coronel<lb corresp="#265_a_z1_l15"/>a cargo del Subdelegado Marítimo de aquel punto.</p>
-        <p corresp="#265_a_z1" n="4"><lb corresp="#265_a_z1_l16"/>Ha sido nombrado Ministro del Interior D. Antonio<lb corresp="#265_a_z1_l17"/>Varas y con su nombramiento ha querido probar que no será<lb corresp="#265_a_z1_l18"/>el candidato para la Presidencia, verémos lo que di-<lb corresp="#265_a_z1_l19"/>visemos para mas tarde.</p>
+        <p corresp="#265_a_z1" n="1"><lb corresp="#265_a_z1_l1"/>He arreglado el pago de los mil quinientos pesos<lb corresp="#265_a_z1_l2"/>(1500 $) que me has jirado a favor de <persname resp="spacy" ref="#PERS_99138">Ulloa</persname> y a la vuelta<lb corresp="#265_a_z1_l3"/>de <persname resp="spacy" ref="#PERS_47745">Boonen</persname> arreglare con él el pago, porque supongo que te<lb corresp="#265_a_z1_l4"/>habrá comprado algunos animales, o de lo contrario me manda-<lb corresp="#265_a_z1_l5"/>ras fondos por el “Maipú”.</p>
+        <p corresp="#265_a_z1" n="2"><lb corresp="#265_a_z1_l6"/>Veo que pronto mandarás tus <orgname resp="spacy" ref="#ORG_40231">fuerzas</orgname> a Nagualgüe pero<lb corresp="#265_a_z1_l7"/>me parece prudente que no te muevas en el invierno de <placename resp="spacy" ref="#LOC_61855">Arauco<lb corresp="#265_a_z1_l8"/>y</placename> que sólo mandes <persname resp="spacy" ref="#PERS_70976">25 ó 50 hombres</persname> al trabajo del galpon<lb corresp="#265_a_z1_l9"/>preparados con carpas, víveres y herramientas. Esta corta<lb corresp="#265_a_z1_l10"/>fuerza te bastará para aquel trabajo y así que prepares el<lb corresp="#265_a_z1_l11"/>alojamiento de tus <orgname resp="spacy" ref="#ORG_40231">fuerzas</orgname>, te podrias trasladar con ventaja<lb corresp="#265_a_z1_l12"/>sin mortificar al soldado en la estación de las lluvias, pero<lb corresp="#265_a_z1_l13"/>tú verás lo que más convenga.</p>
+        <p corresp="#265_a_z1" n="3"><lb corresp="#265_a_z1_l14"/>Los Sud-Oeste te los mando por el <placename resp="spacy" ref="#LOC_26165">Bio-Bio</placename> a <placename resp="spacy" ref="#LOC_24529">Coronel<lb corresp="#265_a_z1_l15"/>a</placename> cargo del <persname resp="spacy" ref="#PERS_12276">Subdelegado Marítimo</persname> de aquel punto.</p>
+        <p corresp="#265_a_z1" n="4"><lb corresp="#265_a_z1_l16"/>Ha sido nombrado <persname resp="spacy" ref="#PERS_27985">Ministro del Interior D. Antonio<lb corresp="#265_a_z1_l17"/>Varas</persname> y con su nombramiento ha querido probar que no será<lb corresp="#265_a_z1_l18"/>el candidato para la <orgname resp="spacy" ref="#ORG_21557">Presidencia</orgname>, verémos lo que di-<lb corresp="#265_a_z1_l19"/>visemos para <date resp="spacy">mas tarde</date>.</p>
         <fw corresp="#265_a_z3" type="n_page"><lb corresp="#265_a_z3_l1"/>1</fw>
         <closer>
-          <signed><lb corresp="#265_a_z4_l1"/>Cornelio Saavedra</signed>
+          <signed><persname resp="spacy" ref="#PERS_23903"><lb corresp="#265_a_z4_l1"/>Cornelio Saavedra</persname></signed>
           <salute corresp="#265_a_z7" n="5"><lb corresp="#265_a_z7_l1"/>No tiene mas tiempo tu amigo y S.S.</salute>
         </closer>
       </div>
     </body>
     <noteGrp/>
-  </text>
-</TEI>
+  </text></TEI>

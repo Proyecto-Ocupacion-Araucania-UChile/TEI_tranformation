@@ -27,7 +27,6 @@ def run(enrich):
 
     # Building teiheader, sourcedoc and body
     for id_group in dict(files):
-        print(id_group)
         xml = XML(str(id_group), files[id_group])
         xml.building_teiheader()
         xml.alto_extraction()

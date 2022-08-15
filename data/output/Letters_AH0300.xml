@@ -52,7 +52,7 @@
           <p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p>
           <p>The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: &lt;email&gt;archivo.central@uchile.cl&lt;/email&gt;</p>
         </availability>
-        <date when-iso="2022-08-14"/>
+        <date when-iso="2022-08-15"/>
       </publicationStmt>
       <notesStmt>
         <note>Digital editing done as part of an international internship.</note>
@@ -83,15 +83,15 @@
       <particDesc>
         <listOrg>
           <head>List of organizations</head>
-        </listOrg>
+        <org xml:id="ORG_84978"><orgname>tropa</orgname></org></listOrg>
         <listPerson>
           <head>List of persons</head>
-        </listPerson>
+        <person xml:id="PERS_16960" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Joce Ant^o Queszada</persname></person><person xml:id="PERS_60436" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Coronel Barbosa</persname></person><person xml:id="PERS_60436" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>Coronel Barbosa</persname></person><person xml:id="PERS_54136" xml:base="https://viaf.org/viaf/None" xml:lang="es" sex="0"><persname>C. Saaved</persname></person></listPerson>
       </particDesc>
       <settingDesc>
         <listPlace>
           <head>List of places</head>
-        </listPlace>
+        <place xml:id="LOC_47070" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Valp^o</placename></place><place xml:id="LOC_85049" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>PArauco</placename></place><place xml:id="LOC_23457" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Lebu</placename></place><place xml:id="LOC_64647" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Arauco</placename></place><place xml:id="LOC_97785" xml:base="https://www.geonames.org/None" xml:lang="es" type="None"><placename>Nagualgueno</placename></place></listPlace>
       </settingDesc>
     </profileDesc>
     <encodingDesc>
@@ -245,19 +245,19 @@
       <div type="Letters">
         <pb corresp="#300_a"/>
         <opener>
-          <name corresp="#300_a_z1" type="addressee"><lb corresp="#300_a_z1_l1"/>Sōr D Joce Ant^o Queszada</name>
+          <name corresp="#300_a_z1" type="addressee"><lb corresp="#300_a_z1_l1"/>Sōr D <persname resp="spacy" ref="#PERS_16960">Joce Ant^o Queszada</persname></name>
           <salute corresp="#300_a_z2"><lb corresp="#300_a_z2_l1"/>Estimado amigo</salute>
-          <dateline corresp="#300_a_z4"><lb corresp="#300_a_z4_l1"/>Valp^o Julio 10 d 1860</dateline>
+          <dateline corresp="#300_a_z4"><placename resp="spacy" ref="#LOC_47070"><lb corresp="#300_a_z4_l1"/>Valp^o</placename> <date resp="spacy">Julio 10 d 1860</date></dateline>
         </opener>
-        <p corresp="#300_a_z3" n="1"><lb corresp="#300_a_z3_l1"/>Pasado manana saldrá P<lb corresp="#300_a_z3_l2"/>Arauco i Lebu el Vapor Maule, condu-<lb corresp="#300_a_z3_l3"/>ciendo viveres para el Coronel Barbosa i transpor-<lb corresp="#300_a_z3_l4"/>tar la tropa a Arauco si Haci lo crellese con-<lb corresp="#300_a_z3_l5"/>veniente este jefe.</p>
-        <p corresp="#300_a_z3" n="2"><lb corresp="#300_a_z3_l6"/>Sale el vapor de la cassera<lb corresp="#300_a_z3_l7"/>i no tengo mas tiempo. Sírvase comunicar<lb corresp="#300_a_z3_l8"/>esto al Sōr Coronel Barbosa, P q este pre-<lb corresp="#300_a_z3_l9"/>venido diciendole q le iran.</p>
+        <p corresp="#300_a_z3" n="1"><lb corresp="#300_a_z3_l1"/>Pasado manana saldrá <placename resp="spacy" ref="#LOC_85049">P<lb corresp="#300_a_z3_l2"/>Arauco</placename> i <placename resp="spacy" ref="#LOC_23457">Lebu</placename> el Vapor Maule, condu-<lb corresp="#300_a_z3_l3"/>ciendo viveres para el <persname resp="spacy" ref="#PERS_60436">Coronel Barbosa</persname> i transpor-<lb corresp="#300_a_z3_l4"/>tar la <orgname resp="spacy" ref="#ORG_84978">tropa</orgname> a <placename resp="spacy" ref="#LOC_64647">Arauco</placename> si Haci lo crellese con-<lb corresp="#300_a_z3_l5"/>veniente este jefe.</p>
+        <p corresp="#300_a_z3" n="2"><lb corresp="#300_a_z3_l6"/>Sale el vapor de la cassera<lb corresp="#300_a_z3_l7"/>i no tengo mas tiempo. Sírvase comunicar<lb corresp="#300_a_z3_l8"/>esto al Sōr <persname resp="spacy" ref="#PERS_60436">Coronel Barbosa</persname>, P q este pre-<lb corresp="#300_a_z3_l9"/>venido diciendole q le iran.</p>
         <p corresp="#300_a_z3" n="3"><lb corresp="#300_a_z3_l10"/>100 Qa^s de frejoles, charqui, grasa<lb corresp="#300_a_z3_l11"/>sal i frangollo i tambien un poco de harina</p>
-        <p corresp="#300_a_z3" n="4"><lb corresp="#300_a_z3_l12"/>Los techos de fierro P Nagualgue<lb corresp="#300_a_z3_l13"/>no sé si alcancen a ir P estan listo.</p>
+        <p corresp="#300_a_z3" n="4"><lb corresp="#300_a_z3_l12"/>Los techos de fierro P <placename resp="spacy" ref="#LOC_97785">Nagualgue<lb corresp="#300_a_z3_l13"/>no</placename> sé si alcancen a ir P estan listo.</p>
         <p corresp="#300_a_z3" n="5"><lb corresp="#300_a_z3_l14"/>El Maule regresará a este puerto<lb corresp="#300_a_z3_l15"/>despues de desempeñada la comision.</p>
         <fw corresp="#300_a_z5" type="n_page"><lb corresp="#300_a_z5_l1"/>1</fw>
         <closer>
           <salute corresp="#300_a_z6" n="6"><lb corresp="#300_a_z6_l1"/>Su amigo</salute>
-          <signed><lb corresp="#300_a_z7_l1"/>C. Saaved</signed>
+          <signed><persname resp="spacy" ref="#PERS_54136"><lb corresp="#300_a_z7_l1"/>C. Saaved</persname></signed>
         </closer>
         <pb corresp="#300_b"/>
       </div>
@@ -265,5 +265,4 @@
     <noteGrp>
       <note corresp="#300_b_z1_l1" type="id_imp">000300</note>
     </noteGrp>
-  </text>
-</TEI>
+  </text></TEI>
