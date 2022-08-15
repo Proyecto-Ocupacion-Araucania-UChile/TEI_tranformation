@@ -101,20 +101,17 @@ class NLP:
         val_id = check_csv(df, ent._.kb_qid, 'id')
         val_name = check_csv(df, ent.text, 'names_associated', split=True)
         # Check if the entity is referenced
-        if len(val_id) > 0 and len(val_name) < 0:
+        if len(val_id) > 0 and len(val_name) == 0:
             row = val_id.iloc[0]
-            print('id')
-            print({"resp": "spacy", "ref": f"#{row.id}"})
-        elif len(val_name) > 0 and len(val_id) < 0:
+            return {"resp": "spacy", "ref": f"#{row.id}"}
+        elif len(val_name) > 0 and len(val_id) == 0:
             row = val_name.iloc[0]
-            print('name')
-            print({"resp": "spacy", "ref": f"#{row.id}"})
+            return {"resp": "spacy", "ref": f"#{row.id}"}
         elif len(val_id) > 0 and len(val_name) > 0:
             # verification of row similarity
             if val_id['id'].iloc[0] == val_name['id'].iloc[0]:
                 row = val_id.iloc[0]
-                print('id + name')
-                print({"resp": "spacy", "ref": f"#{row.id}"})
+                return {"resp": "spacy", "ref": f"#{row.id}"}
             else:
                 journal_error(file=file, name=ent.text, error="confusion between entities csv")
         else:

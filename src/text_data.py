@@ -17,17 +17,17 @@ class Text:
         data = []
 
         for ln in self.root.findall('.//line'):
-            # On définit le type de ligne
-            typeLigne = ln.getparent().get("type")
-            # S'il existe un sous-type, on le récupère
+            # Define type of line
+            typeLine = ln.getparent().get("type")
+            # Get type
             if ln.getparent().get("subtype") != "none":
-                typeLigne = typeLigne + ":" + ln.getparent().get("subtype"),  # @type of line
-            # On retype les chaînes en tuple
-            if type(typeLigne) == str:
-                typeLigne = (typeLigne,)
-            # On définit le type de région
+                typeLine = typeLine + ":" + ln.getparent().get("subtype"),  # @type of line
+            # We retype the strings in tuple
+            if type(typeLine) == str:
+                typeLine = (typeLine,)
+            # Define type of region
             typeRegion = ln.getparent().getparent().get("type")
-            # S'il existe un sous-type, on le récupère
+            # Get it if exist
             if ln.getparent().getparent().get("subtype") != "none":
                 typeRegion = typeRegion + ":" + ln.getparent().getparent().get("subtype")
             if type(typeRegion) == str:
@@ -38,7 +38,7 @@ class Text:
                     ln.getparent().get("{http://www.w3.org/XML/1998/namespace}id"),  # @xml:id of the line's zone
                     ln.getparent().get("n"),  # line number
                     ln.text,  # text content of line
-                    typeLigne[0],
+                    typeLine[0],
                     typeRegion[0],  # @type of text block zone
                     ln.getparent().getparent().get("{http://www.w3.org/XML/1998/namespace}id"),
                     # @xml:id of text block zone

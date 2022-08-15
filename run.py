@@ -7,9 +7,6 @@ from src.build_tei import XML
 from src.build_enrich import EnrichmentTEI
 
 
-# https://github.com/e-ditiones/Annotator to apply NER voir aussi hugoscheitaeur
-# see https://stackoverflow.com/questions/5395948/incredibly-basic-lxml-questions-getting-html-string-content-of-lxml-etree-elem
-
 @click.command()
 @click.option("-e", "--enrich", "enrich", is_flag=True, show_default=True, default=False,
               help="Argument for automatic data enrichment")
@@ -39,8 +36,7 @@ def run(enrich):
         files_tei = []
         for doc in list(p_output.glob('*.xml')):
             files_tei.append(Docs_output(doc.name, doc))
-        # truc = Docs_output('AH0215.xml', 'data/Letters_AH0215.xml')
-        # files_tei.append(truc)
+        # build sparql, ner, particDesc and settingDesc
         for doc in files_tei:
             xml_op = EnrichmentTEI(doc.name, doc.path)
             xml_op.annotation_NER()

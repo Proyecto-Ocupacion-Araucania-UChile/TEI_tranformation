@@ -1,25 +1,25 @@
 id,id_authority,label_ent,type,name,names_associated,date_birth,date_end,region,country,description,sex,geo_loc,request
 ORG_94765,,ORG,,Bahia,Bahia,,,,,,,,False
-Q3632,,LOC,,Arauco,Arauco;Parauco;Araucoy,,,,,,,,False
+Q3632,3899462,LOC,city in Chile,Arauco,Arauco;Parauco;Araucoy;Parauco,,,Arauco,Chile,Chilean commune,,-73.3175 -37.2463,True
 PERS_87857,,PERS,,muchachas,muchachas,,,,,,,,False
 LOC_83779,,LOC,,alta fron-tera,alta fron-tera,,,,,,,,False
 ORG_40607,,ORG,,division,division,,,,,,,,False
 PERS_31088,,PERS,,Ten^te Coronel de Art^aé,Ten^te Coronel de Art^aé,,,,,,,,False
 PERS_40732,,PERS,,José T. Gonzales,In^te D^n José T. Gonzales,,,,,,,,False
 Q16911,,LOC,,Lota,Lota,,,,,,,,False
-Q178484,,ORG,,Mapuches,indios,,,,,,,,False
+Q178484,,ORG,,Mapuches,indios,,,,,"Amerindian people, who inhabit the historical territory of the Araucanía in the current states of Chile and Argentina",,,True
 PERS_87861,,PERS,,jefe,jefe,,,,,,,,False
 PERS_24847,,PERS,,hombres,hombres,,,,,,,,False
 Q419,,LOC,,Perú,Perú,,,,,,,,False
-Q14488,,LOC,,Lebu,Lebu,,,,,,,,False
+Q14488,3883457,LOC,city in Chile,Lebu,Lebu,,,Lebu,Chile,city and commune in Chile,,-73.6561 -37.6103,True
 PERS_81129,,PERS,,pícaros indios,pícaros indios,,,,,,,,False
 PERS_18181,,PERS,,infantes,infantes,,,,,,,,False
 PERS_12900,,PERS,,100 carabineros,100 carabineros,,,,,,,,False
-Q33986,,LOC,,Valparaíso,Valparaiso;Valp^o,,,,,,,,False
+Q33986,3868626,LOC,city in Chile,Valparaíso,Valparaiso;Valp^o,,,Valparaíso,Chile,city in Chile,,-71.619722222 -33.046111111,True
 Q6173167,,PERS,,Ángel Gallo Goyenechea,General D^n Cus-todio;Ángel Custodio Gallo,,,,,,,,False
 Q310007,,PERS,,Pedro Leon,Pedro Leon,,,,,,,,True
 PERS_17036,,PERS,,Mercurios,Mercurios,,,,,,,,False
-Q187974,8261196.0,LOC,city in Chile,Santa Juana,Santa Juana,,,Concepción Province,Chile,commune of Chile,,-72.933333333 -37.166666666,True
+Q187974,8261196,LOC,city in Chile,Santa Juana,Santa Juana,,,Concepción Province,Chile,commune of Chile,,-72.933333333 -37.166666666,True
 PERS_73889,,PERS,,estrilones,estrilones,,,,,,,,False
 ORG_96712,,ORG,,división,división,,,,,,,,False
 LOC_55284,,LOC,,sud,sud,,,,,,,,False
@@ -28,14 +28,14 @@ PERS_90636,,PERS,,Intendente,Int^te,,,,,,,,False
 Q1880,,LOC,,Concepción,Concep-cion;Concepcion,,,,,,,,False
 PERS_75133,,PERS,,propio,propio,,,,,,,,False
 PERS_56395,,PERS,,siete individuos,siete individuos,,,,,,,,False
-Q17633149,,ORG,,Gobierno de Chile,Gob^o;Gobierno,,,,,,,,False
+ORG_74844,,ORG,,Gobierno de Chile,Gob^o;Gobierno,,,,,,,,False
 ORG_84978,,ORG,,tropa,tropa,,,,,,,,False
 PERS_54928,,PERS,,desertor,desertor,,,,,,,,False
 Q3873,,LOC,,Coronel,Coronel;Coronela,,,,,,,,False
 Q16911,,LOC,,Lota,Lotay,,,,,,,,False
 PERS_45259,,PERS,,Manuel 2^o Escala,Manuel 2^o Escala,,,,,,,,False
 PERS_52378,,PERS,,ministros-llegado,ministros-llegado,,,,,,,,False
-Q6097988,,PERS,,Rafael Sotomayor,Rafael Soto Mayor;Ministro Soto-mayor,,,,,,,,False
+Q6097988,13628092,PERS,,Rafael Sotomayor,Rafael Soto Mayor;Ministro Soto-mayor,1823-09-13,1880-05-20,,Chile,Chilean politician,1.0,,True
 ORG_85382,,ORG,,ministerio,ministerio,,,,,,,,False
 PERS_48841,,PERS,,Novoa,Novoa,,,,,,,,False
 Q16280345,,PERS,,Los oficiales,Los oficiales,,,,,,,,True
@@ -52,7 +52,7 @@ PERS_54152,,PERS,,caciques,caciques,,,,,,,,False
 ORG_41918,,ORG,,delImperial,delImperial,,,,,,,,False
 LOC_52154,,LOC,,cuarteles de invierno,cuarteles de invierno,,,,,,,,False
 LOC_94374,,LOC,,cuartel,cuartel,,,,,,,,False
-Q1328,,PERS,,Manuel Montt,Pre-sidente;Presidente,,,,,,,,False
+Q1328,40711922,PERS,,Manuel Montt,Pre-sidente;Presidente,1809-09-04,1880-09-21,,Chile,Chilean politician,1.0,,True
 PERS_15708,,PERS,,25 hombres,25 hombres,,,,,,,,False
 LOC_86087,,LOC,,Pontón,Pontón,,,,,,,,False
 PERS_16348,,PERS,,Escala,Escala,,,,,,,,False
@@ -61,7 +61,7 @@ PERS_33880,,PERS,,Capitán Chaconle,Capitán Chaconle,,,,,,,,False
 PERS_76573,,PERS,,Villalón,Villalón;Villalon,,,,,,,,False
 PERS_95931,,PERS,,Matus,Matus,,,,,,,,False
 Q16910,,LOC,,Los Ángeles,Angeles;Los Ángeles;los,,,,,,,,False
-Q4233309,,PERS,,Cornelio Saavedra Rodríguez,Cornelio Saavedra;C. Saaved,,,,,,,,False
+Q4233309,"5,34145858091523E+020",PERS,,Cornelio Saavedra Rodríguez,Cornelio Saavedra;C. Saaved,1821-01-01,1891-04-07,,Chile,Chilean general,1.0,,True
 PERS_99138,,PERS,,Ulloa,Ulloa,,,,,,,,False
 ORG_40231,,ORG,,fuerzas,fuerzas,,,,,,,,False
 PERS_70976,,PERS,,25 ó 50 hombres,25 ó 50 hombres,,,,,,,,False
@@ -88,6 +88,25 @@ PERS_10710,,PERS,,Cruz,Cruz,,,,,,,,False
 Q3608,,LOC,,Angol,Angol,,,,,,,,False
 PERS_58229,,PERS,,jóven,jóven,,,,,,,,False
 LOC_33860,,LOC,,frontera,frontera,,,,,,,,False
-PERS_81771,,PERS,,Miguel,Miguel,,,,,,,,False
-LOC_83290,,LOC,,casa,casa,,,,,,,,False
-PERS_86752,,PERS,,Manuel,Manuel,,,,,,,,False
+PERS_35125,,PERS,,Mauricio Barbosa,Mauricio Barbosa,,,,,,,,False
+LOC_55607,,LOC,,punto del fuerte de Lebu,punto del fuerte de Lebu,,,,,,,,False
+ORG_17927,,ORG,,guarnición,guarnición,,,,,,,,False
+LOC_90991,,LOC,,Negrete,Negrete,,,,,,,,False
+PERS_39884,,PERS,,150infantes,150infantes,,,,,,,,False
+PERS_82897,,PERS,,40 de caballería,40 de caballería,,,,,,,,False
+PERS_41706,,PERS,,dos mil indioshabiendo,dos mil indioshabiendo,,,,,,,,False
+LOC_49605,,LOC,,campo,campo,,,,,,,,False
+PERS_21413,,PERS,,20heridos,20heridos,,,,,,,,False
+PERS_30448,,PERS,,Coronel Señoret,Coronel Señoret,,,,,,,,False
+PERS_91296,,PERS,,Coman-dante,Coman-dante,,,,,,,,False
+ORG_30801,,ORG,,guarniciones,guarniciones,,,,,,,,False
+LOC_10203,,LOC,,Constitucion,Constitucion,,,,,,,,False
+LOC_88528,,LOC,,Tucapel,Tucapel,,,,,,,,False
+LOC_18849,,LOC,,Los Angeles,Los Angeles,,,,,,,,False
+ORG_16832,,ORG,,Gob^otu,Gob^otu,,,,,,,,False
+ORG_89363,,ORG,,cuerpo,cuerpo,,,,,,,,False
+ORG_56624,,ORG,,Co-misaría,Co-misaría,,,,,,,,False
+PERS_70914,,PERS,,doctor,doctor,,,,,,,,False
+Q1327,26785781,PERS,,José Joaquín Pérez,José Joaquín Pérez,1801-05-06,1889-07-01,,Chile,Chilean politician and President (1801-1889),1.0,,True
+PERS_46502,,PERS,,Ocha-gavía,Ocha-gavía,,,,,,,,False
+Q5945826,50032889,PERS,,José Tomás Urmeneta,José Tomás Urmeneta,1808-10-08,1878-10-20,,Chile,Chilean politician,1.0,,True

@@ -9,6 +9,10 @@ class Index:
     NS = {"tei": "http://www.tei-c.org/ns/1.0", "xml": "http://www.w3.org/XML/1998/namespace"}
 
     def __init__(self, root):
+        """
+        initiation
+        :param root: root of xml
+        """
         self.root = root
         ET.register_namespace("xml", Index.NS['xml'])
         self.xml_id = ET.QName(Index.NS['xml'], "id")
@@ -39,10 +43,13 @@ class Index:
                         sex = 0
                     else:
                         sex = data.sex
+                    if data.id_authority is not None:
+                        id_authority ="https://viaf.org/viaf/" + str(data.id_authority)
+                    else:
+                        id_authority = "N.C."
                     # Build element description
                     person = ET.SubElement(listPerson[0], "person", {self.xml_id: id_,
-                                                                     self.xml_base: "https://viaf.org/viaf/" + str(
-                                                                         data.id_authority),
+                                                                     self.xml_base: id_authority,
                                                                      self.xml_lang: data.language,
                                                                      'sex': str(sex)})
                     persname = ET.SubElement(person, "persname")
@@ -58,6 +65,7 @@ class Index:
                     if data.description is not None:
                         note = ET.SubElement(person, "note", type='description')
                         note.text = str(data.description)
+
             elif type_ == 'ORG':
                 # build xpath
                 xpath = f"//tei:particDesc/tei:listOrg/tei:org[@xml:id ='{id_}']"
@@ -83,9 +91,12 @@ class Index:
             if len(self.root.xpath(xpath, namespaces=Index.NS)) < 1:
                 data = SPARQL.run_sparql(id_, 'LOC')
                 listPlace = self.root.xpath('//tei:settingDesc/tei:listPlace', namespaces=Index.NS)
+                if data.id_authority is not None:
+                    id_authority = "https://www.geonames.org/" + str(data.id_authority)
+                else:
+                    id_authority = "N.C."
                 place = ET.SubElement(listPlace[0], "place", {self.xml_id: id_,
-                                                              self.xml_base: "https://www.geonames.org/" + str(
-                                                                  data.id_authority), self.xml_lang: data.language,
+                                                              self.xml_base: id_authority, self.xml_lang: data.language,
                                                               'type': str(data.type).replace(" ", "_")})
                 ET.SubElement(place, "placename").text = str(data.name)
                 if data.region is not None:
@@ -99,6 +110,9 @@ class Index:
 
 
 class TreeHeader:
+    """
+    Class to build teiheader
+    """
     NS_XML = "http://www.w3.org/XML/1998/namespace"
     terms = ["Share — copy and redistribute the material in any medium or format",
              "Adapt — remix, transform, and build upon the material",
@@ -108,6 +122,12 @@ class TreeHeader:
              "The license is restricted to the use of XML-TEI files. The exploitation, distribution or publication of the attached images is subject to the approval of the institution. The full rights of the archive are reserved. The request can be made to the following address: <email>archivo.central@uchile.cl</email>"]
 
     def __init__(self, root, meta, id_archive):
+        """
+        Function to init class
+        :param root: root of xml-tei
+        :param meta: nametuple with metadata
+        :param id_archive: id of file
+        """
         self.root = root
         self.author = meta.author
         self.box = meta.box
@@ -120,6 +140,10 @@ class TreeHeader:
         self.id_archive = id_archive
 
     def build(self):
+        """
+        Function to build all element in teiheader
+        :return:
+        """
 
         #   Base
         teiHeader = ET.SubElement(self.root, "teiHeader")
@@ -234,11 +258,13 @@ class TreeHeader:
         p_corr = ET.SubElement(correction, "p")
         p_corr.text = "There are no corrections for spelling or grammatical errors. The transcription is as original as possible. A post-process HTR correction was performed via spellchecker and Levenshtein's Distance algorithm."
         punctuation = ET.SubElement(editorialDecl, "punctuation")
-        punctuation.text = """<p>The punctuation has been transcribed as found.</p>"""
+        ET.SubElement(punctuation, 'p').text = "The punctuation has been transcribed as found."
         segmentation = ET.SubElement(editorialDecl, "segmentation", attrib={"target": "https://github.com/segmonto"})
-        segmentation.text = "<p>The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.</p>"
+        ET.SubElement(segmentation,
+                      'p').text = "The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology."
         normalization = ET.SubElement(editorialDecl, "normalization")
-        normalization.text = """<p>Words that are crossed out, illegible or only interpretable have not been transcribed.</p>"""
+        ET.SubElement(normalization,
+                      'p').text = "Words that are crossed out, illegible or only interpretable have not been transcribed."
         appInfo = ET.SubElement(encodingDesc, "appInfo")
         application1 = ET.SubElement(appInfo, "application", attrib={"version": "4.1.1", "ident": "kraken"})
         label1 = ET.SubElement(application1, "label")

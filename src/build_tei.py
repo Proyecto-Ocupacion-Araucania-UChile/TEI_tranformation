@@ -10,12 +10,20 @@ from .build_body import body
 
 
 class XML:
+    """
+    Class to build xml tei base from xml-alto
+    """
     tags = None
     root = None
     body = None
     meta = None
 
     def __init__(self, id_, bank_files):
+        """
+        initiation class
+        :param id_: id of files
+        :param bank_files:
+        """
         self.id = id_
         self.bank_files = bank_files
         self.id_archive = "AH0" + id_

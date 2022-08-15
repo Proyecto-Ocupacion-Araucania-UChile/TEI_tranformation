@@ -83,15 +83,15 @@
       <particDesc>
         <listOrg>
           <head>List of organizations</head>
-        </listOrg>
+        <org xml:id="ORG_16832"><orgname>Gob^otu</orgname></org><org xml:id="ORG_84978"><orgname>tropa</orgname></org><org xml:id="ORG_89363"><orgname>cuerpo</orgname></org><org xml:id="ORG_56624"><orgname>Co-misaría</orgname></org><org xml:id="ORG_84978"><orgname>tropa</orgname></org><org xml:id="ORG_74844"><orgname>Gobierno de Chile</orgname></org><org xml:id="ORG_96712"><orgname>división</orgname></org></listOrg>
         <listPerson>
           <head>List of persons</head>
-        </listPerson>
+        <person xml:id="PERS_41113" xml:base="N.C." xml:lang="es" sex="0"><persname>Mauricio Barbosa</persname></person><person xml:id="PERS_86612" xml:base="N.C." xml:lang="es" sex="0"><persname>General</persname></person><person xml:id="PERS_70914" xml:base="N.C." xml:lang="es" sex="0"><persname>doctor</persname></person><person xml:id="Q1327" xml:base="https://viaf.org/viaf/26785781" xml:lang="en" sex="1.0"><persname>José Joaquín Pérez</persname><birth when-iso="1801-05-06">6 de mayo de 1801</birth><death when-iso="1889-07-01">1 de julio de 1889</death><note type="description">Chilean politician and President (1801-1889)</note></person><person xml:id="PERS_46502" xml:base="N.C." xml:lang="es" sex="0"><persname>Ocha-gavía</persname></person><person xml:id="Q5945826" xml:base="https://viaf.org/viaf/50032889" xml:lang="en" sex="1.0"><persname>José Tomás Urmeneta</persname><birth when-iso="1808-10-08">8 de octubre de 1808</birth><death when-iso="1878-10-20">20 de octubre de 1878</death><note type="description">Chilean politician</note></person><person xml:id="PERS_47745" xml:base="N.C." xml:lang="es" sex="0"><persname>Boonen</persname></person><person xml:id="Q4233309" xml:base="https://viaf.org/viaf/5,34145858091523E+020" xml:lang="en" sex="1.0"><persname>Cornelio Saavedra Rodríguez</persname><birth when-iso="1821-01-01">1 de enero de 1821</birth><death when-iso="1891-04-07">7 de abril de 1891</death><note type="description">Chilean general</note></person></listPerson>
       </particDesc>
       <settingDesc>
         <listPlace>
           <head>List of places</head>
-        </listPlace>
+        <place xml:id="Q33986" xml:base="https://www.geonames.org/3868626" xml:lang="en" type="city_in_Chile"><placename>Valparaíso</placename><region>Valparaíso</region><country>Chile</country><geo>-71.619722222 -33.046111111</geo><note type="description">city in Chile</note></place><place xml:id="LOC_88528" xml:base="N.C." xml:lang="es" type="None"><placename>Tucapel</placename></place><place xml:id="LOC_18849" xml:base="N.C." xml:lang="es" type="None"><placename>Los Angeles</placename></place><place xml:id="Q3632" xml:base="https://www.geonames.org/3899462" xml:lang="en" type="city_in_Chile"><placename>Arauco</placename><region>Arauco</region><country>Chile</country><geo>-73.3175 -37.2463</geo><note type="description">Chilean commune</note></place></listPlace>
       </settingDesc>
     </profileDesc>
     <encodingDesc>
@@ -100,9 +100,15 @@
         <correction>
           <p>There are no corrections for spelling or grammatical errors. The transcription is as original as possible. A post-process HTR correction was performed via spellchecker and Levenshtein's Distance algorithm.</p>
         </correction>
-        <punctuation>&lt;p&gt;The punctuation has been transcribed as found.&lt;/p&gt;</punctuation>
-        <segmentation target="https://github.com/segmonto">&lt;p&gt;The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.&lt;/p&gt;</segmentation>
-        <normalization>&lt;p&gt;Words that are crossed out, illegible or only interpretable have not been transcribed.&lt;/p&gt;</normalization>
+        <punctuation>
+          <p>The punctuation has been transcribed as found.</p>
+        </punctuation>
+        <segmentation target="https://github.com/segmonto">
+          <p>The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.</p>
+        </segmentation>
+        <normalization>
+          <p>Words that are crossed out, illegible or only interpretable have not been transcribed.</p>
+        </normalization>
       </editorialDecl>
       <appInfo>
         <application version="4.1.1" ident="kraken">
@@ -347,25 +353,25 @@
       <div type="Letters">
         <pb corresp="#299_a"/>
         <opener>
-          <dateline corresp="#299_a_z1"><lb corresp="#299_a_z1_l1"/>Valparaiso, Julio 101860</dateline>
-          <dateline corresp="#299_a_z1"><lb corresp="#299_a_z1_l2"/>Tucapel</dateline>
-          <name corresp="#299_a_z2" type="addressee"><lb corresp="#299_a_z2_l1"/>Sr D. Mauricio Barboza</name>
+          <dateline corresp="#299_a_z1"><placename resp="spacy" ref="#Q33986"><lb corresp="#299_a_z1_l1"/>Valparaiso</placename>, <date resp="spacy">Julio 101860</date></dateline>
+          <dateline corresp="#299_a_z1"><placename resp="spacy" ref="#LOC_88528"><lb corresp="#299_a_z1_l2"/>Tucapel</placename></dateline>
+          <name corresp="#299_a_z2" type="addressee"><lb corresp="#299_a_z2_l1"/>Sr D. <persname resp="spacy" ref="#PERS_41113">Mauricio Barboza</persname></name>
           <salute corresp="#299_a_z4"><lb corresp="#299_a_z4_l1"/>Mi estimado amigo:</salute>
         </opener>
-        <p corresp="#299_a_z3" n="1"><lb corresp="#299_a_z3_l1"/>Tus cartas del 17 de Junio son las únicas que<lb corresp="#299_a_z3_l2"/>he recibido desde que fuiste a Los Angeles y con tanto atraso han llega-<lb corresp="#299_a_z3_l3"/>do a mi poder que hacen solo dos días las he recibido y en el mo-<lb corresp="#299_a_z3_l4"/>mento he tomado medidas para alistar un buque y avisar al Gob^o<lb corresp="#299_a_z3_l5"/>tu situacion. Hoi se ordena ya la salida del “Maule” y embarque de<lb corresp="#299_a_z3_l6"/>víveres y el viernes 13 estará de viaje este vapor para proporcionarte<lb corresp="#299_a_z3_l7"/>los auxilios necesarios.</p>
+        <p corresp="#299_a_z3" n="1"><lb corresp="#299_a_z3_l1"/>Tus cartas del <date resp="spacy">17 de Junio</date> son las únicas que<lb corresp="#299_a_z3_l2"/>he recibido desde que fuiste a <placename resp="spacy" ref="#LOC_18849">Los Angeles</placename> y con tanto atraso han llega-<lb corresp="#299_a_z3_l3"/>do a mi poder que hacen solo <date resp="spacy">dos días</date> las he recibido y en el mo-<lb corresp="#299_a_z3_l4"/>mento he tomado medidas para alistar un buque y avisar al <orgname resp="spacy" ref="#ORG_16832">Gob^o<lb corresp="#299_a_z3_l5"/>tu</orgname> situacion. <date resp="spacy">Hoi</date> se ordena ya la salida del “Maule” y embarque de<lb corresp="#299_a_z3_l6"/>víveres y el <date resp="spacy">viernes 13</date> estará de viaje este vapor para proporcionarte<lb corresp="#299_a_z3_l7"/>los auxilios necesarios.</p>
         <p corresp="#299_a_z3" n="2"><lb corresp="#299_a_z3_l8"/>Los techos están listos para mandartelos cuando tu creas<lb corresp="#299_a_z3_l9"/>convenientes emprender el trabajo y tengas los elementos necesa-<lb corresp="#299_a_z3_l10"/>rios para conducir el fierro. De todos modos te los había<lb corresp="#299_a_z3_l11"/>mandado por el Maule, pero este vapor es tan pequeño que<lb corresp="#299_a_z3_l12"/>apenas puede llevarte los víveres.</p>
-        <p corresp="#299_a_z3" n="3"><lb corresp="#299_a_z3_l13"/>En cuanto a la remesa de artículos, te mando lo que<lb corresp="#299_a_z3_l14"/>creo puedas necesitar tanto para la tropa como para los ofi-<lb corresp="#299_a_z3_l15"/>ciales y lo que no necesites, bien puedes realizarlo en esa con<lb corresp="#299_a_z3_l16"/>ventaja y evitar el cargo que irá contra tu cuerpo. La Co-<lb corresp="#299_a_z3_l17"/>misaría ha sido la encargada para esta compra.</p>
-        <p corresp="#299_a_z3" n="4"><lb corresp="#299_a_z3_l18"/>Debes pues estar prevenido de la llegada del “Maule” y si<lb corresp="#299_a_z3_l19"/>encuentras mas prudente retirarte sobre Arauco, debes hacerlo<lb corresp="#299_a_z3_l20"/>a pesar que sería nuevo sacrificio llevar tu tropa a esa locali-<lb corresp="#299_a_z3_l21"/>dad pasado el invierno, el que estando ya mui adelantado<lb corresp="#299_a_z3_l22"/>hace desaparezca luego tu penosa situacion; sinembargo tu<lb corresp="#299_a_z3_l23"/>veras lo mas conveniente.</p>
-        <p corresp="#299_a_z3" n="5"><lb corresp="#299_a_z3_l24"/>El General me dice que te dirijas oficialmente al Gob^o</p>
+        <p corresp="#299_a_z3" n="3"><lb corresp="#299_a_z3_l13"/>En cuanto a la remesa de artículos, te mando lo que<lb corresp="#299_a_z3_l14"/>creo puedas necesitar tanto para la <orgname resp="spacy" ref="#ORG_84978">tropa</orgname> como para los ofi-<lb corresp="#299_a_z3_l15"/>ciales y lo que no necesites, bien puedes realizarlo en esa con<lb corresp="#299_a_z3_l16"/>ventaja y evitar el cargo que irá contra tu <orgname resp="spacy" ref="#ORG_89363">cuerpo</orgname>. La <orgname resp="spacy" ref="#ORG_56624">Co-<lb corresp="#299_a_z3_l17"/>misaría</orgname> ha sido la encargada para esta compra.</p>
+        <p corresp="#299_a_z3" n="4"><lb corresp="#299_a_z3_l18"/>Debes pues estar prevenido de la llegada del “Maule” y si<lb corresp="#299_a_z3_l19"/>encuentras mas prudente retirarte sobre <placename resp="spacy" ref="#Q3632">Arauco</placename>, debes hacerlo<lb corresp="#299_a_z3_l20"/>a pesar que sería nuevo sacrificio llevar tu <orgname resp="spacy" ref="#ORG_84978">tropa</orgname> a esa locali-<lb corresp="#299_a_z3_l21"/>dad pasado el invierno, el que estando ya mui adelantado<lb corresp="#299_a_z3_l22"/>hace desaparezca luego tu penosa situacion; sinembargo tu<lb corresp="#299_a_z3_l23"/>veras lo mas conveniente.</p>
+        <p corresp="#299_a_z3" n="5"><lb corresp="#299_a_z3_l24"/>El <persname resp="spacy" ref="#PERS_86612">General</persname> me dice que te dirijas oficialmente al <orgname resp="spacy" ref="#ORG_74844">Gob^o</orgname></p>
         <pb corresp="#299_b"/>
-        <p corresp="#299_b_z1" n="6"><lb corresp="#299_b_z1_l1"/>pidiendo las medicinas y médico que necesitas y ya tengo<lb corresp="#299_b_z1_l2"/>encargo de buscarte un doctor para que esté con tu división.</p>
+        <p corresp="#299_b_z1" n="6"><lb corresp="#299_b_z1_l1"/>pidiendo las medicinas y médico que necesitas y ya tengo<lb corresp="#299_b_z1_l2"/>encargo de buscarte un <persname resp="spacy" ref="#PERS_70914">doctor</persname> para que esté con tu <orgname resp="spacy" ref="#ORG_96712">división</orgname>.</p>
         <p corresp="#299_b_z1" n="7"><lb corresp="#299_b_z1_l3"/>En cuanto al abono de real diario no será posible y te<lb corresp="#299_b_z1_l4"/>lo aviso para que procures la economía en el rancho de tropa.</p>
         <p corresp="#299_b_z1" n="8"><lb corresp="#299_b_z1_l5"/>Por acá no ocurre novedad ninguna que pueda co-<lb corresp="#299_b_z1_l6"/>municarte, todo sigue tranquilo y con mas que segurida-<lb corresp="#299_b_z1_l7"/>des que continuaremos del mismo modo.</p>
-        <p corresp="#299_b_z1" n="9"><lb corresp="#299_b_z1_l8"/>En materia de política hai mucho silencio y en cuanto<lb corresp="#299_b_z1_l9"/>a candidatos se habla de Don José Joaquín Pérez, Ocha-<lb corresp="#299_b_z1_l10"/>gavía y Don José Tomás Urmeneta, mas probablemente<lb corresp="#299_b_z1_l11"/>se fijará la atención sobre los dos primeros: todavia esto<lb corresp="#299_b_z1_l12"/>es un problema que se decidirá en pocos meses mas.</p>
-        <p corresp="#299_b_z1" n="10"><lb corresp="#299_b_z1_l13"/>Boonen recibió el recibo que me mandaste y me dice<lb corresp="#299_b_z1_l14"/>que tiene en su poder $ 300 poco mas ó menos de los que<lb corresp="#299_b_z1_l15"/>te dará cuenta o pondrá a tu disposicion.</p>
+        <p corresp="#299_b_z1" n="9"><lb corresp="#299_b_z1_l8"/>En materia de política hai mucho silencio y en cuanto<lb corresp="#299_b_z1_l9"/>a candidatos se habla de Don <persname resp="spacy" ref="#Q1327">José Joaquín Pérez</persname>, <persname resp="spacy" ref="#PERS_46502">Ocha-<lb corresp="#299_b_z1_l10"/>gavía</persname> y Don <persname resp="spacy" ref="#Q5945826">José Tomás Urmeneta</persname>, mas probablemente<lb corresp="#299_b_z1_l11"/>se fijará la atención sobre los dos primeros: todavia esto<lb corresp="#299_b_z1_l12"/>es un problema que se decidirá en pocos meses mas.</p>
+        <p corresp="#299_b_z1" n="10"><persname resp="spacy" ref="#PERS_47745"><lb corresp="#299_b_z1_l13"/>Boonen</persname> recibió el recibo que me mandaste y me dice<lb corresp="#299_b_z1_l14"/>que tiene en su poder $ 300 poco mas ó menos de los que<lb corresp="#299_b_z1_l15"/>te dará cuenta o pondrá a tu disposicion.</p>
         <fw corresp="#299_b_z2" type="n_page"><lb corresp="#299_b_z2_l1"/>2</fw>
         <closer>
-          <signed><lb corresp="#299_b_z4_l1"/>Cornelio Saavedra</signed>
+          <signed><persname resp="spacy" ref="#Q4233309"><lb corresp="#299_b_z4_l1"/>Cornelio Saavedra</persname></signed>
           <salute corresp="#299_b_z5" n="11"><lb corresp="#299_b_z5_l1"/>Como siempre me repito tu amigo y S.S.</salute>
         </closer>
       </div>
@@ -373,5 +379,4 @@
     <noteGrp>
       <note corresp="#299_b_z3_l1" type="id_imp">000299</note>
     </noteGrp>
-  </text>
-</TEI>
+  </text></TEI>

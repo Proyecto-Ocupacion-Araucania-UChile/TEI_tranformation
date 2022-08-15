@@ -83,15 +83,15 @@
       <particDesc>
         <listOrg>
           <head>List of organizations</head>
-        </listOrg>
+        <org xml:id="ORG_17927"><orgname>guarnición</orgname></org><org xml:id="ORG_30801"><orgname>guarniciones</orgname></org></listOrg>
         <listPerson>
           <head>List of persons</head>
-        </listPerson>
+        <person xml:id="PERS_35125" xml:base="N.C." xml:lang="es" sex="0"><persname>Mauricio Barbosa</persname></person><person xml:id="Q178484" xml:base="N.C." xml:lang="en" sex="0"><persname>Mapuches</persname><note type="description">Amerindian people, who inhabit the historical territory of the Araucanía in the current states of Chile and Argentina</note></person><person xml:id="PERS_39884" xml:base="N.C." xml:lang="es" sex="0"><persname>150infantes</persname></person><person xml:id="PERS_82897" xml:base="N.C." xml:lang="es" sex="0"><persname>40 de caballería</persname></person><person xml:id="PERS_41706" xml:base="N.C." xml:lang="es" sex="0"><persname>dos mil indioshabiendo</persname></person><person xml:id="PERS_21413" xml:base="N.C." xml:lang="es" sex="0"><persname>20heridos</persname></person><person xml:id="PERS_30448" xml:base="N.C." xml:lang="es" sex="0"><persname>Coronel Señoret</persname></person><person xml:id="PERS_91296" xml:base="N.C." xml:lang="es" sex="0"><persname>Coman-dante</persname></person><person xml:id="Q4233309" xml:base="https://viaf.org/viaf/5,34145858091523E+020" xml:lang="en" sex="1.0"><persname>Cornelio Saavedra Rodríguez</persname><birth when-iso="1821-01-01">1 de enero de 1821</birth><death when-iso="1891-04-07">7 de abril de 1891</death><note type="description">Chilean general</note></person></listPerson>
       </particDesc>
       <settingDesc>
         <listPlace>
           <head>List of places</head>
-        </listPlace>
+        <place xml:id="Q33986" xml:base="https://www.geonames.org/3868626" xml:lang="en" type="city_in_Chile"><placename>Valparaíso</placename><region>Valparaíso</region><country>Chile</country><geo>-71.619722222 -33.046111111</geo><note type="description">city in Chile</note></place><place xml:id="LOC_55607" xml:base="N.C." xml:lang="es" type="None"><placename>punto del fuerte de Lebu</placename></place><place xml:id="LOC_90991" xml:base="N.C." xml:lang="es" type="None"><placename>Negrete</placename></place><place xml:id="LOC_49605" xml:base="N.C." xml:lang="es" type="None"><placename>campo</placename></place><place xml:id="Q14488" xml:base="https://www.geonames.org/3883457" xml:lang="en" type="city_in_Chile"><placename>Lebu</placename><region>Lebu</region><country>Chile</country><geo>-73.6561 -37.6103</geo><note type="description">city and commune in Chile</note></place><place xml:id="Q3632" xml:base="https://www.geonames.org/3899462" xml:lang="en" type="city_in_Chile"><placename>Arauco</placename><region>Arauco</region><country>Chile</country><geo>-73.3175 -37.2463</geo><note type="description">Chilean commune</note></place><place xml:id="LOC_10203" xml:base="N.C." xml:lang="es" type="None"><placename>Constitucion</placename></place></listPlace>
       </settingDesc>
     </profileDesc>
     <encodingDesc>
@@ -100,9 +100,15 @@
         <correction>
           <p>There are no corrections for spelling or grammatical errors. The transcription is as original as possible. A post-process HTR correction was performed via spellchecker and Levenshtein's Distance algorithm.</p>
         </correction>
-        <punctuation>&lt;p&gt;The punctuation has been transcribed as found.&lt;/p&gt;</punctuation>
-        <segmentation target="https://github.com/segmonto">&lt;p&gt;The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.&lt;/p&gt;</segmentation>
-        <normalization>&lt;p&gt;Words that are crossed out, illegible or only interpretable have not been transcribed.&lt;/p&gt;</normalization>
+        <punctuation>
+          <p>The punctuation has been transcribed as found.</p>
+        </punctuation>
+        <segmentation target="https://github.com/segmonto">
+          <p>The segmentation is done via the kraken segmentation model and restructured from the XML-ALTO files and Segmonto ontology.</p>
+        </segmentation>
+        <normalization>
+          <p>Words that are crossed out, illegible or only interpretable have not been transcribed.</p>
+        </normalization>
       </editorialDecl>
       <appInfo>
         <application version="4.1.1" ident="kraken">
@@ -309,31 +315,30 @@
       <div type="Letters">
         <pb corresp="#255_a"/>
         <opener>
-          <name corresp="#255_a_z1" type="addressee"><lb corresp="#255_a_z1_l1"/>Sr D. Mauricio Barbosa</name>
-          <dateline corresp="#255_a_z3"><lb corresp="#255_a_z3_l1"/>Valp^o, Febrero 24 de 1860</dateline>
+          <name corresp="#255_a_z1" type="addressee"><lb corresp="#255_a_z1_l1"/>Sr D. <persname resp="spacy" ref="#PERS_35125">Mauricio Barbosa</persname></name>
+          <dateline corresp="#255_a_z3"><placename resp="spacy" ref="#Q33986"><lb corresp="#255_a_z3_l1"/>Valp^o</placename>, <date resp="spacy">Febrero 24 de 1860</date></dateline>
           <salute corresp="#255_a_z5"><lb corresp="#255_a_z5_l1"/>Apreciado amigo:</salute>
-          <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l1"/>glar el punto del fuerte de Lebu.</salute>
-          <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l2"/>No tengas mucha confianza con tus indios</salute>
+          <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l1"/>glar el <placename resp="spacy" ref="#LOC_55607">punto del fuerte de Lebu</placename>.</salute>
+          <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l2"/>No tengas mucha confianza con tus <persname resp="spacy" ref="#Q178484">indios</persname></salute>
           <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l3"/>amigos y sed prudente con la timides que te</salute>
           <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l4"/>manifiestan los del Imperial.</salute>
           <salute corresp="#255_b_z1"><lb corresp="#255_b_z1_l5"/>tu amigo y Seguro servidor.</salute>
         </opener>
         <p corresp="#255_a_z2" n="1"><lb corresp="#255_a_z2_l1"/>Despues de mi ultima que habras recibido dos o<lb corresp="#255_a_z2_l2"/>tres dias antes de esta, no tengo nada nuevo que<lb corresp="#255_a_z2_l3"/>comunicarte.</p>
-        <p corresp="#255_a_z2" n="2"><lb corresp="#255_a_z2_l4"/>Hoi recibí cartas del sur y me anuncian que<lb corresp="#255_a_z2_l5"/>la guarnición de Negrete, compuesta de 150<lb corresp="#255_a_z2_l6"/>infantes, 40 de caballería y dos piezas de arti-<lb corresp="#255_a_z2_l7"/>llería fue atacada el día 17 por dos mil indios<lb corresp="#255_a_z2_l8"/>habiendo sido completamente dispersados<lb corresp="#255_a_z2_l9"/>estos y dejando en el campo 16 muertos y 20<lb corresp="#255_a_z2_l10"/>heridos. El ataque duró desde las 3 de la tar-<lb corresp="#255_a_z2_l11"/>de hásta las 8 de la noche.</p>
-        <p corresp="#255_a_z2" n="3"><lb corresp="#255_a_z2_l12"/>El Coronel Señoret marcha en el “Indepen-<lb corresp="#255_a_z2_l13"/>dencia” y antes de su regreso será conveniente<lb corresp="#255_a_z2_l14"/>que hable con él.</p>
-        <p corresp="#255_a_z2" n="4"><lb corresp="#255_a_z2_l15"/>Como le hé dicho en mi anterior, el “Indepen-<lb corresp="#255_a_z2_l16"/>dencia” va en reemplaso del Maipu y las<lb corresp="#255_a_z2_l17"/>instrucciones que se han dado a su Coman-<lb corresp="#255_a_z2_l18"/>dante, son de ponerse con su buque á tu dis-<lb corresp="#255_a_z2_l19"/>posición para poder estar en contacto con<lb corresp="#255_a_z2_l20"/>las guarniciones de Lebu y Arauco.</p>
-        <p corresp="#255_a_z2" n="5"><lb corresp="#255_a_z2_l21"/>No te mando herramientas para el traba-<lb corresp="#255_a_z2_l22"/>jo por que no me ha venido autorisación y al<lb corresp="#255_a_z2_l23"/>pasar el Independencia á Constitucion por<lb corresp="#255_a_z2_l24"/>Señoret, creo que es con el objeto de arre-</p>
+        <p corresp="#255_a_z2" n="2"><date resp="spacy"><lb corresp="#255_a_z2_l4"/>Hoi</date> recibí cartas del sur y me anuncian que<lb corresp="#255_a_z2_l5"/>la <orgname resp="spacy" ref="#ORG_17927">guarnición</orgname> de <placename resp="spacy" ref="#LOC_90991">Negrete</placename>, compuesta de <persname resp="spacy" ref="#PERS_39884">150<lb corresp="#255_a_z2_l6"/>infantes</persname>, <persname resp="spacy" ref="#PERS_82897">40 de caballería</persname> y dos piezas de arti-<lb corresp="#255_a_z2_l7"/>llería fue atacada el <date resp="spacy">día 17</date> por <persname resp="spacy" ref="#PERS_41706">dos mil indios<lb corresp="#255_a_z2_l8"/>habiendo</persname> sido completamente dispersados<lb corresp="#255_a_z2_l9"/>estos y dejando en el <placename resp="spacy" ref="#LOC_49605">campo</placename> 16 muertos y <persname resp="spacy" ref="#PERS_21413">20<lb corresp="#255_a_z2_l10"/>heridos</persname>. El ataque duró desde las <date resp="spacy">3 de la tar-<lb corresp="#255_a_z2_l11"/>de</date> hásta las <date resp="spacy">8 de la noche</date>.</p>
+        <p corresp="#255_a_z2" n="3"><lb corresp="#255_a_z2_l12"/>El <persname resp="spacy" ref="#PERS_30448">Coronel Señoret</persname> marcha en el “Indepen-<lb corresp="#255_a_z2_l13"/>dencia” y antes de su regreso será conveniente<lb corresp="#255_a_z2_l14"/>que hable con él.</p>
+        <p corresp="#255_a_z2" n="4"><lb corresp="#255_a_z2_l15"/>Como le hé dicho en mi anterior, el “Indepen-<lb corresp="#255_a_z2_l16"/>dencia” va en reemplaso del Maipu y las<lb corresp="#255_a_z2_l17"/>instrucciones que se han dado a su <persname resp="spacy" ref="#PERS_91296">Coman-<lb corresp="#255_a_z2_l18"/>dante</persname>, son de ponerse con su buque á tu dis-<lb corresp="#255_a_z2_l19"/>posición para poder estar en contacto con<lb corresp="#255_a_z2_l20"/>las <orgname resp="spacy" ref="#ORG_30801">guarniciones</orgname> de <placename resp="spacy" ref="#Q14488">Lebu</placename> y <placename resp="spacy" ref="#Q3632">Arauco</placename>.</p>
+        <p corresp="#255_a_z2" n="5"><lb corresp="#255_a_z2_l21"/>No te mando herramientas para el traba-<lb corresp="#255_a_z2_l22"/>jo por que no me ha venido autorisación y al<lb corresp="#255_a_z2_l23"/>pasar el Independencia á <placename resp="spacy" ref="#LOC_10203">Constitucion</placename> por<lb corresp="#255_a_z2_l24"/>Señoret, creo que es con el objeto de arre-</p>
         <fw corresp="#255_a_z4" type="n_page"><lb corresp="#255_a_z4_l1"/>1</fw>
         <pb corresp="#255_b"/>
         <fw corresp="#255_b_z2" type="n_page"><lb corresp="#255_b_z2_l1"/>2</fw>
         <closer>
           <salute corresp="#255_b_z4" n="6"><lb corresp="#255_b_z4_l1"/>Deseando te conserves bueno, me repito</salute>
-          <signed><lb corresp="#255_b_z5_l1"/>Cornelio Saavedra</signed>
+          <signed><persname resp="spacy" ref="#Q4233309"><lb corresp="#255_b_z5_l1"/>Cornelio Saavedra</persname></signed>
         </closer>
       </div>
     </body>
     <noteGrp>
       <note corresp="#255_b_z3_l1" type="id_imp">000255</note>
     </noteGrp>
-  </text>
-</TEI>
+  </text></TEI>

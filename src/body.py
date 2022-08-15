@@ -1,4 +1,4 @@
-from lxml import etree as ET
+"""from lxml import etree as ET
 from collections import namedtuple
 
 
@@ -10,10 +10,6 @@ class Text:
         self.id = id_
 
     def take_txt(self):
-        """Parse contextual and attribute data for each text line and store it in a named tuple.
-        Returns:
-            data (list of named tuples): list of data for each text line
-        """
         Line = namedtuple("Line", ["id", "n", "text", "line_type", "zone_type", "zone_id", "page_id"])
         data = [Line(
             ln.getparent().get("{http://www.w3.org/XML/1998/namespace}id"),  # @xml:id of the line's zone
@@ -90,3 +86,4 @@ class Text:
                 # if the line is not emphasized, append it to the last element in the <ab>
                 elif line.line_type[:7] == "Default":
                     last_element.append(lb)
+"""

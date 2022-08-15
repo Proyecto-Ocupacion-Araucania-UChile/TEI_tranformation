@@ -22,7 +22,6 @@ class SPARQL:
         """
         # Get row
         row = check_csv(SPARQL.df_ent, id_, 'id')
-        print(id_)
         Data = namedtuple("Data",
                           ["id_authority", "name", "date_birth", "date_death", "region", "country", "description",
                            "sex", "type", "loc", 'language'])
@@ -95,7 +94,7 @@ class SPARQL:
                 else:
                     sex = np.nan
                 if 'VIAF' in results:
-                    id_authority = results['VIAF']['value']
+                    id_authority = str(results['VIAF']['value'])
                 else:
                     id_authority = np.nan
                 if 'description' in results:
