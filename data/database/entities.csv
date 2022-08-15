@@ -1,25 +1,22 @@
 id,id_authority,label_ent,type,name,names_associated,date_birth,date_end,region,country,description,sex,geo_loc,request
 ORG_94765,,ORG,,Bahia,Bahia,,,,,,,,False
-LOC_64647,,LOC,,Arauco,Arauco,,,,,,,,False
+Q3632,,LOC,,Arauco,Arauco;Parauco;Araucoy,,,,,,,,False
 PERS_87857,,PERS,,muchachas,muchachas,,,,,,,,False
 LOC_83779,,LOC,,alta fron-tera,alta fron-tera,,,,,,,,False
 ORG_40607,,ORG,,division,division,,,,,,,,False
 PERS_31088,,PERS,,Ten^te Coronel de Art^aé,Ten^te Coronel de Art^aé,,,,,,,,False
-PERS_40732,,PERS,,In^te D^n José T. Gonzales,In^te D^n José T. Gonzales,,,,,,,,False
-LOC_33719,,LOC,,Lota,Lota,,,,,,,,False
-PERS_53159,,PERS,,indios,indios,,,,,,,,False
+PERS_40732,,PERS,,José T. Gonzales,In^te D^n José T. Gonzales,,,,,,,,False
+Q16911,,LOC,,Lota,Lota,,,,,,,,False
+Q178484,,ORG,,Mapuches,indios,,,,,,,,False
 PERS_87861,,PERS,,jefe,jefe,,,,,,,,False
-LOC_35117,,LOC,,Los Ángeles,Los Ángeles,,,,,,,,False
 PERS_24847,,PERS,,hombres,hombres,,,,,,,,False
-LOC_74162,,LOC,,Perú,Perú,,,,,,,,False
-PERS_94825,,PERS,,Presidente,Presidente,,,,,,,,False
-LOC_23457,,LOC,,Lebu,Lebu,,,,,,,,False
+Q419,,LOC,,Perú,Perú,,,,,,,,False
+Q14488,,LOC,,Lebu,Lebu,,,,,,,,False
 PERS_81129,,PERS,,pícaros indios,pícaros indios,,,,,,,,False
 PERS_18181,,PERS,,infantes,infantes,,,,,,,,False
 PERS_12900,,PERS,,100 carabineros,100 carabineros,,,,,,,,False
-PERS_77224,,PERS,,Ángel Custodio Gallo,Ángel Custodio Gallo,,,,,,,,False
-LOC_88980,,LOC,,Valparaiso,Valparaiso,,,,,,,,False
-PERS_10831,,PERS,,General D^n Cus-todio,General D^n Cus-todio,,,,,,,,False
+Q33986,,LOC,,Valparaíso,Valparaiso;Valp^o,,,,,,,,False
+Q6173167,,PERS,,Ángel Gallo Goyenechea,General D^n Cus-todio;Ángel Custodio Gallo,,,,,,,,False
 Q310007,,PERS,,Pedro Leon,Pedro Leon,,,,,,,,True
 PERS_17036,,PERS,,Mercurios,Mercurios,,,,,,,,False
 Q187974,8261196.0,LOC,city in Chile,Santa Juana,Santa Juana,,,Concepción Province,Chile,commune of Chile,,-72.933333333 -37.166666666,True
@@ -27,73 +24,60 @@ PERS_73889,,PERS,,estrilones,estrilones,,,,,,,,False
 ORG_96712,,ORG,,división,división,,,,,,,,False
 LOC_55284,,LOC,,sud,sud,,,,,,,,False
 PERS_19064,,PERS,,Corneliole,Corneliole,,,,,,,,False
-PERS_90636,,PERS,,Int^te,Int^te,,,,,,,,False
-LOC_54152,,LOC,,Concep-cion,Concep-cion,,,,,,,,False
+PERS_90636,,PERS,,Intendente,Int^te,,,,,,,,False
+Q1880,,LOC,,Concepción,Concep-cion;Concepcion,,,,,,,,False
 PERS_75133,,PERS,,propio,propio,,,,,,,,False
 PERS_56395,,PERS,,siete individuos,siete individuos,,,,,,,,False
-ORG_83532,,ORG,,Gob^o,Gob^o,,,,,,,,False
+Q17633149,,ORG,,Gobierno de Chile,Gob^o;Gobierno,,,,,,,,False
 ORG_84978,,ORG,,tropa,tropa,,,,,,,,False
 PERS_54928,,PERS,,desertor,desertor,,,,,,,,False
-LOC_38186,,LOC,,Coronel,Coronel,,,,,,,,False
-LOC_52774,,LOC,,Lotay,Lotay,,,,,,,,False
+Q3873,,LOC,,Coronel,Coronel;Coronela,,,,,,,,False
+Q16911,,LOC,,Lota,Lotay,,,,,,,,False
 PERS_45259,,PERS,,Manuel 2^o Escala,Manuel 2^o Escala,,,,,,,,False
 PERS_52378,,PERS,,ministros-llegado,ministros-llegado,,,,,,,,False
-LOC_68595,,LOC,,Concepcion,Concepcion,,,,,,,,False
-PERS_25675,,PERS,,Rafael Soto Mayor,Rafael Soto Mayor,,,,,,,,False
+Q6097988,,PERS,,Rafael Sotomayor,Rafael Soto Mayor;Ministro Soto-mayor,,,,,,,,False
 ORG_85382,,ORG,,ministerio,ministerio,,,,,,,,False
 PERS_48841,,PERS,,Novoa,Novoa,,,,,,,,False
 Q16280345,,PERS,,Los oficiales,Los oficiales,,,,,,,,True
 PERS_57359,,PERS,,Gringo,Gringo,,,,,,,,False
-PERS_16960,,PERS,,Joce Ant^o Queszada,Joce Ant^o Queszada,,,,,,,,False
-LOC_47070,,LOC,,Valp^o,Valp^o,,,,,,,,False
-LOC_85049,,LOC,,PArauco,PArauco,,,,,,,,False
-PERS_60436,,PERS,,Coronel Barbosa,Coronel Barbosa,,,,,,,,False
+PERS_16960,,PERS,,José Antonio Quezada,Joce Ant^o Queszada,,,,,,,,False
 LOC_97785,,LOC,,Nagualgueno,Nagualgueno,,,,,,,,False
-PERS_54136,,PERS,,C. Saaved,C. Saaved,,,,,,,,False
-PERS_41113,,PERS,,Mauricio Barboza,Mauricio Barboza,,,,,,,,False
+PERS_41113,,PERS,,Mauricio Barbosa,Mauricio Barboza;Coronel Barbosa,,,,,,,,False
 ORG_69722,,ORG,,Gobiernotu,Gobiernotu,,,,,,,,False
 LOC_90290,,LOC,,costa,costa,,,,,,,,False
 LOC_38706,,LOC,,Imperialó,Imperialó,,,,,,,,False
-LOC_36581,,LOC,,Tolten,Tolten,,,,,,,,False
 LOC_63518,,LOC,,Imperial,Imperial,,,,,,,,False
-LOC_53088,,LOC,,Toltén,Toltén,,,,,,,,False
+Q17107613,,LOC,,Toltén,Toltén;Tolten,,,,,,,,False
 PERS_54152,,PERS,,caciques,caciques,,,,,,,,False
 ORG_41918,,ORG,,delImperial,delImperial,,,,,,,,False
 LOC_52154,,LOC,,cuarteles de invierno,cuarteles de invierno,,,,,,,,False
 LOC_94374,,LOC,,cuartel,cuartel,,,,,,,,False
-PERS_94350,,PERS,,Pre-sidente,Pre-sidente,,,,,,,,False
+Q1328,,PERS,,Manuel Montt,Pre-sidente;Presidente,,,,,,,,False
 PERS_15708,,PERS,,25 hombres,25 hombres,,,,,,,,False
 LOC_86087,,LOC,,Pontón,Pontón,,,,,,,,False
-ORG_31378,,ORG,,Gobierno,Gobierno,,,,,,,,False
 PERS_16348,,PERS,,Escala,Escala,,,,,,,,False
 PERS_47745,,PERS,,Boonen,Boonen,,,,,,,,False
-PERS_41445,,PERS,,Villalon,Villalon,,,,,,,,False
 PERS_33880,,PERS,,Capitán Chaconle,Capitán Chaconle,,,,,,,,False
-PERS_76573,,PERS,,Villalón,Villalón,,,,,,,,False
+PERS_76573,,PERS,,Villalón,Villalón;Villalon,,,,,,,,False
 PERS_95931,,PERS,,Matus,Matus,,,,,,,,False
-PERS_73021,,PERS,,Ministro Soto-mayor,Ministro Soto-mayor,,,,,,,,False
-LOC_37096,,LOC,,los,los,,,,,,,,False
-LOC_15149,,LOC,,Angeles,Angeles,,,,,,,,False
-PERS_23903,,PERS,,Cornelio Saavedra,Cornelio Saavedra,,,,,,,,False
+Q16910,,LOC,,Los Ángeles,Angeles;Los Ángeles;los,,,,,,,,False
+Q4233309,,PERS,,Cornelio Saavedra Rodríguez,Cornelio Saavedra;C. Saaved,,,,,,,,False
 PERS_99138,,PERS,,Ulloa,Ulloa,,,,,,,,False
 ORG_40231,,ORG,,fuerzas,fuerzas,,,,,,,,False
-LOC_61855,,LOC,,Araucoy,Araucoy,,,,,,,,False
 PERS_70976,,PERS,,25 ó 50 hombres,25 ó 50 hombres,,,,,,,,False
 LOC_26165,,LOC,,Bio-Bio,Bio-Bio,,,,,,,,False
-LOC_24529,,LOC,,Coronela,Coronela,,,,,,,,False
 PERS_12276,,PERS,,Subdelegado Marítimo,Subdelegado Marítimo,,,,,,,,False
-PERS_27985,,PERS,,Ministro del Interior D. AntonioVaras,Ministro del Interior D. AntonioVaras,,,,,,,,False
+Q605572,,PERS,,Antonio Varas,Ministro del Interior D. AntonioVaras,,,,,,,,False
 ORG_21557,,ORG,,Presidencia,Presidencia,,,,,,,,False
-Q5885554,,PERS,,Gregorio Urrutia,Gregorio Urrutia,,,,,,,,True
-Q16914,,PERS,,Lumaco,Lumaco,,,,,,,,True
-LOC_44640,,LOC,,Santiago,Santiago,,,,,,,,False
+Q5885554,,PERS,,Gregorio Urrutia,Gregorio Urrutia;Urrutia,,,,,,,,False
+Q16914,,LOC,,Lumaco,Lumaco,,,,,,,,False
+Q2887,,LOC,,Santiago,Santiago,,,,,,,,False
 PERS_70486,,PERS,,Prast,Prast,,,,,,,,False
-ORG_51051,,ORG,,Cámara,Cámara,,,,,,,,False
+Q2119518,,ORG,,Cámara de Diputadas y Diputados de Chile,Cámara,,,,,,,,False
 PERS_20719,,PERS,,Belisario,Belisario,,,,,,,,False
 PERS_82254,,PERS,,Balmaceday,Balmaceday,,,,,,,,False
 PERS_86612,,PERS,,General,General,,,,,,,,False
 PERS_27803,,PERS,,Ministro,Ministro,,,,,,,,False
-PERS_84344,,PERS,,Urrutia,Urrutia,,,,,,,,False
 PERS_10962,,PERS,,Cautin,Cautin,,,,,,,,False
 PERS_44323,,PERS,,delmand,delmand,,,,,,,,False
 ORG_51921,,ORG,,fuerza de operaciones,fuerza de operaciones,,,,,,,,False
@@ -101,7 +85,7 @@ PERS_82636,,PERS,,Mtrosería,Mtrosería,,,,,,,,False
 PERS_60237,,PERS,,Orozimbo,Orozimbo,,,,,,,,False
 ORG_76095,,ORG,,Gobernatura,Gobernatura,,,,,,,,False
 PERS_10710,,PERS,,Cruz,Cruz,,,,,,,,False
-LOC_24009,,LOC,,Angol,Angol,,,,,,,,False
+Q3608,,LOC,,Angol,Angol,,,,,,,,False
 PERS_58229,,PERS,,jóven,jóven,,,,,,,,False
 LOC_33860,,LOC,,frontera,frontera,,,,,,,,False
 PERS_81771,,PERS,,Miguel,Miguel,,,,,,,,False

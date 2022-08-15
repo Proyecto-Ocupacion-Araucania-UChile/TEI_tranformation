@@ -67,15 +67,34 @@ def write_xml(**kwargs):
             ET.ElementTree(kwargs['root']).write(f, encoding="utf-8", xml_declaration=True, pretty_print=True)
 
 
-def check_csv(df: pd.DataFrame, element, column: str) -> pd.DataFrame:
+def check_csv(df: pd.DataFrame, element, column: str, split=False) -> pd.DataFrame:
     """
     function to check if elements exist in csv
+    :param split: Boolean to active splitting method for series
     :param df: dataframe
     :param element: name which you want to identify
     :param column: columns names where you want identify your element
     :return: dataframe row
     """
-    return df.loc[df[column] == element]
+    # search in splited series
+    if split is True:
+        row = None
+        # splitting
+        serie_list = df[column].str.split(";")
+        # iteration to find in all row
+        for n_row, list_row in enumerate(serie_list):
+            if element in list_row:
+                # Get it
+                row = df.iloc[[n_row]]
+        # If script find nothing, return empty dataframe
+        if row is None:
+            return pd.DataFrame()
+        # return row
+        else:
+            return row
+    # search directly
+    else:
+        return df.loc[df[column] == element]
 
 
 def generate_id(ent_: str) -> str:
