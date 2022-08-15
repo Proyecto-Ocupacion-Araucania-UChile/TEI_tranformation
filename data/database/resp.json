@@ -1,0 +1,20 @@
+[
+  {
+    "forename": "Alessandro",
+    "surname": "Chiaretti",
+    "resp": "Scientific Director of the edition",
+    "role": "Professor and archivist, responsable Área de Información Bibliográfica y Archivística",
+    "@id": "DirSc",
+    "affiliation": "Archivo Central Andres Bello | Universidad de Chile",
+    "@affiliation": "ACAB"
+  },
+  {
+    "forename": "Maxime",
+    "surname": "Humeau",
+    "resp": "In charge of digital encoding",
+    "role": "Student, trainee",
+    "@id": "Enc",
+    "affiliation": "Ecole nationale des chartes | PSL",
+    "@affiliation": "PSL"
+  }
+]

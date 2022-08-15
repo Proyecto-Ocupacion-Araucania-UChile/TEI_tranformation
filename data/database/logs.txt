@@ -1,0 +1,4 @@
+entities.csv: entitie "Q310007", error 'VIAF'
+entities.csv: entitie "Q16280345", error 'sex'
+entities.csv: entitie "Q5885554", error 'VIAF'
+entities.csv: entitie "Q16914", error 'sex'
