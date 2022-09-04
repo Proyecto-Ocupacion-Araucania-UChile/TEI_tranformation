@@ -172,14 +172,6 @@ def body(root: _Element, data: list, type_: str):
                 else:
                     last_element_note.append(lb)
 
-        # MarginTextZone commentary
-        elif line.zone_type == "MarginTextZone:commentary":
-            # create a <note> if find zone and add in noteGrp
-            note = ET.SubElement(noteGrp, "note", zone_atts)
-            note.set("type", "postscript")
-            note.set("corresp", f"#{line.id}")
-            note.text = line.text
-
         # NumberingZone id
         elif line.zone_type == "NumberingZone:id":
             # create a <note> if find zone and add in noteGrp
