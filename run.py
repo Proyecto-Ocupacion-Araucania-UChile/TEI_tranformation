@@ -28,6 +28,7 @@ def run(enrich):
         xml.building_teiheader()
         xml.alto_extraction()
         xml.body_creation()
+        #add valid RNG
 
     # Enrichment of output files
     if enrich:
@@ -41,8 +42,11 @@ def run(enrich):
             xml_op = EnrichmentTEI(doc.name, doc.path)
             xml_op.annotation_NER()
             xml_op.build_profileDesc()
+        #add valid RNG
 
-    print("finish ! The register of possible errors has been identified at data/database/logs.txt")
+
+
+    print("Finish ! The register of possible errors has been identified at data/database/logs.txt")
 
 
 if __name__ == '__main__':

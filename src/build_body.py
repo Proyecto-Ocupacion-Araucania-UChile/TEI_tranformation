@@ -90,7 +90,7 @@ def body(root: _Element, data: list, type_: str):
             if opener is None:
                 opener = ET.Element("opener")
                 first_element.addnext(opener)
-            stamp = ET.SubElement(opener, "salute", zone_atts)
+            stamp = ET.SubElement(opener, "stamp", zone_atts)
             stamp.set("type", "graphic")
             figure = ET.SubElement(stamp, "figure")
             head = ET.SubElement(figure, "head", corresp=f"#{line.page_id}")
@@ -104,7 +104,7 @@ def body(root: _Element, data: list, type_: str):
             if opener is None:
                 opener = ET.Element("opener")
                 first_element.addnext(opener)
-            stamp = ET.SubElement(opener, "salute", zone_atts)
+            stamp = ET.SubElement(opener, "stamp", zone_atts)
             stamp.set("type", "manuscript")
             name = ET.SubElement(stamp, "name")
             name.append(lb)
