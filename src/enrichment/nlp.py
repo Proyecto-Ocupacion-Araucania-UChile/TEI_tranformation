@@ -56,7 +56,7 @@ class NLP:
                 self.xml_so.add_inline(
                     begin=start_ind,
                     end=end_ind,
-                    tag="persname",
+                    tag="persName",
                     depth=None,
                     attrib=NLP.attribute_NER(ent, self.name)
                 )
@@ -66,7 +66,7 @@ class NLP:
                 self.xml_so.add_inline(
                     begin=start_ind,
                     end=end_ind,
-                    tag="orgname",
+                    tag="orgName",
                     depth=None,
                     attrib=NLP.attribute_NER(ent, self.name)
                 )
@@ -86,7 +86,7 @@ class NLP:
                 self.xml_so.add_inline(
                     begin=start_ind,
                     end=end_ind,
-                    tag="placename",
+                    tag="placeName",
                     depth=None,
                     attrib=NLP.attribute_NER(ent, self.name)
                 )

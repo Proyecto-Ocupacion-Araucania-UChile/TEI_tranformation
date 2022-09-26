@@ -52,8 +52,8 @@ class Index:
                                                                      self.xml_base: id_authority,
                                                                      self.xml_lang: data.language,
                                                                      'sex': str(sex)})
-                    persname = ET.SubElement(person, "persname")
-                    persname.text = str(data.name)
+                    persName = ET.SubElement(person, "persName")
+                    persName.text = str(data.name)
                     if data.date_birth is not None:
                         birth = ET.SubElement(person, "birth",
                                               {'when-iso': str(data.date_birth)})
@@ -77,12 +77,12 @@ class Index:
                     listOrg = self.root.xpath('//tei:particDesc/tei:listOrg', namespaces=Index.NS)
                     # Build element description
                     org = ET.SubElement(listOrg[0], "org", {self.xml_id: id_})
-                    ET.SubElement(org, "orgname").text = str(data.name)
+                    ET.SubElement(org, "orgName").text = str(data.name)
 
     def build_settingDesc(self, elements: list):
         """
         Function to build settingDesc root's
-        :param elements: List of elements of placename in body
+        :param elements: List of elements of placeName in body
         :return: None
         """
         for element in elements:
@@ -98,7 +98,7 @@ class Index:
                 place = ET.SubElement(listPlace[0], "place", {self.xml_id: id_,
                                                               self.xml_base: id_authority, self.xml_lang: data.language,
                                                               'type': str(data.type).replace(" ", "_")})
-                ET.SubElement(place, "placename").text = str(data.name)
+                ET.SubElement(place, "placeName").text = str(data.name)
                 if data.region is not None:
                     ET.SubElement(place, "region").text = str(data.region)
                 if data.country is not None:
