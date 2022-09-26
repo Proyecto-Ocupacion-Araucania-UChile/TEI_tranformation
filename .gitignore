@@ -1,3 +1,4 @@
 .env*
 *.jpg
 models/
+__pycache__/
