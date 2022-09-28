@@ -2,3 +2,4 @@
 *.jpg
 models/
 __pycache__/
+.idea/
