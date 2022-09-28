@@ -59,10 +59,9 @@ def run(enrich, validate):
             relaxng = ET.RelaxNG(ET.parse("data/database/schema.rng"))
             parser = ET.XMLParser(recover=True)
             file = ET.parse(doc.path, parser=parser)
-            validation_rng = relaxng.validate(file)
-            print("Validation RNG : " + str(validation_rng))
-            # recording error in journal
-            if validation_rng is False:
+            if not relaxng.validate(file):
+                print("Validation RNG invalid !")
+                # recording error in journal
                 for error in relaxng.error_log.message:
                     journal_error(rng=True, file=doc.name, message=error)
 
