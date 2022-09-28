@@ -105,14 +105,20 @@ def generate_id(ent_: str) -> str:
     return ent_ + "_" + str(np.random.random_integers(10000, high=99999))
 
 
-def journal_error(**kwargs):
+def journal_error(rng=False, **kwargs):
     if os.path.isfile("data/database/logs.txt"):
         with open("data/database/logs.txt", "a") as f:
-            f.write(
-                f"""{kwargs["file"]}: entitie "{kwargs['name']}", error {kwargs['error']}""")
+            if rng:
+                f.write(f"""{kwargs["file"]}: RNG error -> {kwargs["message"]}""")
+            else:
+                f.write(
+                    f"""{kwargs["file"]}: entitie "{kwargs['name']}", error {kwargs['error']}""")
             f.write("\n")
     else:
         with open("data/database/logs.txt", "w") as f:
-            f.write(
-                f"""{kwargs["file"]}: entitie "{kwargs['name']}", error {kwargs['error']}""")
+            if rng:
+                f.write(f"""{kwargs["file"]}: RNG error -> {kwargs["message"]}""")
+            else:
+                f.write(
+                    f"""{kwargs["file"]}: entitie "{kwargs['name']}", error {kwargs['error']}""")
             f.write("\n")

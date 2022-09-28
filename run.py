@@ -1,16 +1,20 @@
 from collections import namedtuple, defaultdict
 from pathlib import Path
+from lxml import etree as ET
 import re
 import click
 
 from src.build_tei import XML
 from src.build_enrich import EnrichmentTEI
+from src.opt.utils import journal_error
 
 
 @click.command()
 @click.option("-e", "--enrich", "enrich", is_flag=True, show_default=True, default=False,
               help="Argument for automatic data enrichment")
-def run(enrich):
+@click.option("-v", "--validate", "validate", is_flag=True, show_default=True, default=False,
+              help="Argument to execute the xml validation with the RelaxNG schema")
+def run(enrich, validate):
     p_input = Path('./data/input/')
     p_output = Path('./data/output/')
 
@@ -28,7 +32,7 @@ def run(enrich):
         xml.building_teiheader()
         xml.alto_extraction()
         xml.body_creation()
-        #add valid RNG
+        # add valid RNG
 
     # Enrichment of output files
     if enrich:
@@ -42,9 +46,24 @@ def run(enrich):
             xml_op = EnrichmentTEI(doc.name, doc.path)
             xml_op.annotation_NER()
             xml_op.build_profileDesc()
-        #add valid RNG
 
-
+    # Validation
+    if validate:
+        # list of output files
+        Docs_output = namedtuple("Doc", ["name", "path"])
+        files_tei = []
+        for doc in list(p_output.glob('*.xml')):
+            files_tei.append(Docs_output(doc.name, doc))
+        # Parsing Validation
+        for doc in files_tei:
+            parser = ET.XMLParser(recover=True)
+            parsed_file = ET.parse(doc.path, parser=parser)
+            relaxng = ET.RelaxNG(parsed_file)
+            print("Validation RNG : " + str(relaxng))
+            # recording error in journal
+            if relaxng is False:
+                for error in relaxng.error_log.message:
+                    journal_error(rng=True, file=doc.name, message=error)
 
     print("Finish ! The register of possible errors has been identified at data/database/logs.txt")
 

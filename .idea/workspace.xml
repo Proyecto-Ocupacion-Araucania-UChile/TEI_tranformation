@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="8b9011a3-219e-4386-bbc6-51d052004c2c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/build_enrich.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/build_enrich.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enrichment/nlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/enrichment/nlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output/Letters_AH0299.xml" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/Letters_AH0299.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/opt/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/opt/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/teiheader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/teiheader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

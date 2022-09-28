@@ -99,12 +99,13 @@ class Index:
                                                               self.xml_base: id_authority, self.xml_lang: data.language,
                                                               'type': str(data.type).replace(" ", "_")})
                 ET.SubElement(place, "placeName").text = str(data.name)
+                location = ET.SubElement(place, "location")
                 if data.region is not None:
-                    ET.SubElement(place, "region").text = str(data.region)
+                    ET.SubElement(location, "region").text = str(data.region)
                 if data.country is not None:
-                    ET.SubElement(place, "country").text = str(data.country)
+                    ET.SubElement(location, "country").text = str(data.country)
                 if data.loc is not None:
-                    ET.SubElement(place, "geo").text = str(data.loc)
+                    ET.SubElement(location, "geo").text = str(data.loc)
                 if data.description is not None:
                     ET.SubElement(place, "note", type='description').text = str(data.description)
 
@@ -232,7 +233,7 @@ class TreeHeader:
         sourceDesc = ET.SubElement(fileDesc, "sourceDesc")
         bibl = ET.SubElement(sourceDesc, "bibl")
         series = ET.SubElement(bibl, "series", attrib={ns_lang: "es"})
-        title_sp = ET.SubElement(series, "title", attrib={"series": "s", "type": "principal"})
+        title_sp = ET.SubElement(series, "title", attrib={"level": "s", "type": "principal"})
         title_sp.text = "Colección Manuscritos"
         title_sb = ET.SubElement(series, "title", attrib={"type": "subtitle"})
         title_sb.text = "Pacificacion de la Araucania"
