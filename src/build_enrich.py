@@ -25,7 +25,7 @@ class EnrichmentTEI:
 
     def annotation_NER(self):
         """
-        Function to apply NER (placename, persname, date) annotation in body root's
+        Function to apply NER (placeName, persName, date) annotation in body root's
         :return: None
         """
         # annotation NER
@@ -48,15 +48,15 @@ class EnrichmentTEI:
         index = Index(self.root)
 
         # Get all elements to index
-        persname = self.root.xpath('//tei:body/descendant::persname', namespaces=EnrichmentTEI.NS)
-        orgname = self.root.xpath('//tei:body/descendant::orgname', namespaces=EnrichmentTEI.NS)
-        placename = self.root.xpath('//tei:body/descendant::placename', namespaces=EnrichmentTEI.NS)
+        persName = self.root.xpath('//tei:body/descendant::persName', namespaces=EnrichmentTEI.NS)
+        orgName = self.root.xpath('//tei:body/descendant::orgName', namespaces=EnrichmentTEI.NS)
+        placeName = self.root.xpath('//tei:body/descendant::placeName', namespaces=EnrichmentTEI.NS)
         # Build particDesc
-        index.build_particDesc(persname, type_='PERS')
-        index.build_particDesc(orgname, type_='ORG')
-        del persname, orgname
+        index.build_particDesc(persName, type_='PERS')
+        index.build_particDesc(orgName, type_='ORG')
+        del persName, orgName
         # Build settingDesc
-        index.build_settingDesc(placename)
-        del placename
+        index.build_settingDesc(placeName)
+        del placeName
         # write final xml
         write_xml(path=self.path, root=self.root)
