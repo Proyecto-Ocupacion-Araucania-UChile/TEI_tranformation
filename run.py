@@ -56,7 +56,7 @@ def run(enrich, validate):
             files_tei.append(Docs_output(doc.name, doc))
         # Parsing Validation
         for doc in files_tei:
-            relaxng = ET.RelaxNG(ET.parse("data/database/schema.rng"))
+            relaxng = ET.RelaxNG(ET.parse("data/database/schema_letter.rng"))
             parser = ET.XMLParser(recover=True)
             file = ET.parse(doc.path, parser=parser)
             if not relaxng.validate(file):

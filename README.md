@@ -24,10 +24,14 @@ Project
 |
 ├── data
 │   ├── database
+ |    |   ├── database
+ |    |    |          ├── ODD_Letters.html
+ |    |    |          └── ODD_Letters.xml
 │   │   ├── araucania_inventory.csv
 │   │   ├── entities.csv
 │   │   ├── logs.txt
-│   │   └── resp.json
+│   │   ├──resp.json
+│   │   └── schema_letter.rng
 |
 │   ├── models
 │   │   └── araucania_NER_model
